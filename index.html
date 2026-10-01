@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión documental para captación · Guía del agente inmobiliario · Lima</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F3F0;
+  --card:#FFFFFF;
+  --navy:#16264D;
+  --navy2:#1D3160;
+  --gold:#DEBF58;
+  --ink:#1B1B1A;
+  --ink-2:#4A4A46;
+  --muted:#8A8880;
+  --line:#E4E2DC;
+  --line-2:#EFEDE7;
+  --ochre:#8F701C;
+  --ochre-soft:#F8F2DF;
+  --ok:#2E6A4F;
+  --ok-soft:#E9F1EC;
+  --dep:#8F701C;
+  --dep-soft:#F8F2DF;
+  --no:#8A8880;
+  --no-soft:#EFEDE7;
+  --red:#9E3A2F;
+  --red-soft:#F7EBE8;
+  --shadow:0 18px 44px rgba(20,25,40,.13);
+  --r:0px;
+  --pill:999px;
+  --sans:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --disp:'Archivo', 'Inter', system-ui, sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important; transition:none!important}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--disp); font-weight:700; letter-spacing:-.02em; margin:0; line-height:1.15}
+p{margin:0}
+ul{margin:0; padding:0; list-style:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ochre); outline-offset:3px; border-radius:4px}
+
+/* ---------- estructura ---------- */
+.shell{max-width:1400px; margin:0 auto; display:block}
+.side{display:none}
+.main{padding:0 20px 80px}
+
+@media (min-width:1000px){
+  .shell{display:grid; grid-template-columns:268px minmax(0,1fr); gap:48px; padding:0 40px}
+  .side{display:block; position:sticky; top:0; height:100vh; padding:40px 0 40px; overflow-y:auto}
+  .main{padding:0 0 120px; min-width:0}
+}
+
+/* ---------- sidebar ---------- */
+.brandmark{display:block; margin-bottom:34px}
+.brandmark__logo{display:block; height:34px; width:auto; margin-bottom:16px}
+.topbar__logo{display:block; height:22px; width:auto}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.brandmark__t{font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; line-height:1.3}
+.brandmark__s{font-size:11px; color:var(--muted); letter-spacing:.02em}
+
+.navtitle{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:12px}
+.nav{border-left:1px solid var(--line)}
+.nav a{
+  display:block; padding:9px 0 9px 16px; margin-left:-1px;
+  border-left:2px solid transparent; text-decoration:none;
+  font-size:14px; color:var(--ink-2); transition:all .18s ease;
+}
+.nav a:hover{color:var(--ink)}
+.nav a.is-active{color:var(--ink); font-weight:600; border-left-color:var(--gold)}
+.nav a .n{font-family:var(--mono); font-size:10px; color:var(--muted); margin-right:8px}
+.side__foot{margin-top:28px; font-size:11.5px; color:var(--muted); line-height:1.5; border-top:1px solid var(--line); padding-top:16px}
+
+/* ---------- nav móvil ---------- */
+.topbar{
+  position:sticky; top:0; z-index:60; background:rgba(242,243,240,.92);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:12px 20px;
+}
+@media (min-width:1000px){.topbar{display:none}}
+.topbar__t{font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase}
+.menubtn{
+  font-family:var(--sans); font-size:14px; font-weight:500; color:var(--ink);
+  background:var(--card); border:1px solid var(--line); border-radius:var(--pill);
+  padding:10px 20px; cursor:pointer; display:flex; align-items:center; gap:9px;
+}
+.menubtn:hover{border-color:#BDB9B0}
+.menubtn .bars{display:grid; gap:3px}
+.menubtn .bars i{display:block; width:14px; height:1.5px; background:var(--ink)}
+.drawer{
+  display:none; position:fixed; inset:0; z-index:70; background:rgba(15,28,36,.35);
+}
+.drawer.is-open{display:block}
+.drawer__panel{
+  position:absolute; top:0; right:0; width:min(320px,86vw); height:100%;
+  background:var(--card); padding:24px 22px; overflow-y:auto;
+}
+.drawer__panel a{display:block; padding:12px 0; border-bottom:1px solid var(--line-2); text-decoration:none; font-size:15px; font-weight:500}
+.drawer__panel a .n{font-family:var(--mono); font-size:10px; color:var(--muted); margin-right:10px}
+.drawer__close{background:none; border:0; font-size:26px; line-height:1; cursor:pointer; color:var(--ink-2); margin-bottom:8px}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 40px; border-bottom:1px solid var(--line)}
+@media (min-width:1000px){.hero{padding:80px 0 56px}}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ochre); font-weight:700}
+.hero h1{font-size:clamp(32px,6.2vw,58px); margin:18px 0 0; max-width:16ch}
+.hero h1 em{font-style:normal; color:var(--ochre)}
+.hero__sub{margin-top:20px; font-size:clamp(16px,2.2vw,19px); color:var(--ink-2); max-width:58ch}
+.thesis{
+  margin-top:32px; background:var(--navy); color:#fff;
+  padding:26px 26px; display:grid; gap:10px;
+}
+@media (min-width:760px){.thesis{padding:32px 36px}}
+.thesis__k{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.62)}
+.thesis__t{font-family:var(--disp); font-size:clamp(20px,3.4vw,28px); line-height:1.25; letter-spacing:-.02em}
+.thesis__t b{color:var(--gold); font-weight:700}
+
+/* ---------- barras de bloques ---------- */
+.blocks{display:grid; gap:12px; margin-top:34px}
+@media (min-width:900px){.blocks{grid-template-columns:repeat(4,1fr)}}
+.blk{
+  background:var(--card); border:1px solid var(--line);
+  padding:18px 18px 20px; text-decoration:none; display:block;
+  border-top:3px solid var(--gold); transition:border-color .18s ease;
+}
+.blk:hover{border-color:#BDB9B0; border-top-color:var(--gold)}
+.blk__n{display:block; font-family:var(--mono); font-size:10px; color:var(--muted); letter-spacing:.12em}
+.blk__t{display:block; font-family:var(--disp); font-size:15px; font-weight:700; margin:8px 0 6px; letter-spacing:.01em; text-transform:uppercase}
+.blk__q{display:block; font-size:13.5px; color:var(--muted); line-height:1.45}
+
+/* ---------- secciones ---------- */
+.sec{padding:64px 0 8px; scroll-margin-top:80px}
+@media (min-width:1000px){.sec{padding:96px 0 8px; scroll-margin-top:40px}}
+.sec__head{max-width:70ch; margin-bottom:28px}
+.sec__num{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--muted)}
+.sec h2{font-size:clamp(25px,4vw,38px); margin:10px 0 0}
+.sec__lead{margin-top:14px; color:var(--ink-2); font-size:16.5px; max-width:62ch}
+.hr{height:1px; background:var(--line); border:0; margin:0}
+
+/* ---------- leyenda ---------- */
+.legend{display:grid; gap:12px; margin-top:8px}
+@media (min-width:760px){.legend{grid-template-columns:repeat(3,1fr)}}
+.leg{background:var(--card); border:1px solid var(--line); padding:18px}
+.leg__tag{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.1em; padding:6px 15px; border-radius:var(--pill)}
+.leg p{margin-top:10px; font-size:14px; color:var(--ink-2)}
+.t-si{background:var(--ok-soft); color:var(--ok)}
+.t-dep{background:var(--dep-soft); color:var(--dep)}
+.t-no{background:var(--no-soft); color:var(--no)}
+
+/* ---------- tarjeta CRI (firma) ---------- */
+.cri{
+  background:var(--card); border:1px solid var(--line);
+  overflow:hidden; box-shadow:var(--shadow); margin-bottom:28px;
+}
+.cri__top{
+  padding:26px 24px; border-bottom:1px solid var(--line-2);
+  display:grid; gap:6px; background:linear-gradient(180deg,var(--ochre-soft),transparent);
+}
+@media (min-width:760px){.cri__top{padding:32px 34px}}
+.cri__code{font-family:var(--mono); font-size:clamp(34px,7vw,54px); font-weight:700; letter-spacing:-.04em; line-height:1}
+.cri__name{font-family:var(--disp); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--navy); font-weight:600}
+.cri__desc{margin-top:12px; font-size:16px; color:var(--ink-2); max-width:60ch}
+.cri__grid{display:grid; gap:0}
+@media (min-width:860px){.cri__grid{grid-template-columns:1.05fr .95fr}}
+.cri__col{padding:24px; border-top:1px solid var(--line-2)}
+@media (min-width:860px){.cri__col+.cri__col{border-left:1px solid var(--line-2)}
+  .cri__col{padding:28px 34px}}
+.mini{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:14px}
+.arrows li{position:relative; padding-left:22px; font-size:15px; color:var(--ink-2); margin-bottom:10px}
+.arrows li::before{content:"→"; position:absolute; left:0; color:var(--ochre); font-family:var(--mono)}
+
+/* árbol */
+.tree{font-family:var(--mono); font-size:13.5px; line-height:2.1}
+.tree .root{font-weight:700; color:var(--ink); font-size:15px}
+.tree .br{color:var(--muted)}
+.tree .lf{color:var(--ink-2)}
+.tree .lf b{color:var(--ink); font-weight:700}
+.tree__note{
+  margin-top:16px; font-family:var(--sans); font-size:13.5px; color:var(--ink-2);
+  background:var(--ochre-soft); padding:12px 14px;
+}
+
+/* ---------- grid de documentos ---------- */
+.docs{display:grid; gap:12px}
+@media (min-width:700px){.docs{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1240px){.docs{grid-template-columns:repeat(3,1fr)}}
+.doc{
+  background:var(--card); border:1px solid var(--line);
+  padding:0; display:flex; flex-direction:column; overflow:hidden;
+  transition:border-color .18s ease;
+}
+.doc:hover{border-color:#BDB9B0}
+.doc__btn{
+  all:unset; cursor:pointer; display:block; padding:18px 18px 16px;
+}
+.doc__btn:focus-visible{outline:2px solid var(--ochre); outline-offset:-3px}
+.doc__row{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
+.doc__row>span:first-child{display:block; min-width:0}
+.doc__code{display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.1em; color:var(--ochre); text-transform:uppercase}
+.doc__name{display:block; font-family:var(--disp); font-size:16px; font-weight:600; margin-top:5px; letter-spacing:-.01em; line-height:1.25}
+.doc__use{display:block; font-size:13.5px; color:var(--muted); margin-top:8px; line-height:1.45}
+.doc__chev{font-family:var(--mono); font-size:16px; color:var(--muted); flex:none; transition:transform .2s ease}
+.doc.is-open .doc__chev{transform:rotate(45deg)}
+.doc__cost{
+  display:inline-flex; align-items:baseline; gap:6px; margin-top:14px;
+  font-family:var(--mono); font-size:12px; font-weight:700;
+  background:var(--paper); border:1px solid var(--line); padding:6px 11px;
+}
+.doc__cost span{font-family:var(--sans); font-weight:500; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.doc__body{display:none; padding:0 18px 18px; border-top:1px solid var(--line-2); margin-top:2px}
+.doc.is-open .doc__body{display:block}
+.doc__body .mini{margin-top:16px}
+.checkl li{position:relative; padding-left:20px; font-size:14px; color:var(--ink-2); margin-bottom:8px; line-height:1.45}
+.checkl li::before{content:""; position:absolute; left:2px; top:8px; width:6px; height:6px; border-radius:2px; background:var(--ochre)}
+.doc__note{margin-top:14px; font-size:13px; color:var(--ink-2); background:var(--paper); border:1px solid var(--line); padding:11px 13px}
+.doc__aparte{margin-top:10px; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ok); background:var(--ok-soft); border-radius:var(--pill); padding:5px 13px; display:inline-block}
+
+.callout{
+  margin-top:24px; background:var(--card); border:1px solid var(--line);
+  border-left:3px solid var(--navy); padding:20px 22px;
+  font-size:16px; color:var(--ink-2); max-width:74ch;
+}
+.callout b{color:var(--ink)}
+
+/* ---------- comercial ---------- */
+.commercial{display:grid; gap:12px}
+@media (min-width:760px){.commercial{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1240px){.commercial{grid-template-columns:repeat(4,1fr)}}
+.cgroup{background:var(--card); border:1px solid var(--line); padding:20px}
+.cgroup h4{font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-family:var(--mono); font-weight:700; color:var(--ink)}
+.cgroup .why{font-size:13px; color:var(--muted); margin:8px 0 14px}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chip{font-size:14px; background:#fff; border:1px solid var(--line); border-radius:var(--pill); padding:8px 16px; color:var(--ink)}
+.chip:hover{border-color:#BDB9B0}
+
+/* ---------- selector de propiedad ---------- */
+.tabs{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:22px}
+@media (min-width:760px){.tabs{grid-template-columns:repeat(4,1fr); gap:12px}}
+.tab{
+  all:unset; cursor:pointer; text-align:center; background:var(--card);
+  border:1px solid var(--line); border-radius:var(--pill); padding:18px 12px;
+  transition:background .18s ease, border-color .18s ease, color .18s ease;
+}
+.tab:hover{border-color:#BDB9B0}
+.tab.is-on{background:var(--navy); border-color:var(--navy); color:#fff}
+.tab.is-on:hover{background:var(--navy2); border-color:var(--navy2)}
+.tab__i{display:flex; justify-content:center; margin-bottom:10px; color:var(--navy)}
+.tab.is-on .tab__i{color:var(--gold)}
+.tab__i svg{width:26px; height:26px; display:block}
+.tab__t{display:block; font-family:var(--disp); font-size:13.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+.tab__s{display:block; font-size:11.5px; color:var(--muted); margin-top:4px}
+.tab.is-on .tab__s{color:rgba(255,255,255,.62)}
+
+.matrix{background:var(--card); border:1px solid var(--line); overflow:hidden}
+.matrix__head{padding:20px 20px 16px; border-bottom:1px solid var(--line-2); display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; justify-content:space-between}
+.matrix__head h3{font-size:20px}
+.matrix__count{font-family:var(--mono); font-size:11.5px; color:var(--muted)}
+.mrow>span:last-child{display:block; min-width:0}
+.mrow{display:flex; gap:14px; align-items:flex-start; padding:14px 20px; border-bottom:1px solid var(--line-2)}
+.mrow:last-child{border-bottom:0}
+.mrow__tag{display:block; flex:none; width:auto; min-width:112px; font-family:var(--mono); font-size:10.5px; font-weight:700; letter-spacing:.08em; padding:6px 12px; border-radius:var(--pill); text-align:center}
+.mrow__t{display:block; font-size:15px; font-weight:600; line-height:1.35}
+.mrow__d{display:block; font-size:13.5px; color:var(--muted); margin-top:3px; line-height:1.45}
+.matrix__foot{padding:16px 20px; background:var(--paper); font-size:13.5px; color:var(--ink-2)}
+
+/* ---------- flujo ---------- */
+.flow{background:var(--card); border:1px solid var(--line); padding:26px 22px; text-align:center}
+.flow__no{font-family:var(--disp); font-size:clamp(52px,12vw,96px); font-weight:700; letter-spacing:-.05em; line-height:1; color:var(--ink)}
+.flow__cap{font-size:15px; color:var(--muted); margin-top:6px}
+.chain{margin:26px auto 0; display:grid; gap:0; max-width:520px}
+.chain__step{background:var(--paper); border:1px solid var(--line); padding:14px 16px; font-size:14.5px; font-weight:500}
+.chain__step.q{background:var(--ochre-soft); border-color:#E7DDBC; font-weight:600}
+.chain__arrow{font-family:var(--mono); color:var(--gold); font-size:18px; padding:7px 0}
+.chain__split{display:grid; gap:10px; grid-template-columns:1fr}
+@media (min-width:620px){.chain__split{grid-template-columns:1fr 1fr}}
+.chain__split .chain__step{text-align:left}
+.chain__split .chain__step b{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; margin-bottom:4px}
+.chain__split .yes b{color:var(--dep)}
+.chain__split .no b{color:var(--ok)}
+
+.cases{display:grid; gap:12px; margin-top:20px}
+@media (min-width:760px){.cases{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1240px){.cases{grid-template-columns:repeat(4,1fr)}}
+.case{background:var(--card); border:1px solid var(--line); padding:18px; font-size:14px}
+.case__l{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.case__find{font-family:var(--disp); font-size:16px; font-weight:700; margin:8px 0 12px}
+.case__do{color:var(--ink-2); line-height:1.45; padding-top:12px; border-top:1px dashed var(--line)}
+.case__do b{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ochre); margin-bottom:5px}
+
+/* ---------- checklist ---------- */
+.steps{display:grid; gap:10px}
+.step{
+  display:flex; gap:16px; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); padding:16px 18px; cursor:pointer;
+  transition:border-color .18s ease;
+}
+.step:hover{border-color:#BDB9B0}
+.step>span:last-child{display:block; min-width:0}
+.step__box{
+  flex:none; width:22px; height:22px; border:1.5px solid var(--line);
+  display:grid; place-items:center; margin-top:2px; font-size:13px; color:transparent; background:var(--paper);
+}
+.step.is-done .step>span:last-child{display:block; min-width:0}
+.step__box{background:var(--ok); border-color:var(--ok); color:#fff}
+.step.is-done .step__t{text-decoration:line-through; color:var(--muted)}
+.step__n{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--muted)}
+.step__t{display:block; font-family:var(--disp); font-size:16px; font-weight:600; margin-top:3px}
+.step__d{display:block; font-size:13.5px; color:var(--muted); margin-top:4px; line-height:1.45}
+.progress{margin-top:16px; display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:11.5px; color:var(--muted)}
+.progress__bar{flex:1; height:5px; background:var(--line); border-radius:99px; overflow:hidden}
+.progress__fill{height:100%; width:0%; background:var(--ok); transition:width .25s ease}
+
+/* ---------- banderas ---------- */
+.h2ico{display:flex; align-items:center; gap:13px}
+.h2ico svg{width:26px; height:26px; flex:none; color:var(--red)}
+.flags{display:grid; gap:10px}
+@media (min-width:760px){.flags{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1240px){.flags{grid-template-columns:repeat(3,1fr)}}
+.flag{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--red); padding:16px 18px}
+.flag__t{font-size:15px; font-weight:600; line-height:1.35}
+.flag__d{font-size:13.5px; color:var(--muted); margin-top:6px; line-height:1.45}
+.redbar{background:var(--red-soft); border:1px solid #EFD9D4; padding:20px 22px; margin-bottom:22px; font-size:16px; color:#6E2A22; max-width:74ch}
+
+/* ---------- cierre ---------- */
+.closing{margin-top:72px; background:var(--navy); color:#fff; padding:44px 26px}
+@media (min-width:760px){.closing{padding:64px 56px}}
+.closing__k{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.62)}
+.closing h2{font-size:clamp(22px,3.6vw,34px); margin-top:16px; max-width:22ch; line-height:1.25}
+.closing__mantra{margin-top:28px; display:grid; gap:8px; max-width:60ch}
+.closing__mantra li{font-size:15.5px; color:rgba(255,255,255,.82); padding-left:26px; position:relative}
+.closing__mantra li::before{content:counter(m); counter-increment:m; position:absolute; left:0; font-family:var(--mono); font-size:11px; color:var(--gold); top:3px}
+.closing__mantra{counter-reset:m}
+.closing__quote{margin-top:36px; padding-top:28px; border-top:1px solid rgba(255,255,255,.14); font-family:var(--disp); font-size:clamp(17px,2.6vw,22px); line-height:1.4; max-width:34ch}
+.foot{margin-top:24px; font-size:12.5px; color:var(--muted); line-height:1.6; max-width:76ch}
+.foot b{color:var(--ink-2)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <img class="topbar__logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAq4AAAB4CAYAAAAzB3AdAABa+0lEQVR42u19d7hdRfX2e865CQkp9N6L1AiI/BSQJoiggAUFBQGlo6CodBCwIlhQQEWxIiioIEVBeq/SISAtoSaE0BLS773n3O+Ptda315nsMnvv2eXczDzPeQL3nrv3lDVr3nlXA3wb7q0BoAWgj/8122gAWwI4HsB/AEwH8A6AywCsx99p8sc333zzzTfffPPNN9+cAtVmAlB9P4CvAPgrgOcAtAEMhXzeAHCY+ts+P72++eabb7755ptvvhUFVEcBeB+AowD8A8CLESB1kAFsR/2//O4aAOvy8zz76ptvvvnmm2+++eabE6A6EsCmAI5koPpCBFAdUGB1KOLTUQD2bQCHq/d49tU333zzzTfffPPNt1RAdTEQo/oVAJeATP9ZgWrUR7Ov/wKwDr/bs6+++eabb7755ptvHqjGAtXNABwB4C8FAVXPvvrmm2+++eabb775lhqojgSwCQPFvwKYFANUB9Dtp1rEx7Ov1ciHb7755ptvvvnmW6UtDKiOAPmofhnApQCetwCqQyV/PPta/CWmz1JefPPNN998880330oBKQL03g+K+i/T9O+afb0awHt4TJ59dQNUAWBFAKuo/28q2fHNN998880333wrvAmo2xPAk6jW9O+SfX0HFCQGBcp9W3jtWzFzsy6ALwA4H8AjAGYAmAXgIf65NM+++uabb7755ptvpYHWCQqQdnoIqNqwr9fCs696veMY1XUAfB7ArwA8CmBBwjz/HcCqCrx69tU333zzzTfffCusCYA5joFIElDppY8A8CEQU7iosa82pv+1AewD4NcAHotY/0HjEtPh/5bLwWsA9l/E5tY333zzzTfffKsQuJ5sAL06f9oIGGEbNnhRYV8FqMaZ/tcBsC8D1UcAzLcAqrZz+zcE/q8teL9i33zzzTfffPOtIOB6EgJf1rr6rUYBVZtsBhqUvwPKkmDOQS+2JEZ1XRCj+ksADzsAqkl+xdMA7Kfe731fffPNN998880358D1hBoBVzFFD6Cb0ZPPyyB278+g9FcagCUBWP28axjYCQCsO0OYZPpvgEz/n0O8j2peoBr10bLzN3jfV998880333zzrSDgelTFwFWzqubv3gVwO4BvA9gWwBjV/5UYdD8b8qwO7Hxf68q+JhWDAMjtYT8AvwXwBIphVLOyr6+hm331vq+++eabb7755ltPAteOAajM3z0J4DcA9kJ33lBpph/naFB6pruwMAsYBdY0+3odgA34WVWxr0lAtcl9/CIDVdtgqqqzOlwK7/vqm2+++eabb771GHCNM/9PBXAFgK+CSsq2QkCdALpGyM912xHAPwxQF+UHqxnCmfx+c27KAKytiLXZEMCXAPwBwMSIuasDULVhX33eV998880333zzrbbANc78PwfA3QC+D2AnAEtG9M3WP7IR8t0JAH4OYLoB8qLAn2Zf1+dnlMm+SnndwwBcDOCZCLBdV6CahX31vq/2l5uG4/nK8jzX/cj7vCLmJUq39BmfVgnvjfr0srw1hsHecb2vek1GGhWO0zff/j9wPdIBcI0z/w8B+B/IxL0PgDVD+iKHQ94yoqY5egUAx/L74/xgTfb1qJB5KmIzLsYA/tkIINprQNWzr70JjH2fwwGrjb6pavxaZ/rm95XZxPWsMYzm0IPXlMphODJEAsiOyQhc48z/rwO4GsDRAN4HYhTNuY2aVzOCvplx0+pDZTEAewO4BfF+sGWxr9K384chUPXsq9vWcgxSkvL9JvXD1Xq1jH40Ku6Pnh9pY0FWoW8C+AGA74GKmXxQ7eEi2Mk+Y3z6UzSA1u9yJW99Ba1Vmnks4719JV1mmjHy0UqQ6brpI5v3lTWvPQ9UmzW7YRcJXE+2BK5x5v95AO4D8EMAOwNYOkYAmzFANU4xNzKuqXlAbwPgIpDLQlg6Lc0QzoB79lXGsRSI3Y1yYRiOHz23U9HNvvrMAwvLyDIAHgIx8s8CODOHHpK/OYef9TSABwAsp/Zg1IG3Miho8hn+2x0z9kPGNQrAHWpc51oesKIHduS/e5L/3cmRfm6q/p0K4MUYWX4cwIEO2SDp+2E8pqf432eMz2MA7gGVXD4F3YGlLto1al3+lmNsMp6vGuNZrwAwFfbeT/H7JvK/2xV0hsvcXKrm7S4AixfAEsqcXcTv+V+IfIiM/BtUFXM5B/MtYxjP57yM8/sFzak8b19jDXeBvTVkkQWqywL4ME/ernz7FgEYDgyRAIUTI4CrzqkaZv5/HsAfGXysFXPTNucrCaiOAPmo7gXg8whYzzwbJMwP9j0MtKegm0UeDGEI/wN3mQfkb1cDMFvN9dAi9DHZ15VzXlCGK3BdAd1pzi7OAfJl71xprMXFMXtLZHVN428+lRO4Lg7gDfW8fgBrxABocwz/NPqzp4MDVN67NgN6W1m+jMeTl3mVNf1Wyr00F2TZcgUGn1PPfigH+JLxfN/o76YFA1d574HGe3crAGSJvtosZF0+FUGcuACud6eQj5dBFoI8cy7rvzQoRaU8+08FkQ6CGR40xnLFMCQQcwPVpQBsD+A0ADcDeMuYtMkgH83hwr5qRTnIh0c7hgF8iwHcsQDeDzK/h7GbrZRAdSSCwKSL+MaogdwCUPWnJR2BG9OcsjTI/PcowqtyyVy8C+DrDhhCkb1Vexy4mn7NMlcdZGNf9x1Ge8sVcF0eVGhD5vcPDoDr3/hZC3jPxx3qIqtrMIAWy8TuDoDrS/ysedyH7yeMTfqyOoM1rbM+kVNu5KBckfX8kOrXdAC/A7lUnYDurCXy7/XI71KmC8LI+sj8zOHP/BDdKP/9CUd753Elb3c5AK6nG+N5b0nAdX81f20mn1zrFnnXL3ldFqhxFgGyZM5u4Xf08z7Q8jEUIh/TmRxoZJx3bSWcpuTjggKAq+yhrdQZIXpnNgIXs2Hr220DVD/MQPVGdEegx/lx/hWU/L7XGSIRti9GAIt+UKnQswF8DIHJwRQyc36TgGofgI35RvxndBcQCPP3lP9/lvvhCtyYfrAtVv7XGofDgDrgh1hWNsyh0HsVuCZVNbPNoRvHvl4C7/tqAtcZan7+6AC4/t24mHVAJvFxWNg6ooFrv1rTPRwA11eM9Z8KsmpFMZdhrk3yt590BFyv5+cJALhG6Xrd3gdytdDf/WHOPpgWMDmsd+L5X5PZ4E1Alqi7FTjpgEy4WYGJbhOVvN3jALh+G90WvbKA6wEGePuYYyCpwdybas1kj8xBUEHQ1VjlObeiO/B5Df6szezvYaBAWC2f5+UYvx6rxkm/LQi4gnXdkNI7Ij9HF8Ty1haoLg3yjToVFHjzOqIrK4UxR5p9m8LKAz08iXJAjAFwOTOKk0Gm24NApvSwjWOa/22A6ntjGFUNdsICkzoGgHXJvmq50e39oCII7xj9EyU4S22gRkbl0wvANc6veSYr0NMAfJRZuz8h2nc4K/u6KPq+lgVc9b/nhTy7DOCq9epBMeNrgNyIngn5uzzAVd61p3HQPwiyBsl35COBpmuDrFBtpbvy+JtGAdd1Ir6/GKhiXoc/s0CuJcipEz1wTfeew0Mu4DLWbzjWYWHA9dGI726OwDLRAfAqqFhPlvUsC7hqF6mZxrnYVvuyp9Nj2QDVHfiGfp0Fo5qFIfrLMGFfwYzqqIgN2koBVEcwK3A4gpykSamebLMYtAtiX7U8aVlaFcBJBivcrxTTjzO8v87ANamq2US+OHwW4VXNwBees9SN3wQZadjXRdX3tUzgqtPDfcj4btnA9WGExxDI+u9iyIkL4CpjvIPHJ+4HWyl9ZjYBtN8wwO65OdYnCrhuZBAGTaWnz1BzOI/XKS8o9MA1HfHzoLo83MI4o5Mgzy6B62NKLuQj8nmVscfWzzj3ZQFXec7XlW56AWRN0HpqC8drWSlQXRLko/otADeg2/k/D1BNYohM9rXX/PPM24uZU9UWqB4KMv3bANU8c2+yr0sUAG5MN4LFQa4Nj4T0J63PTd2Aa5z5/zVQIMxX+MBpRTDwYalYlmNWemIIe96B932tGrgOqkNd5vsJZvJa6DY7Fw1cO+qiFJaxQP77MkM+8gJXHZDVr/pwe8LzRC8uweeMzMsLCHz/0+qiKOC6YYh+ETB9kdozeRg1D1zT76UGX/S0/t7QuBh2AHzA4XujgGsU2XSuMfeb1By4SpzMRDWn3wZZ9FxdEEsFqmEbZxkAHwHwHQA3Idz07wqo2oCoXmdfG5ZAdSRvgCOYUX02Zm6Kykmq2ddnCmBfzY2kFcJuoGCNx/ngGJVyrasGrnHm/7kg37nvMYBYwoKBTwL9IwF8hi+TYcFvNnvrr4sY+1oGcB0C8C+QNUof8N9R7ygLuOr1vjKC9ZWgLFO35AGuMo9fMA7GbyI5IjyMwe7kAAdRwHUC/24kul0VVmXZGDBARF7954Gr/V76s9KpD/LP9jVk6RcOQVYa4ApQvIb0L48rSRnAVfT6R4wzfgLLviYip4BcHPNe0py1uGoPyzPy/nYMo9opGKimZV97xT+vEQNUR4Ecvr8M8n99vgKgWiX7qi9RcKh8ygKuSWnNngXwe5bbNSMUSpaqZmEH/wf5XTNh5wdr7q19enBv1Rm4/g3kQ9mv9u8CBS76SgCuc0E5PuWwWoBuk6b04SQlE/egO8dqXuD6QwPkbGvxPDmnjkV3FoK9M65RFHBdOeS7qwG4F91ltNeFD84qA7hKv1cExYXInjiE50ki77XVapwjkBUGXB9Ht8VLxr8eun1cb8sx72UBV4CydgwZfQYo5kRfCD4L9+nGci2KBqq7gNKk3ApKC1M2o5o1N+VfWLB7gSEy+zYG5ENyJAPVSRZAtcp5N9nXXQtiXzWAbeVQRGUA1zjz/xug5NTfQPqqZnnmTO/v1UFBXZOxsB9sJ2FvDZesHnUArtfzz75nHPL3GIdCkcB1AYO1BWof/8wAhyPRXRb5aMfA9SIlg/3qAmeTU/bTxoF6jCPgKgzu2fyzk3jPXIwgVeMg65A9HYJBD1ztnn+M0t1vgFwVZUy/MmRib0cgKwy4PhzyvQ1BOXh1H/KkSysauGrLzlylB3SBmq0RxJiItahIOUrVNgcFdtzRA0DVhiH6XIEgyuUBuTgomOoyUH7FujCqWdnXX4CqfBQJbho5N6lL4KrN/+az5oMSqv+ILRbLRBzCrRKUgOlGMBbkO3xvCFDtIN73dTjlVK4KuF7D7xqlAIsc9F9Tf1skcB1iJv4GBNaBN/mQlO9/TH33RQQR/XmBq3z/avWstxGk/mtY/O0Oxrx91yFwTdJ3cwB83CHr5YGrnQyPAFkJOuh2BxD/5q0MkHWNozGbwLXN+uEyUGagy0G5d+cbF/4Lc76/aOAqf3+a0vVTmaluKPLjcbgPRszd9kF3vsxeAKo2IOrimjJEIhDjQFF7YWOwTWdUl0+Z7Gte5ZMHuCaZ/ycxi3QAH/JhfUhj/m/AfXSsqew+CgoE60e8H6zpVz4cfV/LBK7StkEQVT8IMoOuzX1Zq2Dg+l4Gnxpo6FLL/1Tv/iEDh9kOgKvsxevUs6YjSLdnA1y3N/r9/YxrlAW4DvBe/7oaT9494IFr/Jo3EAQLiW76P3T7IY9U8yggay0H4zaB66AFBrmQ+5NHNooEroJDFmNZln3+M+7zYggCRk9Bt1vOcY4vbZkW5AxWSDq6UwcJ9dKh1KeE9gvMeH1OjasO/nktBOUSP4jAVNdRYyiDhXMtR03e0OuBKn39AuT72u5xcNNRwLxhgM+3QQGKJ/JabgSqHPNnkDkexj7qGJfBMGWifVs1uG44mEd5v/YdvoFlcQtQTtG31Ptl3Obe2pf31j4121u91kYyU/Mr1sFtvtD+KkI+XLclGERP5fcPgVyVhO3dlWWlzeB9lKN+iQzPVT9bDAtXBbS5EEgbdDgvcln5MYCfgoJCbwLll5a8smvzIX8W7ytfMrnYNgQKTJbz5nrWQYPq0tePIPK9n+V175LYwQF11n0TVGAoTtfXBYd8jGVZgOlPsXA1sl/xhVrSfe2vzofKgN5y3OmRw4g1abHQrALyF90D5Mw/jX9XB2FajfvRwvAxufYpAH4kKFLxaAQ+fa0qhT2FghT5MC8QA3yjv5MPsvtAflZh7EBHAcU4WW0a39fzsyTI9WIBKHtHWynhTs4xtg0F9jjITP1DVkwH8yVEz0lT7a2VQX6vnwL5nb2qntWBb7YXiSYo5/UerBP6QTEGe4EYySIvBCN5LX8PKhDTD0rmvyVfZEbzet4N8nVdydHaCsh7h/9tg3z8x7OcN2L0s2bFob73psPzYwiU3nGq8bsVQT7qxyvW7Xhep1t7RL/1WhOAtBYC15UGEwO7qTlvqgtEW+GZ/QD8xPG6NEEp2MQ6sQ+/Z4B/dxDI4vu2A11dpO4ByFVR5P4lUHaOzdS+kvl8CcTaS/ngLUGWgcpk/k3Uv/yl6bowCDs3Bu2f9yrq4Z+X1jRVp8T4cWZyW9/XvorYiaa6MMxS40sqqfoSX34ORVChx3yurXUiKSfycugOjHwd5Dc1A+SPeriS274C5kfviVGgjAe3IbysrN5br7HirnpvuQJUZbkK6EvrHgj889ogX/3NlawW4SqwA/98DZDfpujUW0HpfuR7B/AzVjHmJW9w1rf4feIbuIvF80R/fAfdQTB75OxLUjosvV9PVe/ugFwq8sq9dxWwH49t6Ws5pz6Usw82wVlXGOO+0IFMFOUqIOPZAIErUpJ7oj7/hwD8umpd/3oNgWtczsuwyOcO7EHUpai2LruZZmagZvNuC05t/HBN39ddKgQ3Wgm8i8C0FFdSdVsEeevMNXQBVJdlVvp0ZnDfslijuxjQaMbW9TyZCnE7kF/r3JD11/L7t4r3Vi8CV/3vJegOLrmTWZuifFy3U9+5GOH+e9MQpLtb0RFwNcG6HPbfs5hnkfeb0Z2RYJ2MwCxNAQK5aIxkIkTm4XkEWUKyyrwHruFyK0GMLxhgNE3MywUFAFdJhzWCf78EKICxrfbv1jnfWxRwlb/7UQYMIrrodUVGla7nq2K/zKYnpBnC/jzDSvw2FuBlQT6sn1YKox1zkPepd3yOFfZxfBgDi7aJR9gz7UPZVGz8A6CSeg/w93YCmUJWU/MetTnlOeL7eh2zr99igNinFFEZMtYEmSdvYtkR0/ZToKo9tzKzOSXkoLUx/yeZ/pcBmWK25c/7sHC2Ab0ezZA98iGQ6fZ0pXj64M7HTw5veX8HlG3kDlCez4NArgQrqb+R7++t9tbFfm+lls1vANiZD6o2KHBL9ljRF71fsk5tKBkYwRf9maqfrnQOQK427yLIt/kZBbjC3AV0+p6t1T55ks+FBoo1y8oZ0wYFtMglbRSD2QEvyk6buCV9HJQqTdb73yC2O659hMHkEMid6Xi+dDUcybEmZvp4jxwDyjQguvgMBNkv6nQ5HwRlltkPgUvcYwCei5gf+dl6fH4N8OV+d75st+DWx9yqTa+IcY0zz04HpUo5mtmlERF9n4AgoMSWCay6LnvVjGtSCqcHQT5BuyA8hRNAvpdfQZAmw6y9nsS+Pl0R+yrrK+mgDmQmohnBOibJRBKjujSoEtbpzBC9ifyp5rT83o6gYlAR7KvJNGkA/lV0m5O1yde0bPQK81oV46r/+0tY2JI0WDDjKuO6h981H0HAy2bqOSs4Ylz131xqMHTicjIyZAwjFcjWbgIn5FifOFcBYdQkIGsEgkjsV9Ul81EsXMK7bozrZuh2fYj7NHO81yXjKv24QemYOy3/9seGjOyXQ0aSKmdp0kcyBQnrultOxtk14yp/sx+6S8KvZ/G3E9BtZbvemJ9hCVzjzP/zecF/yIzD0hGKLqo++yqglA2TYJdYPa4ue9HR0WUDV5sUTheDoiDXidi0et71/IwAVdK4BeE+RkluG+ei+LyvadYlL1BdhhnpbwO40VA2LlPNddQ8zmGGs1GC/DZD1v/TrMB0/+TQeo33c2XKrYeAq/7/6w3AWjRwlWj+fYx1vNd4XxHA9f3oTgc2XemhRoiu383QZ2/wvssKHKOA66oxf3OWAYp+7GDvFQ1cVy/pXHMFXEVfbGQQXPshSNfUCvmM5H83M0DWDTn0kE3JVxnfzgZwfSTHZaAI4Cr9uFOdPzeoy2LYnMqlrQngfnRX21snx7zmFrYimj5kw8z/kxBEZ9+LIH2QnuCmmtx2xCI0QKbdHwA4h4HU4aCoN2mDBigRhdgGmTz/wofCMQxk65J5IGuLM/+/zazqrfx5lAXQlAsdvNQJ2VBNVgqX8Wcbnvc9+YAEwt03+lTfvgrKzVd25gGdDkqzWogYZ5zpf1OQ+X5bVpbLxaxFU33y9l/cLBYHuQzsBopynaie3ylYrgZAQQlXgNKBHc77T0y/K4Ly2koi/UYP76kympjIj+R9Obqk+RLZvwLkBiIH1gMFvlPcHx4CVak6hoHgcnwRPhLkWiR9G8ug6CdKFvtAuVTfcqw3GnwhexXdVprVWV9ty7I/EpTX9jwU76aQt53J8xS3B+Wsvh5kjq8yIl7efbA6j6YCuFJddIYi5KrJ++cB1ksdkMn+PSBzeBHjkvfeyOfqh7mPm/GF8CJU7zYl798cgatNC0GgVSemf3JuXwTgAwjSjX2esVfpsuKScY0z/78J4FpQjrPNEW4Kypo7NiygZGcGVDoAJ8yNII59LcKEXQTjGmf+7+fD4RwG58vFsNnNDPNurte6IN+eV0LY7zj29VcIEpBXxb7aMqqns4JyYfp3sfYyj7NAfpJlXEz1fOm5WpPZnhe4T1ehd/ISa8b1TQTJ5n/ngHG9RD3v6hj9Ij87RrF68/nvdnfAuL6g+rGt5fMainHV8/KJnHpSM6qXG0yV+J5fxefGS2p/6aIIefW0rOnxPKZ5Fjp5UPXlM47OisfUvN7pgHE9LcV4zM+PMsi7fHd/BNXFBhAUo2lllNdXEES+n2XZL/n9Ufx3s3jNTs64j0V33aTW6OGYvfshfu887vszCNxMGhnmYSnGJvLu32Qch/TvPH5OPxOGoyz6JnOwEsgvvZ+f8Tjyu8mUDlyTzP8PgMwocSUvo0BClslohGyQjUBJdV9PAFJmXfZVVR9dHrougGtSCqcXeQyHgAJqwoQw6pKQVQhNk95SoITRDyE+C4T2fX0WQSnFoi4OUUA1bMzLs+x+l2/RdQCqNr6vN7HcA8X6vpoypddrPLMOY3McwlUB1xWNuf27A+B6rXreHTHy3TAYT92PPXMC1zHoTq+1o/E8IQBMX8eGOrR0f/ZysE8b6r2/tJT1eUyAuNARpmnd9vNQyPzlafqiP9EBcD0rhy7JA1wPNZ6V5XIjz/qa8az1LfWZ3seaqJrOeyDtGSfve9A4Y+O++y+j71lKEksflzZwwl8zPEtXjtT9Oj3Fs2QNrzCesbvDfZBKQGxbkvl/Miji+Ub+N435X5tldaR5GrO9mVgdfGs/hjfyF0Cmh43V93Vidfn/fVgpHcfUuMxV6ZFzqmlQ1Gds4BmsSLX5f27IWoeZ/7UJW89fWnNz21jjd0AmiAsYjB7B/8q6DKLbbD4IMuVcA+B8vh3PQDGZB0RxmaaRlUCmnQ/xZ1MG4OY6uDb9u2gttX47gXyRTgXwc7jPPBAln3r932VZ1HuzV9ockIViNP//PSn3AkLGfSWDEwB4ImZOtI49EOROM8jr93zOuRxgcLiUAkv6eUMJMmLOy7MO1lbcIwZB7gGXgQI/t0NQZEC+9wrIfeBcUCYBF9V7dIaDCxC4MISNaRYzv4+yTHTgroLQ7xAECk9yMJ67QBasNBkp5Lt3ZZD3jpLtC5TMTs4gIx31728QFBx4BnYuGSJT00AWqI0RmMWXYTluZNjDf+VzFiA3krjz5XiQC2Nb4ZqsrgLzed+NU2ubVR+tyLI2wH36nXF+28zrmUwEyhqPrkLHJzGuSeb/6xjgbYHwkn1xzF4c4zrW2HBZwYEZUDKSmYKbEB1QNGiwLauqZ+VljmwZ1zjz/yArz3NAqT5WTMFmNwzG1WyLKZYszy0qjP1+P4PZd4yxDFbEvq4I8g39Icg8N7PGjGovsa96/X0pTN9s5UXL5tKgWvS7gty+NkHgO18qu2PBQPlWnowU+X3feqiZBQjiANMCEF1+NoOKZVMCpqTUQR8BVQ26jW8rT/GNyUXEdJgf7IdAdeVnY2E/WO1OMA3kuwMH/YiqnJVk/n8ZlDrmMATJscMAugkWkoDqKFA+0SNACeQngfxpLkF3xGAzx7yb7hargbJAPIfwdFoazP8SQQL0vEBImNbxoEjx4QJUbXxfv+5IfheVpk3mLgBKK8PzmkY/Go7H1ajg723mqZXw+yIuX+Zcx32KuJC1HMtbmvG4SIdVhMy6mJNWRf1pOtYhrtan4WA+mg77k7lNRpDaICxd0mQQRX4QyJQbNYhmCGBKAqofBjmR3wxKaxJ1CLvMVxnGBK3DgDksoEiDKM2+ZlVeAhpO5XfMiwCqM3leTgFF7I+NeFZaoDoClI/tUFA2hUkx8/4WA2VXgMd0LVkclN7kzhDGUAfSPYsgrQpyKjGA3D/0u4YDULVlXzd0tI98861odk2n5HFh7fLNN9+GSTvFOOjeBuX1OhnAVszI2QKmOKC6JIDt+bnXojtYKort0nnY5oL8RlzmqzSB1JIM1B7EwpH50o/X0M2+plWm8r6Ph4z9MZD/1qfQXZnIvPFpJd4wbkBhf7MRyLf3zwbLabpKCFg0Wc+rAayt5sxVOifdtucLkllWdAG62dclVT/SvlMuTO/CrmTtcPl49tU333zzzbdh1fYARWnuim6H+DDAFAZUwxiw8SBT/LGgCLtpyG6W1azRbaCgGZesUTPkAN8VFFCh360rA/1NzVVW35vPgxydDwIxYY2IfrUigGpUmdUNQIEdfwS5WwxGzGkSeNOpwt4CsbQuAU8Y+70+KJBuigGqJU3OswiqbjVTrjFAbgqzUU21uCIAaZoxaDm4EdX4vvrmm2+++eab8xYFmOKA6hhQst/jGKhOjWF+sphly6gWFMYEbgrgF+hOhSQA9jFQpJ/LPGZpgWqDQe8XQRU1JiI84EtM4u0Mc68Bz1Vwy77qy5FZVlQSsZt5X9tIX0VIpwPpZeDaRndAW1Klsrh99C6o+AMc7yPffPPNN998K7S1cgDVYxjMvOIYqNqyr0XVajeDAFYGuSo8bYxvBQMYZZl3bf5PMv03QL7G+4JShTyBaEY1K1BNYl/fhHv2VQPMlvHsT4LcS/Q4Tk/57l4FrknZJdqIL7Bhy75uWMBlxDfffPPNN98KazbpqbZkoPpPUJR7GUA1CUTNBUXoNwtijUwgJWXOrgKZ+LOCVhiAuy+m7+uCctBewEC1vwSgasu+rlUQ4IlKp/VbUHaFZdT3hhNwtc0ucTDIJWRjUKWyV5FcqSzJ99Wzr7755ptvvvUMYDXbeFBw1rEgX88koFpFoIs+nO8EpXXSYND1PLk+zON8VL8E4PegkmoLKgSqNr6vhxQIeMLSaWW9gNQVuMZVoJsJyqpxGshnfEzE+JYGuVY8hvAUY2nY1wkF7qM66LsmFk6TE5byqJcj2W3HORzGuqif34uCPPvmW5fQa6C6CR+O2zC7ZUa2C5vTqNGhJn3qA/mefhdUsk5+NliQopDWzvEcqTSxESjZ9jZ8WVg/BADKxUC7FFTddFWWq0E5dyejuwqZy6YVr201Nf23HQauTzMAHKpoHjVoNpnqIQD/44vYjQDuBfmLmxceXUGmqeS8D1Rm8QhQ4nZpg4hP4SZ9aoF8yE8HlUoGqq8a52K/mhX50l4wZb47NR5rWAW8XhmrjcWmivmPInbCdHOvyLOuYNmpeE3r0tLMRRXjGkJ3hTsX8tazVrUGH+A/ALB3jwBVGxB1F6hU4qPoLu9ZpwOmA4qO/z6IKW71AFBNAjxvgfyA/1BDwFM1cNWlYs21fg3Af0F5Vm8HlbPshByeQzGAXfanBixbAjgcwGcR5AFuJ+xlvY9uBdULn1jTfWRzyTEB3DIAVgdll1gJxFSPUrIwF+TD/QqovOdLfCFOem7VwNy8KDZBfvlr8HiX4bHqcqbv8p59BWRRexnkhmTKXZnAzLd4sGTq0yV5fVdneV4GVIJT5Hkey/MUAC+yPM8NkeeOX+Oear1ymS5M6V2AINBmyDjYes2sEMa+nsULWxcQJYfMe0D+qiN7DKjaXBz+CWJfX0Zx7GvdgasGmebNdi5fqm4HFZl4EOQSYN6GhzIcKGFAZm2QP/YBDNignttK2EdzQG4KZ9fwMhK1zlBjHwuyZOwMYGsA6zGAs5XpV3itbgFwPSgdmz48qgSw5vvXBLAjf97HoHWM5bMGeKyPAbiDL1ETjXcVAW5kX+4AYHf+72aIPDYAnA8qmNIsQZ+IRWxVdOc9NtsgnzHvoNuKVtQFbHGW44+ArKMbILyCZdTleQqv8S2gfO1PFiDPsj5bAfhMxJrWpUnfruU5iZMt+d1uoOJJRY1rPu/H+aDYgxksX6+DCjVN49/rdbM9Y0VGR4DKzo/vQdw6B3wbG27J2E3f182MQ73KJiDmGwjK6A6nRPcy99NBfrrmuKsGNEX5uOqgqrC99AzIZ/kLDCjCQEif4wtjWIGNLwN4GAsXn+gk7KObUW/fV5PJ3hxUzOOlGB0xEPMJW8P5AK4BZbkwgUUVsiz7ak9QCsLZiPefTjPWQQawhyEo+gG4KUcapg9Ptdhjd8DOdO9yjj9o0a81Q9bFtTxPAPBjRFc6zLLGAwxe91bvciHPsqZf76Gz6zsW55T87twK+zkHwPMALmddvmYIC5skV3IBmtujOGMAjOR7BRTFRVvHRUzPQ7GZB7Js6pOxcIWqOucOHYB9vlC9PpeBzFiysaoCPEUA1zh5nA7g36AsHFvwDddUIEXVPQ8be5+h4D7BLIOpENox+2g2qFBJowb7CBFgagtQaeY20hc6idI5YYFz98JNGeKsY22Acjc/DjdBm3FjfQkUpDsmxQGZVh9+k987LwJ4Se7sb5Q03011AZICKLo/8v+zlH5rOn43QHEnF6E7k0wR8vwwgE87kmdZ08MS1rQOH+nb8SmA6xkVjCuKWJzF8rFZhPxEAdfRvK/DZLuuH+nnVCAovVrH1EBxwCBLxPQdoKAzOFY0WTb1SehOqt8ruUOHEjZSGPv6Oh+yVbKvLoBr3LwsAPmpnsWAZpkEVtWGcWmm/Ju0LA5AQYG/BbkqxOWDLbp6Xd79tBSA84z9NAD3rLpZ/OFPaq2LlGs9z1uB/PjNKnhFj/UpBIU/XOlPmbNjE/Sh9GcOyN2jaP0tz35/hK7oKFJk9QLmYwyoquL8lHo37xr/DUGsS1/OMRxR4zPOLGpzYgrgemaF44q6fCxgRn7xhIuHBq5Taoz9osYupBCm16jzScDgQTa33mlp6gxjjeYD+JZa2L6STX0i/CfUaFMnmblfBHAxgL9YAJwk9nW1itjXLMA1aV4mA/gzyHd03Rim08b8llQhzSXTFZZibHU2107GwvlgOyH7aC6zFFWyrzJPOwB4LuTCZFsy1/zYXqpFJp4D8IEC50Gv06lqfGlcvPKM1bQM/RIU0OaC+bQFrlqX3FIA81sH4Cpz8QFQ/IMed6cEeZb5fRnkw5lVnj1wLffs1v14SJ1FLQ9cqwFMk5gG/1IIMNgOwCWsOGyBlD7Q7mEzUNmskQj/URULf1jpUPm8DQpEOQEUmT7aADinAXghBuAk+b5+sQITqy1wtZmX40G+b6Mj1tf2QNWMatjvNgQFN3zOkP+W43nRzxvL++3emMuhnpvbUVz1Ohvm+CjVnwHYX4zbFoeBDWDQZag/XgB4lXEuAcqnbQvO047Vhs3T4OZedLsAlQFc9e+PKvjCVDZwlXF8SZ1pNoSM7RoPWlogZH77We9kmWMPXKvBUuJOMgWUYjNMJj1wLQAwvcXA4EQGTKMsWKcNAPwEgctDUuUgfUNZAOAUg30drsA1Tnn1g3yczgZFTC4fMe/6gBoHilS/LwX7XaXvqzx/NZBfkGYoouZlAMAjPC8fj5kXW1N+HFAFg9N9QJk+njQOo3kAfoYgrZVrS0EzpF87g4IA+kPMlR0DtB1XEvuqQesPQtjPJMBlyuNMUDqyKawL50R8r2NxIV6AwO/VxeVCnrESW5tkr3YyjnUGj3UqKDp5boq/N/WFWGLem3O8aYGr7NdZANZxaKKvErjKHJwYoStt16jN8jyN5fl1hAfsDVrIkOjGvTLs6TTAVeOBKj7z+d8THANXV/3TPp5pLtKTQNkmzJyzGri+rN6Rt59p3FLyzMUg67DCgWsSYHqIgcEeAFZIAQxMILUcqGTlE5abVE/23Qh8X4tmjcoCrjbm/78AOBCBz1gYkDEvCmEVxD4KSoE1YMF+V+X72lDM1cwY5f8SM/kHgQpB2M5LHBiMGtdaoIje8xFfIc30M9ypQMY6zA/2vQDOYbATppi172vR7KvM5Y8tLkomM/kGs5bHMChfn5X7OL4QLMGM/AdBKQIv5cu0LZiQALZNHAAq+dsVQAUpknSFOdYZoODAE3h/rg/yxR2rxroaj/VgkK/uiwh3hYg7IF9HkG2ilWM9j02hD2WcNxfoMlAWcDVjHgZTyPPbvMYngnKCb8jnoMjzeFAu3y1Yz19kEDxJ8tzmM/pDKde3lxhX+ZzWQ4xrElCUfl0esm4auM7sEabV/MxtMHBdDu5yWupNFnYIvsRm+ptBAQbPhCiMJuxzWJp57tJUDtL5KhcA+B4LpfysiMTbkgfzKFAwyaBDwKbny5z3Gcza3AxKLP84K12zb7bzHpbwfhNQ+dd9EOQWbEf0R+d9vQwUVfwKis37Knn4fg1KzA/evA/zvNwCynE4N+O86By8YblO1wb5r23HFoUNQ6wKUfl8tawCwM9B/o6zC5RVcy1WALAfA50Njb0luQHnglLL/ARBYYq2471zEiiyN27vaPl6EMCv+JB/I+U7VwSwP8vnisZzo975LAMezWimvTw0+HC5jYGH7VifAPAbAFdg4YprSW0Mg9wj1eXIZryvMLh5BelzrMqaHsuXEVt9KN87CuRz6zq/sIzj/YrtNs+OBjN26zN7lXXsX+ExxFW30zlDn2B5vpLZ1TRtOdbPxzDgjltfeeeroLzAb6uf24zrCL6Ux63pkSC3syJy4NqemU3GIZMT+iHjOpMvhOa4dNGHg7Bwbu60bSwoFd0KbF3YABQUO9p4X9z+2IP1nqmHW3wOjXKA/Vqg2KPlQ54l83s/nwt5cjDLs/tdMa5xtdZngJJZn8zKbfEIgch7aw5jArcEVXF6F/YR03cj8H0twgzlknFNYrMfAZmXd0d+M3eS4OpnrMQH0f8QnwXCZF8PKJBJ1LfNBihJ+04pWf60jOo6ID+x89iyMA/R+Rdt0xfp7z0JSkRe5JzJOPWzFwNV47oJCwdQSt/uBLCxMe95ZQyglD22LimvM8huhqxty7gc6OqA+jtapi+xYDxkP5+fY030hS5JR2jm8yvoTrvWzDhWgHLVPp1ivA/yIZhWj2dhXMNcBlwz/EUzrjLfOyI5Q47M/zt8boxMscZRQZ/LgLKJDCXoHlmPS1LIcxrGdR30TktiXGUO30V4/IOLtrYiBYYSZKbD+7KMErWTDcuTKbv/dP3CLMA1DjC1mbU6j5XfSimBgVaoWSY7LGJ6LUb7L8IuYloyD/QpgXWdt/BrGYBrUi7bl0DmzYNAlbmigFbY4WLOeyOjsteKbRQDt1sQ7werx/IPlJ95wNb8b2P63wvAL5jFne8AqCYBhiEU6/tqczn8PbrNTvOVAv8k8ieNF3lcjVmfODO2zMvtCAo9NHJcjM0xn2oB5uR3W2UAr/LdY9DtTxr3nv8o8JRHBkzdOZ4v/kkmbOnjbzKMNytwDXMZ6HOsE4oCrqJrl0UQINNOGOOD6HZd6nMkz1+3WF9Zk10t1zcNcN2cnzcCgftfFZ9mCllNAq6zGPfoS2GWT5/6mPrrU0wUxJ0jIlPbRaxb3jmTfo1S2CoKuP6LvzvS0XpZ53GNA0xTGHAcBopma6QETElAtpVD+ei/XYIZmPthFzF9H4I0N67YV9MRP00ktPm7dxgUnsKHZBo2u8j0S2EAZxuQj9WcCPZbs6/TCmZfG2oDNBIOlyRGdV+Q2e4RR4xq2kBHzb4W6fsaNn967tYA+YmZlX2ucgAqZCz/SgCNskeuVKyUKzCjg9dOTdi7gwo8p9Eb8r2N+VCyARPnhegWlxdsrats+vOJlPKXB7jq7x/pWO6LBK7Sx4st5egmkN8qGOC5SolnS6LIuj9iCfLSANdNHZ6tdWFcZyGwcBbhey267QBLffibAvSDHtsIC+B6tetz6a2YjRkFmGaBTIHfZjQ/LiVgigOqy4L8abYEBUqYrEveQ0faLiA/MDNhuRkxvYAP5BGOGK2kAgRxKU4GQb6pvwCZTFdMwWYnAdXRIL/F7UC+qqMdgKAwgLMOgO+DfMLC2G+9Cf9eIvtqA+TXBZVsPZ+VeJGMalb29eyS2Neoy+FYUMDdPSDfuO1zylBLMQw2h/wd6nAv4sIjeiDJbUD27o4pxi/yfYvlgXSm+rtmQXvC1rVJ5P1lZmpt9XVe4CpWKNcuA0UBV5GDD1vKzyNqPxdxGRV5Pj+hP/LzPS364oFrccDVXLfLYtZNZGiyArsNx/qhMuA6B0Hqi7go9KdBPjF7GYAyDDA1UgLVXRjM3AoyBco7Z4OCEz7jiEmKipg+F8kR0/eBqgzl7YcI/yn8/AUWbPblIP+1jVOw2UlAbAQrjS8zQHzJWPfJIPeK8Y5AUBj7fTiCwAeThY1iX12bA6PmpwFyt/i8YlQX1ASoJiXEn1gi+xp3ORzrSDmOBGVT6EToJhn7NASuSUX6+zZBQROvxvRJm8hs+mMC9CQAcaH6uyIvJxqsfy8BiMjPv5tiDdIA1yQf0Jsdrn1RwFXOx3sSAEcbFB+yTsHyLGfiaFCAUpw8d5iwShqrB67FA1fZ9xOQnFmlDTeZTmoFXKdEDPh1ANeAfGA2CzmUGjGAKQ6oLsMsxOkAbgTwpqWSuhSU2sOVsjYZvBVAkcNPITw5t2Zf+3IsgvzNXhHjnsdK7Qc8T+Mt2ewkoNpiIT8clAbruYSbvnye4YuFKxBkApwGKHfsv4x3S21izb6u6mjzNSIY6fVAUfO/ZfA3UGOgWkf2Nexy6CIp+z4p2aCi8zHL8/eP6ZeQAfNBvs9JcyHz9jCiCwzI/ngC5FfWLHFNZcz/SRiz5BJdEd1ZMfIC1/kJ4NW1y0ARwFX6tIulPB9ckjxLv3ZL6JesbxLY9MC1eOCq5+yOmHWTn+1TgCxVClz3YfA6A1Rr/Se8sZaOEHAT8CUB1aVA5sJTQMUFpiPefzYs6lwGPxVBNQ+XN2szYnpvLBxQtEAtyn2gFDVZBVNYpN8ya/M/ZlD2V4dcEpudBFT7mKE9hJ/9VMRNekCxnJ2QNZH/P8cxCArzg90clKrqHaN/CxT7ur9DhbAhHw5/6GGgmuT7OhGBubos9hWO1kjk/d4YMCc/u7akQ17vvRbIdSfs0Ogg8FP9ekLfZE12RbL5uA1g6wrWUtZiVT4rovaD7KHTLdcjCbjKXFzD5EUSaJ4FirzO6zJQBHCV319nIc93l7zG8p67YuR5Pq/PdxLW1gPXcoCrnMOnx8yz/OyU4QZcATLbrhTDjpmAKQ6ojgewLciH8z/oTnicBFRtk+5ehMC/02X9dpuAovnq330dbLrFQxYzjM22BaoHAvgjg+EooGpT3jHMBF1UAJB5GVqNN5oO9NHs64UZ110YoGWxcEWoXgaqtuzrmJLZV1eMV1zNdZHPLVCMX2vSIXaIcQEM21uPJAAp+flVWLj2uLmWfykRoEeN+aSYg1L7ui5ucXjbAtered/ORHRWCR3MlFc/uQau8rv3IL76WRbfaJdr+xkLeZ6coEM8cC0PuAKB9XYwRm+cO9yAa9MCMMUB1SVBAT0nM+vxmiOgmlQ55FVQLknXICosoOg9AH7I7zSj+vM4PTcjWFUboNpixvBAUNWbZ2IYkF5Jv2Sy32NA/q33hPTjqxnWXeb27+gOChsuQLXO7GtWpXxWzOEnuuC6Cg4/kfml0F1dS+evvgvAT0FJwBsJMrkqgoIFHUSXqp5QMkAPY5rHgaxfSf69n7Q4LG2B620hF4U4PfWVnDLuGrjaZJORsd5XkTxL0YuXER6QfR/I8vYZ+OCsOgBXWYOPWgDX3w9HxtVMWBwHVJcGsAMD1f9EANWOI6BqA6L+CKoG4pJ91YLRMsb+ZZAf2hDIxJzXJJWUKFpvmo1Apu0/M6M6iGrTL+1QEAgKY793ZMApKae+l3IjilwsC8ovOpiCdR4OH71nforyfV+zgqQnEJ3nUuT/MxEyU3QTmb8I5Kt/HSgwaReEZ/yIOwwPQ7Kf2g01OOSlvz9AvHmyo9hhG5CTBFxvVHJ6DYp3GSiKcb3LYp0PqYhVl/edCwqSvpHXeXcAq2R4jgeu9QGuRaTEqhy4NmMOsKUZNJyKaB/VooFqFIiSSXkRQWBGEUySyQQ2QNkIWjmFsxEDVBcDRQIeCjKNPx1zeFeVfqkD4EcITIKuQVAY+z0B5Oc8KuNBtDaSAz165dNJOYZeYV9lrdaPOfRkHNMRBDCWDcDlwrkMf9Lsb3Per0S0m4Douf0rAujm2jT4Ej0Qww5LTMKYhLVJA1zl/ash3s/WBPqtHDLoArjKz1dG4HYW9bx31aWnKnleSpFBaeXZA9fygetnLYDrj4YbcDUFZnlG8N8H+Qq9geJM/66ZpD8UyL7C8aHRCAGqm4Gi/v8K4HlE+/rWJf2SvP8xBPk6iwJBefO4apPs7B4FrlGV09Kyxyb7OqbAPZPngDgAyUEHf68R8LatwGbqgLEILFdRgGY2gjiEqg956fd/Y9hw6XdSIFla4CquWQfBzmXg0Izy4RK4yrs/0SOsepg8NzPsXw9cywnO+paFnvzGcAKuTZ7sCQjyqD7NzOopoECcZRH4lkqn0iroooVJmKcDATzA7Kv01eWBJgvRQL5UNA1+1mgGqv8Amf4fAUXV74Mgf9+gcUGIypdbFfMyyMzwrXyrG81z75p9FaDcRG8EF7lqAla13Mnem8WApqX2cjvFnhkCpYC7H5QQvYg9k6f9n8V3boVd2qUymCpTT9qCow2ZZRsKGUeH/32EwW1D/ayqJvJxk9FHc78CQdnbhkM90MckxbX83+2IPnZAWXLWULqjSqC/hTpHws4WgHx5G6gWyIXJcwe+1fFsGFKkUSNG9ibFyF7PtSYo4fUDDFR3AJkJ6gxUo8bR5P6uAYoY/wOD7nYB/da3q6xKbBwoYfavQVT/WgqoakXRVxOgmgSCAOA4kAP/duqm1Spgsw5mmHv5/jxQVG9dm+kG01SXlTYo/dJ5oMppGzDoORpk+tcuLUngSV88Ngalf/sJiH0t4uKRdo3B/YpSyDLOh9R+rHLN8uiCTQ2wFya397tkLByMFwhSNsWBrPc7PjBlrRugAKxZiggIIwfGg/z7hioEg9K3CTHyLH17IIc8VS3PeUByVZ9ebS1eo3VBWZzCzlr52QCfD8MGuAIUjS55Sutg+nft+/rpkMOuaqAHUOlQSas1XAKFtO/rWSjO9zUP67E0ossc18n8L59XQObww0F+hVFtBMv6DQgPlLF1+3gCxL5WtWe0+WkSws1P0tcZCHxLe/EQEl3wcyRHmn/B+JuqiQLwZXtBxF6Sfj+UsD5ZfFy1XB6OdC4DfSnH6MJVQEDSownyvICJl16VZ3NNbVwFNumh8dbFVUBXs4vLbSxy9lhBxFelrgIr8YNH1phRTTumFk/YGgD+WTD7mrWtyYIeVtShlxWWMF/Hg9JYFcm+9mrTFyzT/D8bwO2gpNI7MFjdm1mjp9Q8t9SB2MdK9AqQf/qWoBRps9WlIc7cp9nXCYp9XbzCPaMDRBoRDNYUUPRzrzIJ0ud1LJi4Z2s0TunDVJD7Qli/pN+rgHx4h+DedaiP98UNsHcZaKP8NFNDPAcrJMznNFDe80WpiUVxhPrvsj4jegzvNBRWGABwFChQuR1xtoq+/7fCGsNGaBaAzNZDNV5E8WGVQ75jHLhJIOpAZpG+yYe7KLR2xWNqot6+Q/oWqc1xTSRH0A6CTKC38qHxHVCeyj7Y+wAOJ6CqfZR1Hs4hBqR3gFxH7gflCzYP34Z6xqDxew2Ah/gZ94NSMx0I4IuKFerEXCL61D47BsDHQG4IN5W4Z0TOlkUQNBZ10EtAU933URz4AoJSxmEAvQFi9aYah1HV8tzgs2MKA8KhmAvI8nyJajje9yKrh4NcaMaEnGOyb8aD3LI+psBsmcB1CVDO87iL2HSQBc71PNW5XcFjbpY8ZtEb+4Pc21zrNlfuCA3jTJU+ngxKVRbluz2kAO6fa6Q7nLXpqF+Etfgx2pg5bb+jMw8sawCCsi8LQHz1mTqYrZNcF2zcG+pogi7DVSDJ/D8F5If9ZXSnVdN9zeNTbqZvWwKUJ/TBFHtHy+XP+XIr8ltGipetEB2xLn271NhTvdRkDkch2swm//8q7KpQldlknf6J+JyqQwj8XFsx+jCtq4D592ldBloWewjI7yogP5sQs9dkjP+JeU6vEWKAnatA1Z+dUpxHaVwFlitgXkeCipncFaMbTXm/pMDztjJXgboofL3wzZCDdzLI7Hwzs1Or8k1pDzWGwRgmMIx9/QYod2Id2Ncqmw4yaxk3vOnM3N3NazAGwAdBCalXtWDw9E1RTNBnAzgNlM9wOLGvWnH1GfM4B1S04hYQA/0IKF+jKaPmxS3PmkLth5kALgDwW2acjgCwW8Le0ezr0QB2Lpl9HWPxnZnDQG7GqEtBFCh9lwFSHYF3nKuGsJ/jC+zHIMvib0CFKHZGuOlUuwzcAKoOVQZTL/O0uGJSoxjXWTW7nJR1/lT13iLXX5+lac+3PlB6zLGg3L/rg9LK7QQKyAWi3QP0vpsPyr8/7Bj8vooFdijioH8HFF15K38eBZmlpP2Xb/qbMJO0L8gkJQsalk5Eg6g1QSaKPzLz+bpSbMPdRGOarfU89YNMbrfw5wF1MEn7E6hs4ecYAL1P/U78xxoRF4cGyF1jF1DJ1lsruDgMFTCP5mVrCJRW7g4Gevchvfnf1R7TLjZtUAqha3ndDgXweWPv6Fux3jMbMev1c1aGswu+eIy0+M7cHt6HcpgsBkohF9dmY2F3nbq02RZ7bWwJe1pcBh6DvctAmcxmK4U8L0rAtTmM3q0vKXcicOFKK8uLgSwx40Mu8HFEkb7MjQBZMZ7HMCXmynIViDP/DzAL9XNQkuYVIjZ+nwIIWuhWZjD1XMj7wsbVVgfuy6B0VGkUjIvLQlmuAklm6xcBXAzyg1w3YnObTu36d58ElbrMYoL+idqYRZug5dnLg6LR08p80jy+xpehI+HG/K9LL/c5lMuwvXMCguwiUXtHu308hcDE5nrPpKkG87MaXMDzHpprIDky//YaHPJReuxMJGdE2CNGTvK6Cphyk2SetnUZcOUqIM//MJJdX/7Uw/IctqZ1dhWQdfhwCh1mI/NFfHTRoaTv9vO/F5WAZyqtnFUUcE066F8C+agdioD+DgNMcQe96VIwBuRCcLclkNKCdyGCFBZF+r6WAVwlYj1s3meAXC5OBkWfLx7Rx7g5CKsgthXP4Rwk+8Gavq8fKeHikKVylr5smb+bxXL2PVD0/xIRh5ZtxoiGcTmLGkPD4XzouR4NslzcnrB39Fz8TLFpri4e0qfdLA76s4cBcF1fjdED1+zAVT//BsT73bZZD66O6GT/roHrVjE6Z1EGru2KPgIEdygIuObtX5Zy3tKff6Kc3O/DBrjGHfQzGTCdAmAbhPuwZQ1ICQNSO4EqUi0wFEQb0XlfXwb5SRUJoooArnFs9iCDw18wO7piApuddt5NYLYugDNAAUhhcxwXAOQaBIUdRGuBfH+iDqO42+3/QL6ieyPw8Y2ax4bl3EXN+ziQX9PRLCtFBbaF7Z3tQWWH50VcQrTF4knH7Kv8/UcsgOv5wwC4rqVYkijgeluNges5NQKusu/WAvkFR5XFNoOhWiUA1w9YANdLS2DJPONaXHBWVcyx7sdv1flZtMtJzwZnxaX56fChdjsD1v8iSOkCg9nsYOGAlDT+XGYp1g6/82ZQUNDBoATeEumnffm0H99qAC4DpY84AZRXr46+r1p5NhSzJ+1VUFDVjSA/y6eN/otPpmYgsvajbRwazzOb+2NQ6dpDAWym/kb7weqguaNBOUi/hmIDgPrU2JPmcRrIz/cmluOJRn/kb2zmUZcJ7oR8fzzIZ3sbAB8CsDnIjK/b30E+wlMcymXY3rmdPxuAasLvry482q9XfF9vgnvf1zkW3xmH3m9SgGREzHcWU2tVJx0kcpt0sM0pqU+Sq/IFUB7p83lu+0LOnUEAuwI4BMDvUJwfoMzTXESnnJSfjanhOhfdXmLwX/alTIKzZvfYfIWdWU0+809h7NJYFOQoDeOaZP5/lQ/Xw/hAa4TcYqNY1TAGqpGDfTOZwBVAuSmfQrQvn2aSXgUFILlmubIyrm3Es9m3A/g2qPxbGja7EbIujYwMrF5j/f+fAAUEmSbnNpLTL7ly29CHw/SIOZ4D4F4AP2TGL4/5P4lRXYoB6rF8G50Ssd8GjLl6DUEVpaLYGRPALwsKpns85Dat948L9lXmaiMkm9D/XUMmMq08Lg3gzYhxala7Yfxd1U3W9mpUmw4rrm83IrvLgCvGVdZrNQQWjCh5vqtma1wG4/o+nrcRSu+U8WlmOFvKdBXQ7n4DMZhrMihLTxUpPmvtKhBn/n+XAdNpDJjGpQRMLUQHnjQT/j/NQaifPxLAXszGRvny6bFerNgmF0JhC1zjzP9tkPn/1yDXhpUjlHeY2VoD1b4Uh0AWoTaf/38gU8ZMRJugdQDQro4BmsjQvgwAZ4OCkv4IYD9QtgnbeUwLVMfzHjkJZKJ8PQaoRgUVDhpyuXLBysrcO30APoXwYLx+4+IxPuO+baqL5qyEg/7+Hj7cbUrbyv9PReBG06hZ/++PAIe6jOnaMbJQBHDVLgOzkOwycE2IjnENXMeBLDhxF5SnVR98ydf6jqtKV4EOKAj9QlAA69iCSYzaAtfXjc0U5+fXYUBxPgOmVVICpriDfQmQb92pAK7n99zFTE/TEBxXQGprFoDZIUBK+2W6ZF81cO0o4bdhsy8HRa1PiLgIhF0STEY1rK3DwO1CUHaHB0CBL2sqhZyH1TIZyjX4sjM5hFHuGArhFwoEufB9bSjGc40QmbCN/reR5+1A5pv/IKjylAaoxl1oBNB8IUS2ilBQNpeQfrV2T4NyaqYFrw11wZycAOheQmBG78WDXvp8dwL4608Af1X1e3EEloIoYDcN8XlqiwCuWkd/GXZZBr5o9McVcJVxN0CpuoYiztUhUGGUpRcx4Lqp0qWNCj5FANc2667nMnyeB5V3fpwvhdeBiiadDoqt2BgLpwrsq0heKgWuz/LLFkQApqmgRP1HMWCyTfNjc7BvA/JFuprfEyXcdyDwk2zkVN6NkL6uCyqf9griTfMu2FcR/iOV4huMYbO/w4Dels1OAqoNAOsx4Pk1K9MFEfP+JsgHzBUwMhm8caCCEPeFHCaaiX0GlPvV1c2yGXPZygpUl2SgeiLIhO0KqMalSJH/vrQE9lXPgXkJOR3kV2imZOkAOCDDmsnzb0sAdPP5/XUBdGmC8/R+uijmIJQ98JGKWJW49VlfrU0UK/5QAhArCrjquYpzGRCS4m0mYhrGRd0FcJV+XBXTD3nmhBrJcxPZotPTAte6jDcvcNWVs1ZmQDeS/03zsbWEVlH5szbA9ViE+/mdAWBHhDvftzIA1SUR+PT9KwKodgzQooHjXAYFLtjXKCC1FG+2h7FwbrQBxXzuG7J4ad7Z4JtTv6FAJzKbvRfso9aTgGoTwIYMEP/A74iKAB5Ad7oQ+d2VILObC/ZVK0TddgYFxvUbAFaD6vOUPLYcbLo4hZzkyjKe5fkEkKlxWsFANYl9LcP3NW7vjAcFcpmXkBsy7Ff57vk9BujSAlkZ5/Ex45SfHR/BfFd5gNvk2v1rwvoUCVxl3tcGWdWSXAauNggBV8BVxngGkjMwfNbh+VbVxcwDVzclX023vjJSXPUMcAUoXckJIPP/6ikAk41P38lMd+c52LVivFMJe8ORwIcFFO3OzJnu13z135cgcIhuZFzwLUEm80P4pt20YLOTgGoLFA1+AChadmLEwaKBapJ/s7CvBztkX7UM6bYRyE3hdYT7UD6twErT8SaMA6pjQbkYj7O8eBVd0CNqf1xSEvsadwn5KKgYwyTFlLcyHBCHWAC6EyoGdCKDv+IL3uEgvz2byl8yJzshOvVXnB9m1Qf4uRbr880EfVEkcNXP/xrSuQyMLAC42gD9syoGriJfZ7HMfRUUQDXKM66pgOsKBjlSpAvDIgtcYQmYkhjV7UE+fdcWcLBr38d5fGA1HW/yMCC1OTM/b6u+CAv4JChaNIuwxZnOtDk2KZhKTP8HAPg9yDc4K1C1AUZXwp3vq6kw9bOWA6XIeiJEuQ+CUjTl2Qg2eVQ/xEzXv5hprwtQtfF93dfxJSPL3hmREwxuAvvAmmaFins0Fg62m8SXiEP5Ujoy5u+XAvk3xgGkdwAsk/Gi7HrMstZPxQBu6ffWFTKuMC41tyI5y8BbIJcBl64COmdvUpW0eypeY1nb54z+vQDKi34kg83FkOz+sSgD1+VrsFeHPXBtRQCmJKC6LQPIMnz6wkCUS9/XsM2rn7cKKKDqWaM/e+RYkGaICcDGR3UDAF8Cmf6fRLLp32VxiaLY1ygGbwSAPRFUw5HPP3K8O8pCIK4sV/UAUK0j+xp2CWnmVIjPIz6g5R1kt3y4Yqe25v70R+zFDl/mwy648oxrjD0Wtqb7V8zGaTn6YAxolZ9NQVCZrwofV3O/vwfkCpeUteMq1WcXwFUD/ocR77c9D9X5bcv7JiBIwRQFOu9UF9OGB64euFbFuNr69J3ISrgKn74w9nVuQeyr3sxmacx9GDRfCsoLmofet/VR/SLI9P9ESUDVBhhdURD7ajIl0j4IKot4OygwJCsDIxtoS1Bu36Q8qlGla+v6iWNfWxUotjyg8AIsnGnClMV9UY27gLzvrJCDTHz0xb3owgj9JP9/GJL9H++swSEv6/JrxLsJdEDJ0JNkrgzgqt9j6zJwoNI5LoBrnKyY7z6yoguKvO9EC3mOAyIeuHrgWjhwjWIqx4Gi/iXvZFmMalYQdTvc+74mASlXN1xzc2zIjOrvkc9HtQxg9AYoKAcFKduGQ7ZQ5ntTUNqv4QJUhxIOYQmSqYJ9zQuQPoZk/8+bKjj85LK6GKLTduk+fiJCceu8te8iOqe2PHvbCi4guq8NUGaVmYiupy593a1GwFW7styGZJcBcc2Y4Ai4yru3jFlj6c+DBZ1htljg0Zj5kZ99MUbfe+DqgWtpjOsSCHz6rkbvmEpN39fj1YT2FbRYLSRHpadhozYB+cJdDAo+atcMqFbNvprsd1alLn//gFI8dTf9u7xkTGFrAQrcH66V4mhQvtY4s3QblFe2USKgk7nbE8mVo95AUIWtEQNq/mzBut5eIXCVMf8c8dkeOiCfyFFItkaVBVz1374HlGUgyWXgL/zdoZi1tQWu+uyYiGQ3i7KzZYhe3RHJfsuz1SW46YGrB65VANdVQb5wVZr+i2BfNyuQfXXF/O3AIKpXgKqN7+thNQVGMucrgfzc2hi+YDVpf5jsa7PmB4VNGqHrSpY5Oej/i+RI8T8lKG2deqkdw/bLO75Uwf5qqUv2gpj9I2M+2bKPZQJX/b4klwFZg1+C3NFcAFd593EW8nxvBcAVCGIJouS5AwrQjRuvB64euBYOXG/A8DGVmuzryWqi6gKidDnCOQivVtaLgEoruqtB1biKZF+zAtfVEF1KtNc+7ZT7VF8ypiEI9qmKwbNds7V4P3cSGLLPlbTX5fn7ID6hvKzNNhZzLGO9Eslm7Blqf7VKOqBafEA9mNC/DigyfznY+f6XDVxtXQa0fmg7Aq7y++V5DZPk+csKGJQhz3FuOfrnuyfsMw9cPXAtHLjOxvDx6QsDUXeBUlrVhX0V4T8a3am1hptZ+q2asa9NZWGY3aPAVV9wzANlENl8X/+OoNhFHX1fRdH9PuYQ1KmM1i4Y0MnFc1lQ4FsnxmLSARVksNE78twJoOwEUVYuedfDoMDQog997dt/QQLQk7U5KcUalA1c9TOSsgwMWfw8DXDVc/ITC3mewwx3kfpTiIUxoAweUfIshMr/GKj4AgQeuFYKXN/skUNcNtSA5SGt2df5zL42C1YCaYT/24iOlq4jsyeAyUZOTPZ17Rqwr70IXE0m3vz9y+guUzwEe7eeOPa1bi4eDWYY58VYJGR+nkCQ77TIDCP/TgBx8vNPpeiLDajRz74eQWL4VkFzL8/9LpJN6x1QusDRSF/2tkzgqufraAtw5RK4yrysBApwS5LnSaBUjEXJszzzr5by/CWLvnjg6oFr4cD19Rof4gKY4jZTUr9N9vV9FbOvIvwnZVSYZQOmKFNWG/bA6G1Q8FmVwKhXgGvc5WwaKAhOkoAvzkzJx0BFEjpY2B8tzSXjbwb7WpfDRFfzsQF0D4Ii30XWGg77AMSXojWTyafRM/LdsQjyRbcT2M0bQQUMXI7V3KM/ThivvoDvlPKAqgq46j7elgDaXAJX/d6TLOXoKQQlt13KcyPlvnoCVEjDl3z1wLVy4Dq9Rod4HGAaAPA4KPL2FoQ7jWf1fW1UIPzH1wi4JrHZrwK4HBTE93ZKAGuyr++piH2tK3CNMv9LjuJ7APwAwIdBRT/i2v+BilLMynHJmAZgvwjAVqWCbIJS9L2IaHOmlrfnEVRtkn2XJedvS83BaAAXWYK4NigHaNo51GmTkgJjZaxPqndlHauMVwPWlRHvcysfKcf84wzjrRK4pnEZcAlcRZ4X47WzYTpfRZBpIK8896ln/NLiHJLf7Wy5vmmA6+b8/ZEIivFU9bEdlweuizhwTQJML4N88A5FkHBemiSjn5PikNbvuBMUxYuSb3wi/EdWDFzjANNsUGaG74AyH4wzDrOTEFQ00sx4xwIYvYMg6KBM9rUuwFXLfJisPgvy59wHQQUdcxxmpTWTHV0HFIn/KtL5werfX2YcyFUzImZe1wELQNcPMnEvETJ/LTVv+tNCeHnlHRDk/h20OOR/lENRmzqi32LN+vmCs0wIEO2LGWtYdcQ+AIcgKMphA2puVs9rZBhrFcBVr09al4E8wFW/d2ulD5LkuQNyI1k2ZI3TyvOWAO5OIc+/SyHPaYDrWj0E1DxwrQlwbTBwXY4fXsYk6wU2N9MsPhxu4c/DDEzNDS/PAIB1QeVHD0CQ4kee34p4f5vfLcr+DJ7gPjXxRQr/IICjAJyn3lvmvIcBkacYzN8CCih5OULRtvnfsQA+C+BwVoLSBmMOr7Z6zrUAvg6qid1U61YkcO0wcH0aZGIvS+Ylejgsz+gboJRoN4FMlhNZIZosiV6/uDE21BotzQD4UAQmOVmHKHOfvKfFfTseQTonkd0qD45BAGcD+AbP04iYORe5egnAb/gSPCnF+0YC2A4UZLhXiAybTfbyf0GFAtoWa5Y01p/xPrEd61QAfwRV9ZuY8p2rgwolHKLkxWa8EwFsz5fSRsp9LOM8lhlbUx/K+29ixq/pWE8I+9nmy/p2CWPW+6QBip9Yn/VlM+PYT2OSIGmN5aL6GihQ7hIAz6QEy1uzPviCGnfUWOV3TzFRpNOC2YzrCJBbTdwZ9x3en62Cz12btZwOcrlKGteZoGqd5rjkObOZPJjO/z+E4dlkbCP4HF/D0EVahv7FuqWlzqdaM65xASYdVnq/YRC0SsRm6ws5aM1SrMsA+CrIncB8dyeBXboXwBYlsa8i6EeVwLjGsdmvAfgnszqbhCgvfZNvhPxct4+CTIqDxk29bcG+HlES+1om4xrHZs9jYPMjnrelImQ+j4+puTdaAD4JqoA3ZLFG5v64XLFKVfq+atP9DRZsZMcYx1y+HHyfgegH+eK7Co9vY2ZWD2Vg8HQIU57EfL4KSrmWV4/oS84f1Fg7lmMdZDn7OV/qtwWwAcv/KiDz+JYA9ubL+y1Y2MUkbn/0KwtBnvFWzbjqZ67HMmLjMpCXcTV16WUW8mzuywWguI0zQangtlTyvBqAjfhCcTCAXyEofDCEeP9p/Z63WG7SjC8N41qnzxMJLKlnXGvCuBYFXOMA01RQgMlXGTA1LQGT7SE9gkHwTUj2g9W+rwsAnIpu/58ihK5I4BoHmOawkvseqDrKkhF9swUmYezhJswiv2kI7mCCAr4Gxfu+Fglck8z/z4Nq1e+PcNNYM+Jy5kKxmJeBLRiUzUCyi40GQ68jiCgu+pKRtI4NAONB/r82h30b8bXp5yE6LV0HyS4WA2qONnGooHVg129h5w4Vl6mkzQzhPMT7VNo+/xF0B/Pl0YdVAlebfhQBXPUaj7K8jCWtscjz/Aj91rEA5vLsGQC2yrC+aYCrnFdVfubzv3d64LpoAdckwHQ33+p3Qre/mQmYGjkn0ZyUrUFmzqRgFa3E7ymYfXXp45qULul/DFL2Rri/ZMsRYDLB7kogE/MzCQpTg4IZDOaLAkaugWvc5ewNZjePY1kamfNy5oqp1Gu0Ol/UJiHZV9lkX9cs+JJhu5ZLqAtqmiC0uKCntjrQbJ4n+3cSgPe6Vs4GeD0d4bl4bcbazjgfUXJwpbr8thzow6qBq94jNr6froCr/rvRCILh2hXL81QEAX99Gde0VxhXnQXEA9dhDFyTGKZnQM7c+6pDrgjAFKeA9HPXAgVpvBxzSJt5X09F4G9URJqZr2Xc1Enpkq5kNnvTEIVTNGAy2e/RLAN3JLDfeizXIQjEcwmM8gLXuIwX80F+qmeDgoeWSZD5Kpu5RuMAHAhyl4lbI7O078EVs69NpTR/ifRpwMxqTx2kiyjX+/Y/fFlzDVrDLuWfQhB0Z8MG5x2rGdjXj6CcqwsgWRfgqtduQ8VKuy5AkCTPGhglufO4XGOzZPpaOfa2B64euNYGuMYBJnFq/jooUr9qhinqkF4SFGjxIKLzwerx3Y/uNDMulGbaPK5J6ZLuZTY7yvyf118yq0CHRWVfyiAvjP3WYGBmAexrWuCadDmbBEqN9CWQX1nY+4q6nBW1Rjszo9ofc3CarNtaFbKv+n17Ish9ql1UinCBGlJyekwI8CkaWK2IwO/VTMHl2u1IP/MWUMo1OJTrOgFX3Z/jkJz2zCVwlT0pc7oryOeySHk2L2BzmLBp5ZRnD1w9cK0MuMYxTAtAjv9nAtil5gyTBhH6/3djsN0OOaT1hh4AVblyxb5KP06MEf44wPQcH1q26ZKqFmzzsrIhKKXLtAhGx2Rf11PPcsFoxAHXuMvZW6BKRSfyZWZUxNq2ekxZhbnYTAAF9UyPWCPN9L1RMfuq+z+O1+dlhPvRDWZgVsNcceaDIvfXdSSbWcArAGzDB0KUDLczjtWU//tB7kZFAHSRl28i8M8M8z+8riTgGuYyMB8L+2L287+zHAJXc35Hg7JnPF+wPA+CMhRs5IikkTU9PGJN6/ZJ6+N6RsS4RCZmLILAdRKPfUHE3F7hWndMQ7dPTRzDJAEmvcgwRR3SmwP4NSjC3bzdFsG+ivCfws/vR3yFsDdAqaOO4b7Whc3Oooz13C8Lcpd4HOHBIZp9/ZoDYCTrtRofNh10l7I1513M/z8FsLtSRHW9nLlaIz2WFfjgfBLhFgqTfa2ytK9pWTmYWbo5Foe4/sT5yr7A8rBRiSyrjR77P1BQ5IsOx/omqAzorsZ7i/L5PyUBdN1bEnDV79gIyYFSQ+j2+S5CnseCioJcA+DdlGscx8S/AuAXCKpJupJnWdOj0RvZBNJmFTjH4lkrLGLA9e2E+bjZpb5s8EYYGzLB7zCrejMohcwTfJibC2mTX7Kuh7TOB7sqKG3MgQqYa+p7BCuBM0Cm+QFky0kmueAORpDUWbd+nus7QIEn9zPbF6bUdP97pZm5RvsYGB4BYu+lDap5B8/F0aCcgllyOUrOufGssMeHfOcZZllu44Py+ZC+N3tY5rOu0UgAe/Aa6eo9bUMm32HG8wJD1stUpE2jX2uBcnNuDfL7XosvTTYgYzrIwnEvy9+dIPecMP1R1TpB9WEMX6535H/XB7kVjLB41htMTjwE4FYe63RjfdsFjaEDysawJb9Dn0WSj/tVvsCXlRdT+rUjKOPJYMgZ2eCf/wNkxXHdtzB5Xh3EtG8DYDO+LC5rCQjeZJ12P1/q7uBLfJgsuZi7DRHkM64zgBMZm4bApB03rg/w3LcjZGIAVD57HhaN1gRZZMaFyL/M7YugrBlO9kgDZP78KAOmJ1lp3cxs0xshgEkSTHeG0aTrQ3pxkL/cYbzpNKAUdu2/oKwAD2YAUSLo40Hmma35wL9fHY7PRAAmbRIaDre1lgFsPoAg2ft4BWA7DJ5mgXywzlHzOJRyrTsg9vpU/u+HQGbIW/nCMDCMLmdFrNFWvEafQVBRTaw1Yg34N8jffRLcJ4xP0+8wPbUEg7kV+MAfC3L7kH01iy+KU0GVo2YmXHjrqMOkjQYFja0EshiMQ+Di0mbS4m1QTuepIBNn2AW5jUWz1SV5fMO4MOs2nmVZ5Hkcr7v0exavscjzOz0gz775lthG8O2hV83/LpWDaYbensHlPHSbkOWA2wH5zWfLs6JBCGBqLSLzbpqo1wSl/nkB3QnPhYU9B9nN0TKfAl4QosiHk/m/qDVaG5Sp4yV0uxBIPtS3GeDWAdRJyctGDr3QC3uxkVN+qxyrXqcsdeSLai0k17j38pxtTev2aTkc16LWWlXv30UFMCUpfz3+9UGVjl5Dt9/GhQr8Z3lPwwOmhRSCmarpIBAbred9hmKOGhnfsyhezopYoyVAlaYewMIpeYb44rdYjea2gYVruIcp2eEgD3qsrWE+1kX5UunX2LdFVvA9wxR+izDLyn4FwMOg1DubhQChvADWt4WzQADkW3kpyNx1rFofP+/1ALANkI/y5ehOeTaERSPC1jfffPPNN99qC6RaCDfv++b+UmUC2CX8tNR+jd4HKlH6FiitVt7LnW+++eabb74BAP4fhaPEJLvlQ6EAAAAASUVORK5CYII=" alt="Inmobiliaria Concept">
+  <span class="topbar__t sr">Revisión documental</span>
+  <button class="menubtn" id="openMenu" aria-expanded="false" aria-controls="drawer">
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span> Secciones
+  </button>
+</div>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navegación">
+  <div class="drawer__panel">
+    <button class="drawer__close" id="closeMenu" aria-label="Cerrar menú">&times;</button>
+    <nav id="navMobile"></nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <aside class="side">
+    <div class="brandmark">
+      <img class="brandmark__logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAq4AAAB4CAYAAAAzB3AdAABa+0lEQVR42u19d7hdRfX2e865CQkp9N6L1AiI/BSQJoiggAUFBQGlo6CodBCwIlhQQEWxIiioIEVBeq/SISAtoSaE0BLS773n3O+Ptda315nsMnvv2eXczDzPeQL3nrv3lDVr3nlXA3wb7q0BoAWgj/8122gAWwI4HsB/AEwH8A6AywCsx99p8sc333zzzTfffPPNN9+cAtVmAlB9P4CvAPgrgOcAtAEMhXzeAHCY+ts+P72++eabb7755ptvvhUFVEcBeB+AowD8A8CLESB1kAFsR/2//O4aAOvy8zz76ptvvvnmm2+++eabE6A6EsCmAI5koPpCBFAdUGB1KOLTUQD2bQCHq/d49tU333zzzTfffPPNt1RAdTEQo/oVAJeATP9ZgWrUR7Ov/wKwDr/bs6+++eabb7755ptvHqjGAtXNABwB4C8FAVXPvvrmm2+++eabb775lhqojgSwCQPFvwKYFANUB9Dtp1rEx7Ov1ciHb7755ptvvvnmW6UtDKiOAPmofhnApQCetwCqQyV/PPta/CWmz1JefPPNN998880330oBKQL03g+K+i/T9O+afb0awHt4TJ59dQNUAWBFAKuo/28q2fHNN998880333wrvAmo2xPAk6jW9O+SfX0HFCQGBcp9W3jtWzFzsy6ALwA4H8AjAGYAmAXgIf65NM+++uabb7755ptvpYHWCQqQdnoIqNqwr9fCs696veMY1XUAfB7ArwA8CmBBwjz/HcCqCrx69tU333zzzTfffCusCYA5joFIElDppY8A8CEQU7iosa82pv+1AewD4NcAHotY/0HjEtPh/5bLwWsA9l/E5tY333zzzTfffKsQuJ5sAL06f9oIGGEbNnhRYV8FqMaZ/tcBsC8D1UcAzLcAqrZz+zcE/q8teL9i33zzzTfffPOtIOB6EgJf1rr6rUYBVZtsBhqUvwPKkmDOQS+2JEZ1XRCj+ksADzsAqkl+xdMA7Kfe731fffPNN998880358D1hBoBVzFFD6Cb0ZPPyyB278+g9FcagCUBWP28axjYCQCsO0OYZPpvgEz/n0O8j2peoBr10bLzN3jfV998880333zzrSDgelTFwFWzqubv3gVwO4BvA9gWwBjV/5UYdD8b8qwO7Hxf68q+JhWDAMjtYT8AvwXwBIphVLOyr6+hm331vq+++eabb7755ltPAteOAajM3z0J4DcA9kJ33lBpph/naFB6pruwMAsYBdY0+3odgA34WVWxr0lAtcl9/CIDVdtgqqqzOlwK7/vqm2+++eabb771GHCNM/9PBXAFgK+CSsq2QkCdALpGyM912xHAPwxQF+UHqxnCmfx+c27KAKytiLXZEMCXAPwBwMSIuasDULVhX33eV998880333zzrbbANc78PwfA3QC+D2AnAEtG9M3WP7IR8t0JAH4OYLoB8qLAn2Zf1+dnlMm+SnndwwBcDOCZCLBdV6CahX31vq/2l5uG4/nK8jzX/cj7vCLmJUq39BmfVgnvjfr0srw1hsHecb2vek1GGhWO0zff/j9wPdIBcI0z/w8B+B/IxL0PgDVD+iKHQ94yoqY5egUAx/L74/xgTfb1qJB5KmIzLsYA/tkIINprQNWzr70JjH2fwwGrjb6pavxaZ/rm95XZxPWsMYzm0IPXlMphODJEAsiOyQhc48z/rwO4GsDRAN4HYhTNuY2aVzOCvplx0+pDZTEAewO4BfF+sGWxr9K384chUPXsq9vWcgxSkvL9JvXD1Xq1jH40Ku6Pnh9pY0FWoW8C+AGA74GKmXxQ7eEi2Mk+Y3z6UzSA1u9yJW99Ba1Vmnks4719JV1mmjHy0UqQ6brpI5v3lTWvPQ9UmzW7YRcJXE+2BK5x5v95AO4D8EMAOwNYOkYAmzFANU4xNzKuqXlAbwPgIpDLQlg6Lc0QzoB79lXGsRSI3Y1yYRiOHz23U9HNvvrMAwvLyDIAHgIx8s8CODOHHpK/OYef9TSABwAsp/Zg1IG3Miho8hn+2x0z9kPGNQrAHWpc51oesKIHduS/e5L/3cmRfm6q/p0K4MUYWX4cwIEO2SDp+2E8pqf432eMz2MA7gGVXD4F3YGlLto1al3+lmNsMp6vGuNZrwAwFfbeT/H7JvK/2xV0hsvcXKrm7S4AixfAEsqcXcTv+V+IfIiM/BtUFXM5B/MtYxjP57yM8/sFzak8b19jDXeBvTVkkQWqywL4ME/ernz7FgEYDgyRAIUTI4CrzqkaZv5/HsAfGXysFXPTNucrCaiOAPmo7gXg8whYzzwbJMwP9j0MtKegm0UeDGEI/wN3mQfkb1cDMFvN9dAi9DHZ15VzXlCGK3BdAd1pzi7OAfJl71xprMXFMXtLZHVN428+lRO4Lg7gDfW8fgBrxABocwz/NPqzp4MDVN67NgN6W1m+jMeTl3mVNf1Wyr00F2TZcgUGn1PPfigH+JLxfN/o76YFA1d574HGe3crAGSJvtosZF0+FUGcuACud6eQj5dBFoI8cy7rvzQoRaU8+08FkQ6CGR40xnLFMCQQcwPVpQBsD+A0ADcDeMuYtMkgH83hwr5qRTnIh0c7hgF8iwHcsQDeDzK/h7GbrZRAdSSCwKSL+MaogdwCUPWnJR2BG9OcsjTI/PcowqtyyVy8C+DrDhhCkb1Vexy4mn7NMlcdZGNf9x1Ge8sVcF0eVGhD5vcPDoDr3/hZC3jPxx3qIqtrMIAWy8TuDoDrS/ysedyH7yeMTfqyOoM1rbM+kVNu5KBckfX8kOrXdAC/A7lUnYDurCXy7/XI71KmC8LI+sj8zOHP/BDdKP/9CUd753Elb3c5AK6nG+N5b0nAdX81f20mn1zrFnnXL3ldFqhxFgGyZM5u4Xf08z7Q8jEUIh/TmRxoZJx3bSWcpuTjggKAq+yhrdQZIXpnNgIXs2Hr220DVD/MQPVGdEegx/lx/hWU/L7XGSIRti9GAIt+UKnQswF8DIHJwRQyc36TgGofgI35RvxndBcQCPP3lP9/lvvhCtyYfrAtVv7XGofDgDrgh1hWNsyh0HsVuCZVNbPNoRvHvl4C7/tqAtcZan7+6AC4/t24mHVAJvFxWNg6ooFrv1rTPRwA11eM9Z8KsmpFMZdhrk3yt590BFyv5+cJALhG6Xrd3gdytdDf/WHOPpgWMDmsd+L5X5PZ4E1Alqi7FTjpgEy4WYGJbhOVvN3jALh+G90WvbKA6wEGePuYYyCpwdybas1kj8xBUEHQ1VjlObeiO/B5Df6szezvYaBAWC2f5+UYvx6rxkm/LQi4gnXdkNI7Ij9HF8Ty1haoLg3yjToVFHjzOqIrK4UxR5p9m8LKAz08iXJAjAFwOTOKk0Gm24NApvSwjWOa/22A6ntjGFUNdsICkzoGgHXJvmq50e39oCII7xj9EyU4S22gRkbl0wvANc6veSYr0NMAfJRZuz8h2nc4K/u6KPq+lgVc9b/nhTy7DOCq9epBMeNrgNyIngn5uzzAVd61p3HQPwiyBsl35COBpmuDrFBtpbvy+JtGAdd1Ir6/GKhiXoc/s0CuJcipEz1wTfeew0Mu4DLWbzjWYWHA9dGI726OwDLRAfAqqFhPlvUsC7hqF6mZxrnYVvuyp9Nj2QDVHfiGfp0Fo5qFIfrLMGFfwYzqqIgN2koBVEcwK3A4gpykSamebLMYtAtiX7U8aVlaFcBJBivcrxTTjzO8v87ANamq2US+OHwW4VXNwBees9SN3wQZadjXRdX3tUzgqtPDfcj4btnA9WGExxDI+u9iyIkL4CpjvIPHJ+4HWyl9ZjYBtN8wwO65OdYnCrhuZBAGTaWnz1BzOI/XKS8o9MA1HfHzoLo83MI4o5Mgzy6B62NKLuQj8nmVscfWzzj3ZQFXec7XlW56AWRN0HpqC8drWSlQXRLko/otADeg2/k/D1BNYohM9rXX/PPM24uZU9UWqB4KMv3bANU8c2+yr0sUAG5MN4LFQa4Nj4T0J63PTd2Aa5z5/zVQIMxX+MBpRTDwYalYlmNWemIIe96B932tGrgOqkNd5vsJZvJa6DY7Fw1cO+qiFJaxQP77MkM+8gJXHZDVr/pwe8LzRC8uweeMzMsLCHz/0+qiKOC6YYh+ETB9kdozeRg1D1zT76UGX/S0/t7QuBh2AHzA4XujgGsU2XSuMfeb1By4SpzMRDWn3wZZ9FxdEEsFqmEbZxkAHwHwHQA3Idz07wqo2oCoXmdfG5ZAdSRvgCOYUX02Zm6Kykmq2ddnCmBfzY2kFcJuoGCNx/ngGJVyrasGrnHm/7kg37nvMYBYwoKBTwL9IwF8hi+TYcFvNnvrr4sY+1oGcB0C8C+QNUof8N9R7ygLuOr1vjKC9ZWgLFO35AGuMo9fMA7GbyI5IjyMwe7kAAdRwHUC/24kul0VVmXZGDBARF7954Gr/V76s9KpD/LP9jVk6RcOQVYa4ApQvIb0L48rSRnAVfT6R4wzfgLLviYip4BcHPNe0py1uGoPyzPy/nYMo9opGKimZV97xT+vEQNUR4Ecvr8M8n99vgKgWiX7qi9RcKh8ygKuSWnNngXwe5bbNSMUSpaqZmEH/wf5XTNh5wdr7q19enBv1Rm4/g3kQ9mv9u8CBS76SgCuc0E5PuWwWoBuk6b04SQlE/egO8dqXuD6QwPkbGvxPDmnjkV3FoK9M65RFHBdOeS7qwG4F91ltNeFD84qA7hKv1cExYXInjiE50ki77XVapwjkBUGXB9Ht8VLxr8eun1cb8sx72UBV4CydgwZfQYo5kRfCD4L9+nGci2KBqq7gNKk3ApKC1M2o5o1N+VfWLB7gSEy+zYG5ENyJAPVSRZAtcp5N9nXXQtiXzWAbeVQRGUA1zjz/xug5NTfQPqqZnnmTO/v1UFBXZOxsB9sJ2FvDZesHnUArtfzz75nHPL3GIdCkcB1AYO1BWof/8wAhyPRXRb5aMfA9SIlg/3qAmeTU/bTxoF6jCPgKgzu2fyzk3jPXIwgVeMg65A9HYJBD1ztnn+M0t1vgFwVZUy/MmRib0cgKwy4PhzyvQ1BOXh1H/KkSysauGrLzlylB3SBmq0RxJiItahIOUrVNgcFdtzRA0DVhiH6XIEgyuUBuTgomOoyUH7FujCqWdnXX4CqfBQJbho5N6lL4KrN/+az5oMSqv+ILRbLRBzCrRKUgOlGMBbkO3xvCFDtIN73dTjlVK4KuF7D7xqlAIsc9F9Tf1skcB1iJv4GBNaBN/mQlO9/TH33RQQR/XmBq3z/avWstxGk/mtY/O0Oxrx91yFwTdJ3cwB83CHr5YGrnQyPAFkJOuh2BxD/5q0MkHWNozGbwLXN+uEyUGagy0G5d+cbF/4Lc76/aOAqf3+a0vVTmaluKPLjcbgPRszd9kF3vsxeAKo2IOrimjJEIhDjQFF7YWOwTWdUl0+Z7Gte5ZMHuCaZ/ycxi3QAH/JhfUhj/m/AfXSsqew+CgoE60e8H6zpVz4cfV/LBK7StkEQVT8IMoOuzX1Zq2Dg+l4Gnxpo6FLL/1Tv/iEDh9kOgKvsxevUs6YjSLdnA1y3N/r9/YxrlAW4DvBe/7oaT9494IFr/Jo3EAQLiW76P3T7IY9U8yggay0H4zaB66AFBrmQ+5NHNooEroJDFmNZln3+M+7zYggCRk9Bt1vOcY4vbZkW5AxWSDq6UwcJ9dKh1KeE9gvMeH1OjasO/nktBOUSP4jAVNdRYyiDhXMtR03e0OuBKn39AuT72u5xcNNRwLxhgM+3QQGKJ/JabgSqHPNnkDkexj7qGJfBMGWifVs1uG44mEd5v/YdvoFlcQtQTtG31Ptl3Obe2pf31j4121u91kYyU/Mr1sFtvtD+KkI+XLclGERP5fcPgVyVhO3dlWWlzeB9lKN+iQzPVT9bDAtXBbS5EEgbdDgvcln5MYCfgoJCbwLll5a8smvzIX8W7ytfMrnYNgQKTJbz5nrWQYPq0tePIPK9n+V175LYwQF11n0TVGAoTtfXBYd8jGVZgOlPsXA1sl/xhVrSfe2vzofKgN5y3OmRw4g1abHQrALyF90D5Mw/jX9XB2FajfvRwvAxufYpAH4kKFLxaAQ+fa0qhT2FghT5MC8QA3yjv5MPsvtAflZh7EBHAcU4WW0a39fzsyTI9WIBKHtHWynhTs4xtg0F9jjITP1DVkwH8yVEz0lT7a2VQX6vnwL5nb2qntWBb7YXiSYo5/UerBP6QTEGe4EYySIvBCN5LX8PKhDTD0rmvyVfZEbzet4N8nVdydHaCsh7h/9tg3z8x7OcN2L0s2bFob73psPzYwiU3nGq8bsVQT7qxyvW7Xhep1t7RL/1WhOAtBYC15UGEwO7qTlvqgtEW+GZ/QD8xPG6NEEp2MQ6sQ+/Z4B/dxDI4vu2A11dpO4ByFVR5P4lUHaOzdS+kvl8CcTaS/ngLUGWgcpk/k3Uv/yl6bowCDs3Bu2f9yrq4Z+X1jRVp8T4cWZyW9/XvorYiaa6MMxS40sqqfoSX34ORVChx3yurXUiKSfycugOjHwd5Dc1A+SPeriS274C5kfviVGgjAe3IbysrN5br7HirnpvuQJUZbkK6EvrHgj889ogX/3NlawW4SqwA/98DZDfpujUW0HpfuR7B/AzVjHmJW9w1rf4feIbuIvF80R/fAfdQTB75OxLUjosvV9PVe/ugFwq8sq9dxWwH49t6Ws5pz6Usw82wVlXGOO+0IFMFOUqIOPZAIErUpJ7oj7/hwD8umpd/3oNgWtczsuwyOcO7EHUpai2LruZZmagZvNuC05t/HBN39ddKgQ3Wgm8i8C0FFdSdVsEeevMNXQBVJdlVvp0ZnDfslijuxjQaMbW9TyZCnE7kF/r3JD11/L7t4r3Vi8CV/3vJegOLrmTWZuifFy3U9+5GOH+e9MQpLtb0RFwNcG6HPbfs5hnkfeb0Z2RYJ2MwCxNAQK5aIxkIkTm4XkEWUKyyrwHruFyK0GMLxhgNE3MywUFAFdJhzWCf78EKICxrfbv1jnfWxRwlb/7UQYMIrrodUVGla7nq2K/zKYnpBnC/jzDSvw2FuBlQT6sn1YKox1zkPepd3yOFfZxfBgDi7aJR9gz7UPZVGz8A6CSeg/w93YCmUJWU/MetTnlOeL7eh2zr99igNinFFEZMtYEmSdvYtkR0/ZToKo9tzKzOSXkoLUx/yeZ/pcBmWK25c/7sHC2Ab0ezZA98iGQ6fZ0pXj64M7HTw5veX8HlG3kDlCez4NArgQrqb+R7++t9tbFfm+lls1vANiZD6o2KHBL9ljRF71fsk5tKBkYwRf9maqfrnQOQK427yLIt/kZBbjC3AV0+p6t1T55ks+FBoo1y8oZ0wYFtMglbRSD2QEvyk6buCV9HJQqTdb73yC2O659hMHkEMid6Xi+dDUcybEmZvp4jxwDyjQguvgMBNkv6nQ5HwRlltkPgUvcYwCei5gf+dl6fH4N8OV+d75st+DWx9yqTa+IcY0zz04HpUo5mtmlERF9n4AgoMSWCay6LnvVjGtSCqcHQT5BuyA8hRNAvpdfQZAmw6y9nsS+Pl0R+yrrK+mgDmQmohnBOibJRBKjujSoEtbpzBC9ifyp5rT83o6gYlAR7KvJNGkA/lV0m5O1yde0bPQK81oV46r/+0tY2JI0WDDjKuO6h981H0HAy2bqOSs4Ylz131xqMHTicjIyZAwjFcjWbgIn5FifOFcBYdQkIGsEgkjsV9Ul81EsXMK7bozrZuh2fYj7NHO81yXjKv24QemYOy3/9seGjOyXQ0aSKmdp0kcyBQnrultOxtk14yp/sx+6S8KvZ/G3E9BtZbvemJ9hCVzjzP/zecF/yIzD0hGKLqo++yqglA2TYJdYPa4ue9HR0WUDV5sUTheDoiDXidi0et71/IwAVdK4BeE+RkluG+ei+LyvadYlL1BdhhnpbwO40VA2LlPNddQ8zmGGs1GC/DZD1v/TrMB0/+TQeo33c2XKrYeAq/7/6w3AWjRwlWj+fYx1vNd4XxHA9f3oTgc2XemhRoiu383QZ2/wvssKHKOA66oxf3OWAYp+7GDvFQ1cVy/pXHMFXEVfbGQQXPshSNfUCvmM5H83M0DWDTn0kE3JVxnfzgZwfSTHZaAI4Cr9uFOdPzeoy2LYnMqlrQngfnRX21snx7zmFrYimj5kw8z/kxBEZ9+LIH2QnuCmmtx2xCI0QKbdHwA4h4HU4aCoN2mDBigRhdgGmTz/wofCMQxk65J5IGuLM/+/zazqrfx5lAXQlAsdvNQJ2VBNVgqX8Wcbnvc9+YAEwt03+lTfvgrKzVd25gGdDkqzWogYZ5zpf1OQ+X5bVpbLxaxFU33y9l/cLBYHuQzsBopynaie3ylYrgZAQQlXgNKBHc77T0y/K4Ly2koi/UYP76kympjIj+R9Obqk+RLZvwLkBiIH1gMFvlPcHx4CVak6hoHgcnwRPhLkWiR9G8ug6CdKFvtAuVTfcqw3GnwhexXdVprVWV9ty7I/EpTX9jwU76aQt53J8xS3B+Wsvh5kjq8yIl7efbA6j6YCuFJddIYi5KrJ++cB1ksdkMn+PSBzeBHjkvfeyOfqh7mPm/GF8CJU7zYl798cgatNC0GgVSemf3JuXwTgAwjSjX2esVfpsuKScY0z/78J4FpQjrPNEW4Kypo7NiygZGcGVDoAJ8yNII59LcKEXQTjGmf+7+fD4RwG58vFsNnNDPNurte6IN+eV0LY7zj29VcIEpBXxb7aMqqns4JyYfp3sfYyj7NAfpJlXEz1fOm5WpPZnhe4T1ehd/ISa8b1TQTJ5n/ngHG9RD3v6hj9Ij87RrF68/nvdnfAuL6g+rGt5fMainHV8/KJnHpSM6qXG0yV+J5fxefGS2p/6aIIefW0rOnxPKZ5Fjp5UPXlM47OisfUvN7pgHE9LcV4zM+PMsi7fHd/BNXFBhAUo2lllNdXEES+n2XZL/n9Ufx3s3jNTs64j0V33aTW6OGYvfshfu887vszCNxMGhnmYSnGJvLu32Qch/TvPH5OPxOGoyz6JnOwEsgvvZ+f8Tjyu8mUDlyTzP8PgMwocSUvo0BClslohGyQjUBJdV9PAFJmXfZVVR9dHrougGtSCqcXeQyHgAJqwoQw6pKQVQhNk95SoITRDyE+C4T2fX0WQSnFoi4OUUA1bMzLs+x+l2/RdQCqNr6vN7HcA8X6vpoypddrPLMOY3McwlUB1xWNuf27A+B6rXreHTHy3TAYT92PPXMC1zHoTq+1o/E8IQBMX8eGOrR0f/ZysE8b6r2/tJT1eUyAuNARpmnd9vNQyPzlafqiP9EBcD0rhy7JA1wPNZ6V5XIjz/qa8az1LfWZ3seaqJrOeyDtGSfve9A4Y+O++y+j71lKEksflzZwwl8zPEtXjtT9Oj3Fs2QNrzCesbvDfZBKQGxbkvl/Miji+Ub+N435X5tldaR5GrO9mVgdfGs/hjfyF0Cmh43V93Vidfn/fVgpHcfUuMxV6ZFzqmlQ1Gds4BmsSLX5f27IWoeZ/7UJW89fWnNz21jjd0AmiAsYjB7B/8q6DKLbbD4IMuVcA+B8vh3PQDGZB0RxmaaRlUCmnQ/xZ1MG4OY6uDb9u2gttX47gXyRTgXwc7jPPBAln3r932VZ1HuzV9ockIViNP//PSn3AkLGfSWDEwB4ImZOtI49EOROM8jr93zOuRxgcLiUAkv6eUMJMmLOy7MO1lbcIwZB7gGXgQI/t0NQZEC+9wrIfeBcUCYBF9V7dIaDCxC4MISNaRYzv4+yTHTgroLQ7xAECk9yMJ67QBasNBkp5Lt3ZZD3jpLtC5TMTs4gIx31728QFBx4BnYuGSJT00AWqI0RmMWXYTluZNjDf+VzFiA3krjz5XiQC2Nb4ZqsrgLzed+NU2ubVR+tyLI2wH36nXF+28zrmUwEyhqPrkLHJzGuSeb/6xjgbYHwkn1xzF4c4zrW2HBZwYEZUDKSmYKbEB1QNGiwLauqZ+VljmwZ1zjz/yArz3NAqT5WTMFmNwzG1WyLKZYszy0qjP1+P4PZd4yxDFbEvq4I8g39Icg8N7PGjGovsa96/X0pTN9s5UXL5tKgWvS7gty+NkHgO18qu2PBQPlWnowU+X3feqiZBQjiANMCEF1+NoOKZVMCpqTUQR8BVQ26jW8rT/GNyUXEdJgf7IdAdeVnY2E/WO1OMA3kuwMH/YiqnJVk/n8ZlDrmMATJscMAugkWkoDqKFA+0SNACeQngfxpLkF3xGAzx7yb7hargbJAPIfwdFoazP8SQQL0vEBImNbxoEjx4QJUbXxfv+5IfheVpk3mLgBKK8PzmkY/Go7H1ajg723mqZXw+yIuX+Zcx32KuJC1HMtbmvG4SIdVhMy6mJNWRf1pOtYhrtan4WA+mg77k7lNRpDaICxd0mQQRX4QyJQbNYhmCGBKAqofBjmR3wxKaxJ1CLvMVxnGBK3DgDksoEiDKM2+ZlVeAhpO5XfMiwCqM3leTgFF7I+NeFZaoDoClI/tUFA2hUkx8/4WA2VXgMd0LVkclN7kzhDGUAfSPYsgrQpyKjGA3D/0u4YDULVlXzd0tI98861odk2n5HFh7fLNN9+GSTvFOOjeBuX1OhnAVszI2QKmOKC6JIDt+bnXojtYKort0nnY5oL8RlzmqzSB1JIM1B7EwpH50o/X0M2+plWm8r6Ph4z9MZD/1qfQXZnIvPFpJd4wbkBhf7MRyLf3zwbLabpKCFg0Wc+rAayt5sxVOifdtucLkllWdAG62dclVT/SvlMuTO/CrmTtcPl49tU333zzzbdh1fYARWnuim6H+DDAFAZUwxiw8SBT/LGgCLtpyG6W1azRbaCgGZesUTPkAN8VFFCh360rA/1NzVVW35vPgxydDwIxYY2IfrUigGpUmdUNQIEdfwS5WwxGzGkSeNOpwt4CsbQuAU8Y+70+KJBuigGqJU3OswiqbjVTrjFAbgqzUU21uCIAaZoxaDm4EdX4vvrmm2+++eab8xYFmOKA6hhQst/jGKhOjWF+sphly6gWFMYEbgrgF+hOhSQA9jFQpJ/LPGZpgWqDQe8XQRU1JiI84EtM4u0Mc68Bz1Vwy77qy5FZVlQSsZt5X9tIX0VIpwPpZeDaRndAW1Klsrh99C6o+AMc7yPffPPNN998K7S1cgDVYxjMvOIYqNqyr0XVajeDAFYGuSo8bYxvBQMYZZl3bf5PMv03QL7G+4JShTyBaEY1K1BNYl/fhHv2VQPMlvHsT4LcS/Q4Tk/57l4FrknZJdqIL7Bhy75uWMBlxDfffPPNN98KazbpqbZkoPpPUJR7GUA1CUTNBUXoNwtijUwgJWXOrgKZ+LOCVhiAuy+m7+uCctBewEC1vwSgasu+rlUQ4IlKp/VbUHaFZdT3hhNwtc0ucTDIJWRjUKWyV5FcqSzJ99Wzr7755ptvvvUMYDXbeFBw1rEgX88koFpFoIs+nO8EpXXSYND1PLk+zON8VL8E4PegkmoLKgSqNr6vhxQIeMLSaWW9gNQVuMZVoJsJyqpxGshnfEzE+JYGuVY8hvAUY2nY1wkF7qM66LsmFk6TE5byqJcj2W3HORzGuqif34uCPPvmW5fQa6C6CR+O2zC7ZUa2C5vTqNGhJn3qA/mefhdUsk5+NliQopDWzvEcqTSxESjZ9jZ8WVg/BADKxUC7FFTddFWWq0E5dyejuwqZy6YVr201Nf23HQauTzMAHKpoHjVoNpnqIQD/44vYjQDuBfmLmxceXUGmqeS8D1Rm8QhQ4nZpg4hP4SZ9aoF8yE8HlUoGqq8a52K/mhX50l4wZb47NR5rWAW8XhmrjcWmivmPInbCdHOvyLOuYNmpeE3r0tLMRRXjGkJ3hTsX8tazVrUGH+A/ALB3jwBVGxB1F6hU4qPoLu9ZpwOmA4qO/z6IKW71AFBNAjxvgfyA/1BDwFM1cNWlYs21fg3Af0F5Vm8HlbPshByeQzGAXfanBixbAjgcwGcR5AFuJ+xlvY9uBdULn1jTfWRzyTEB3DIAVgdll1gJxFSPUrIwF+TD/QqovOdLfCFOem7VwNy8KDZBfvlr8HiX4bHqcqbv8p59BWRRexnkhmTKXZnAzLd4sGTq0yV5fVdneV4GVIJT5Hkey/MUAC+yPM8NkeeOX+Oear1ymS5M6V2AINBmyDjYes2sEMa+nsULWxcQJYfMe0D+qiN7DKjaXBz+CWJfX0Zx7GvdgasGmebNdi5fqm4HFZl4EOQSYN6GhzIcKGFAZm2QP/YBDNignttK2EdzQG4KZ9fwMhK1zlBjHwuyZOwMYGsA6zGAs5XpV3itbgFwPSgdmz48qgSw5vvXBLAjf97HoHWM5bMGeKyPAbiDL1ETjXcVAW5kX+4AYHf+72aIPDYAnA8qmNIsQZ+IRWxVdOc9NtsgnzHvoNuKVtQFbHGW44+ArKMbILyCZdTleQqv8S2gfO1PFiDPsj5bAfhMxJrWpUnfruU5iZMt+d1uoOJJRY1rPu/H+aDYgxksX6+DCjVN49/rdbM9Y0VGR4DKzo/vQdw6B3wbG27J2E3f182MQ73KJiDmGwjK6A6nRPcy99NBfrrmuKsGNEX5uOqgqrC99AzIZ/kLDCjCQEif4wtjWIGNLwN4GAsXn+gk7KObUW/fV5PJ3hxUzOOlGB0xEPMJW8P5AK4BZbkwgUUVsiz7ak9QCsLZiPefTjPWQQawhyEo+gG4KUcapg9Ptdhjd8DOdO9yjj9o0a81Q9bFtTxPAPBjRFc6zLLGAwxe91bvciHPsqZf76Gz6zsW55T87twK+zkHwPMALmddvmYIC5skV3IBmtujOGMAjOR7BRTFRVvHRUzPQ7GZB7Js6pOxcIWqOucOHYB9vlC9PpeBzFiysaoCPEUA1zh5nA7g36AsHFvwDddUIEXVPQ8be5+h4D7BLIOpENox+2g2qFBJowb7CBFgagtQaeY20hc6idI5YYFz98JNGeKsY22Acjc/DjdBm3FjfQkUpDsmxQGZVh9+k987LwJ4Se7sb5Q03011AZICKLo/8v+zlH5rOn43QHEnF6E7k0wR8vwwgE87kmdZ08MS1rQOH+nb8SmA6xkVjCuKWJzF8rFZhPxEAdfRvK/DZLuuH+nnVCAovVrH1EBxwCBLxPQdoKAzOFY0WTb1SehOqt8ruUOHEjZSGPv6Oh+yVbKvLoBr3LwsAPmpnsWAZpkEVtWGcWmm/Ju0LA5AQYG/BbkqxOWDLbp6Xd79tBSA84z9NAD3rLpZ/OFPaq2LlGs9z1uB/PjNKnhFj/UpBIU/XOlPmbNjE/Sh9GcOyN2jaP0tz35/hK7oKFJk9QLmYwyoquL8lHo37xr/DUGsS1/OMRxR4zPOLGpzYgrgemaF44q6fCxgRn7xhIuHBq5Taoz9osYupBCm16jzScDgQTa33mlp6gxjjeYD+JZa2L6STX0i/CfUaFMnmblfBHAxgL9YAJwk9nW1itjXLMA1aV4mA/gzyHd03Rim08b8llQhzSXTFZZibHU2107GwvlgOyH7aC6zFFWyrzJPOwB4LuTCZFsy1/zYXqpFJp4D8IEC50Gv06lqfGlcvPKM1bQM/RIU0OaC+bQFrlqX3FIA81sH4Cpz8QFQ/IMed6cEeZb5fRnkw5lVnj1wLffs1v14SJ1FLQ9cqwFMk5gG/1IIMNgOwCWsOGyBlD7Q7mEzUNmskQj/URULf1jpUPm8DQpEOQEUmT7aADinAXghBuAk+b5+sQITqy1wtZmX40G+b6Mj1tf2QNWMatjvNgQFN3zOkP+W43nRzxvL++3emMuhnpvbUVz1Ohvm+CjVnwHYX4zbFoeBDWDQZag/XgB4lXEuAcqnbQvO047Vhs3T4OZedLsAlQFc9e+PKvjCVDZwlXF8SZ1pNoSM7RoPWlogZH77We9kmWMPXKvBUuJOMgWUYjNMJj1wLQAwvcXA4EQGTKMsWKcNAPwEgctDUuUgfUNZAOAUg30drsA1Tnn1g3yczgZFTC4fMe/6gBoHilS/LwX7XaXvqzx/NZBfkGYoouZlAMAjPC8fj5kXW1N+HFAFg9N9QJk+njQOo3kAfoYgrZVrS0EzpF87g4IA+kPMlR0DtB1XEvuqQesPQtjPJMBlyuNMUDqyKawL50R8r2NxIV6AwO/VxeVCnrESW5tkr3YyjnUGj3UqKDp5boq/N/WFWGLem3O8aYGr7NdZANZxaKKvErjKHJwYoStt16jN8jyN5fl1hAfsDVrIkOjGvTLs6TTAVeOBKj7z+d8THANXV/3TPp5pLtKTQNkmzJyzGri+rN6Rt59p3FLyzMUg67DCgWsSYHqIgcEeAFZIAQxMILUcqGTlE5abVE/23Qh8X4tmjcoCrjbm/78AOBCBz1gYkDEvCmEVxD4KSoE1YMF+V+X72lDM1cwY5f8SM/kHgQpB2M5LHBiMGtdaoIje8xFfIc30M9ypQMY6zA/2vQDOYbATppi172vR7KvM5Y8tLkomM/kGs5bHMChfn5X7OL4QLMGM/AdBKQIv5cu0LZiQALZNHAAq+dsVQAUpknSFOdYZoODAE3h/rg/yxR2rxroaj/VgkK/uiwh3hYg7IF9HkG2ilWM9j02hD2WcNxfoMlAWcDVjHgZTyPPbvMYngnKCb8jnoMjzeFAu3y1Yz19kEDxJ8tzmM/pDKde3lxhX+ZzWQ4xrElCUfl0esm4auM7sEabV/MxtMHBdDu5yWupNFnYIvsRm+ptBAQbPhCiMJuxzWJp57tJUDtL5KhcA+B4LpfysiMTbkgfzKFAwyaBDwKbny5z3Gcza3AxKLP84K12zb7bzHpbwfhNQ+dd9EOQWbEf0R+d9vQwUVfwKis37Knn4fg1KzA/evA/zvNwCynE4N+O86By8YblO1wb5r23HFoUNQ6wKUfl8tawCwM9B/o6zC5RVcy1WALAfA50Njb0luQHnglLL/ARBYYq2471zEiiyN27vaPl6EMCv+JB/I+U7VwSwP8vnisZzo975LAMezWimvTw0+HC5jYGH7VifAPAbAFdg4YprSW0Mg9wj1eXIZryvMLh5BelzrMqaHsuXEVt9KN87CuRz6zq/sIzj/YrtNs+OBjN26zN7lXXsX+ExxFW30zlDn2B5vpLZ1TRtOdbPxzDgjltfeeeroLzAb6uf24zrCL6Ux63pkSC3syJy4NqemU3GIZMT+iHjOpMvhOa4dNGHg7Bwbu60bSwoFd0KbF3YABQUO9p4X9z+2IP1nqmHW3wOjXKA/Vqg2KPlQ54l83s/nwt5cjDLs/tdMa5xtdZngJJZn8zKbfEIgch7aw5jArcEVXF6F/YR03cj8H0twgzlknFNYrMfAZmXd0d+M3eS4OpnrMQH0f8QnwXCZF8PKJBJ1LfNBihJ+04pWf60jOo6ID+x89iyMA/R+Rdt0xfp7z0JSkRe5JzJOPWzFwNV47oJCwdQSt/uBLCxMe95ZQyglD22LimvM8huhqxty7gc6OqA+jtapi+xYDxkP5+fY030hS5JR2jm8yvoTrvWzDhWgHLVPp1ivA/yIZhWj2dhXMNcBlwz/EUzrjLfOyI5Q47M/zt8boxMscZRQZ/LgLKJDCXoHlmPS1LIcxrGdR30TktiXGUO30V4/IOLtrYiBYYSZKbD+7KMErWTDcuTKbv/dP3CLMA1DjC1mbU6j5XfSimBgVaoWSY7LGJ6LUb7L8IuYloyD/QpgXWdt/BrGYBrUi7bl0DmzYNAlbmigFbY4WLOeyOjsteKbRQDt1sQ7werx/IPlJ95wNb8b2P63wvAL5jFne8AqCYBhiEU6/tqczn8PbrNTvOVAv8k8ieNF3lcjVmfODO2zMvtCAo9NHJcjM0xn2oB5uR3W2UAr/LdY9DtTxr3nv8o8JRHBkzdOZ4v/kkmbOnjbzKMNytwDXMZ6HOsE4oCrqJrl0UQINNOGOOD6HZd6nMkz1+3WF9Zk10t1zcNcN2cnzcCgftfFZ9mCllNAq6zGPfoS2GWT5/6mPrrU0wUxJ0jIlPbRaxb3jmTfo1S2CoKuP6LvzvS0XpZ53GNA0xTGHAcBopma6QETElAtpVD+ei/XYIZmPthFzF9H4I0N67YV9MRP00ktPm7dxgUnsKHZBo2u8j0S2EAZxuQj9WcCPZbs6/TCmZfG2oDNBIOlyRGdV+Q2e4RR4xq2kBHzb4W6fsaNn967tYA+YmZlX2ucgAqZCz/SgCNskeuVKyUKzCjg9dOTdi7gwo8p9Eb8r2N+VCyARPnhegWlxdsrats+vOJlPKXB7jq7x/pWO6LBK7Sx4st5egmkN8qGOC5SolnS6LIuj9iCfLSANdNHZ6tdWFcZyGwcBbhey267QBLffibAvSDHtsIC+B6tetz6a2YjRkFmGaBTIHfZjQ/LiVgigOqy4L8abYEBUqYrEveQ0faLiA/MDNhuRkxvYAP5BGOGK2kAgRxKU4GQb6pvwCZTFdMwWYnAdXRIL/F7UC+qqMdgKAwgLMOgO+DfMLC2G+9Cf9eIvtqA+TXBZVsPZ+VeJGMalb29eyS2Neoy+FYUMDdPSDfuO1zylBLMQw2h/wd6nAv4sIjeiDJbUD27o4pxi/yfYvlgXSm+rtmQXvC1rVJ5P1lZmpt9XVe4CpWKNcuA0UBV5GDD1vKzyNqPxdxGRV5Pj+hP/LzPS364oFrccDVXLfLYtZNZGiyArsNx/qhMuA6B0Hqi7go9KdBPjF7GYAyDDA1UgLVXRjM3AoyBco7Z4OCEz7jiEmKipg+F8kR0/eBqgzl7YcI/yn8/AUWbPblIP+1jVOw2UlAbAQrjS8zQHzJWPfJIPeK8Y5AUBj7fTiCwAeThY1iX12bA6PmpwFyt/i8YlQX1ASoJiXEn1gi+xp3ORzrSDmOBGVT6EToJhn7NASuSUX6+zZBQROvxvRJm8hs+mMC9CQAcaH6uyIvJxqsfy8BiMjPv5tiDdIA1yQf0Jsdrn1RwFXOx3sSAEcbFB+yTsHyLGfiaFCAUpw8d5iwShqrB67FA1fZ9xOQnFmlDTeZTmoFXKdEDPh1ANeAfGA2CzmUGjGAKQ6oLsMsxOkAbgTwpqWSuhSU2sOVsjYZvBVAkcNPITw5t2Zf+3IsgvzNXhHjnsdK7Qc8T+Mt2ewkoNpiIT8clAbruYSbvnye4YuFKxBkApwGKHfsv4x3S21izb6u6mjzNSIY6fVAUfO/ZfA3UGOgWkf2Nexy6CIp+z4p2aCi8zHL8/eP6ZeQAfNBvs9JcyHz9jCiCwzI/ngC5FfWLHFNZcz/SRiz5BJdEd1ZMfIC1/kJ4NW1y0ARwFX6tIulPB9ckjxLv3ZL6JesbxLY9MC1eOCq5+yOmHWTn+1TgCxVClz3YfA6A1Rr/Se8sZaOEHAT8CUB1aVA5sJTQMUFpiPefzYs6lwGPxVBNQ+XN2szYnpvLBxQtEAtyn2gFDVZBVNYpN8ya/M/ZlD2V4dcEpudBFT7mKE9hJ/9VMRNekCxnJ2QNZH/P8cxCArzg90clKrqHaN/CxT7ur9DhbAhHw5/6GGgmuT7OhGBubos9hWO1kjk/d4YMCc/u7akQ17vvRbIdSfs0Ogg8FP9ekLfZE12RbL5uA1g6wrWUtZiVT4rovaD7KHTLdcjCbjKXFzD5EUSaJ4FirzO6zJQBHCV319nIc93l7zG8p67YuR5Pq/PdxLW1gPXcoCrnMOnx8yz/OyU4QZcATLbrhTDjpmAKQ6ojgewLciH8z/oTnicBFRtk+5ehMC/02X9dpuAovnq330dbLrFQxYzjM22BaoHAvgjg+EooGpT3jHMBF1UAJB5GVqNN5oO9NHs64UZ110YoGWxcEWoXgaqtuzrmJLZV1eMV1zNdZHPLVCMX2vSIXaIcQEM21uPJAAp+flVWLj2uLmWfykRoEeN+aSYg1L7ui5ucXjbAtered/ORHRWCR3MlFc/uQau8rv3IL76WRbfaJdr+xkLeZ6coEM8cC0PuAKB9XYwRm+cO9yAa9MCMMUB1SVBAT0nM+vxmiOgmlQ55FVQLknXICosoOg9AH7I7zSj+vM4PTcjWFUboNpixvBAUNWbZ2IYkF5Jv2Sy32NA/q33hPTjqxnWXeb27+gOChsuQLXO7GtWpXxWzOEnuuC6Cg4/kfml0F1dS+evvgvAT0FJwBsJMrkqgoIFHUSXqp5QMkAPY5rHgaxfSf69n7Q4LG2B620hF4U4PfWVnDLuGrjaZJORsd5XkTxL0YuXER6QfR/I8vYZ+OCsOgBXWYOPWgDX3w9HxtVMWBwHVJcGsAMD1f9EANWOI6BqA6L+CKoG4pJ91YLRMsb+ZZAf2hDIxJzXJJWUKFpvmo1Apu0/M6M6iGrTL+1QEAgKY793ZMApKae+l3IjilwsC8ovOpiCdR4OH71nforyfV+zgqQnEJ3nUuT/MxEyU3QTmb8I5Kt/HSgwaReEZ/yIOwwPQ7Kf2g01OOSlvz9AvHmyo9hhG5CTBFxvVHJ6DYp3GSiKcb3LYp0PqYhVl/edCwqSvpHXeXcAq2R4jgeu9QGuRaTEqhy4NmMOsKUZNJyKaB/VooFqFIiSSXkRQWBGEUySyQQ2QNkIWjmFsxEDVBcDRQIeCjKNPx1zeFeVfqkD4EcITIKuQVAY+z0B5Oc8KuNBtDaSAz165dNJOYZeYV9lrdaPOfRkHNMRBDCWDcDlwrkMf9Lsb3Per0S0m4Douf0rAujm2jT4Ej0Qww5LTMKYhLVJA1zl/ash3s/WBPqtHDLoArjKz1dG4HYW9bx31aWnKnleSpFBaeXZA9fygetnLYDrj4YbcDUFZnlG8N8H+Qq9geJM/66ZpD8UyL7C8aHRCAGqm4Gi/v8K4HlE+/rWJf2SvP8xBPk6iwJBefO4apPs7B4FrlGV09Kyxyb7OqbAPZPngDgAyUEHf68R8LatwGbqgLEILFdRgGY2gjiEqg956fd/Y9hw6XdSIFla4CquWQfBzmXg0Izy4RK4yrs/0SOsepg8NzPsXw9cywnO+paFnvzGcAKuTZ7sCQjyqD7NzOopoECcZRH4lkqn0iroooVJmKcDATzA7Kv01eWBJgvRQL5UNA1+1mgGqv8Amf4fAUXV74Mgf9+gcUGIypdbFfMyyMzwrXyrG81z75p9FaDcRG8EF7lqAla13Mnem8WApqX2cjvFnhkCpYC7H5QQvYg9k6f9n8V3boVd2qUymCpTT9qCow2ZZRsKGUeH/32EwW1D/ayqJvJxk9FHc78CQdnbhkM90MckxbX83+2IPnZAWXLWULqjSqC/hTpHws4WgHx5G6gWyIXJcwe+1fFsGFKkUSNG9ibFyF7PtSYo4fUDDFR3AJkJ6gxUo8bR5P6uAYoY/wOD7nYB/da3q6xKbBwoYfavQVT/WgqoakXRVxOgmgSCAOA4kAP/duqm1Spgsw5mmHv5/jxQVG9dm+kG01SXlTYo/dJ5oMppGzDoORpk+tcuLUngSV88Ngalf/sJiH0t4uKRdo3B/YpSyDLOh9R+rHLN8uiCTQ2wFya397tkLByMFwhSNsWBrPc7PjBlrRugAKxZiggIIwfGg/z7hioEg9K3CTHyLH17IIc8VS3PeUByVZ9ebS1eo3VBWZzCzlr52QCfD8MGuAIUjS55Sutg+nft+/rpkMOuaqAHUOlQSas1XAKFtO/rWSjO9zUP67E0ossc18n8L59XQObww0F+hVFtBMv6DQgPlLF1+3gCxL5WtWe0+WkSws1P0tcZCHxLe/EQEl3wcyRHmn/B+JuqiQLwZXtBxF6Sfj+UsD5ZfFy1XB6OdC4DfSnH6MJVQEDSownyvICJl16VZ3NNbVwFNumh8dbFVUBXs4vLbSxy9lhBxFelrgIr8YNH1phRTTumFk/YGgD+WTD7mrWtyYIeVtShlxWWMF/Hg9JYFcm+9mrTFyzT/D8bwO2gpNI7MFjdm1mjp9Q8t9SB2MdK9AqQf/qWoBRps9WlIc7cp9nXCYp9XbzCPaMDRBoRDNYUUPRzrzIJ0ud1LJi4Z2s0TunDVJD7Qli/pN+rgHx4h+DedaiP98UNsHcZaKP8NFNDPAcrJMznNFDe80WpiUVxhPrvsj4jegzvNBRWGABwFChQuR1xtoq+/7fCGsNGaBaAzNZDNV5E8WGVQ75jHLhJIOpAZpG+yYe7KLR2xWNqot6+Q/oWqc1xTSRH0A6CTKC38qHxHVCeyj7Y+wAOJ6CqfZR1Hs4hBqR3gFxH7gflCzYP34Z6xqDxew2Ah/gZ94NSMx0I4IuKFerEXCL61D47BsDHQG4IN5W4Z0TOlkUQNBZ10EtAU933URz4AoJSxmEAvQFi9aYah1HV8tzgs2MKA8KhmAvI8nyJajje9yKrh4NcaMaEnGOyb8aD3LI+psBsmcB1CVDO87iL2HSQBc71PNW5XcFjbpY8ZtEb+4Pc21zrNlfuCA3jTJU+ngxKVRbluz2kAO6fa6Q7nLXpqF+Etfgx2pg5bb+jMw8sawCCsi8LQHz1mTqYrZNcF2zcG+pogi7DVSDJ/D8F5If9ZXSnVdN9zeNTbqZvWwKUJ/TBFHtHy+XP+XIr8ltGipetEB2xLn271NhTvdRkDkch2swm//8q7KpQldlknf6J+JyqQwj8XFsx+jCtq4D592ldBloWewjI7yogP5sQs9dkjP+JeU6vEWKAnatA1Z+dUpxHaVwFlitgXkeCipncFaMbTXm/pMDztjJXgboofL3wzZCDdzLI7Hwzs1Or8k1pDzWGwRgmMIx9/QYod2Id2Ncqmw4yaxk3vOnM3N3NazAGwAdBCalXtWDw9E1RTNBnAzgNlM9wOLGvWnH1GfM4B1S04hYQA/0IKF+jKaPmxS3PmkLth5kALgDwW2acjgCwW8Le0ezr0QB2Lpl9HWPxnZnDQG7GqEtBFCh9lwFSHYF3nKuGsJ/jC+zHIMvib0CFKHZGuOlUuwzcAKoOVQZTL/O0uGJSoxjXWTW7nJR1/lT13iLXX5+lac+3PlB6zLGg3L/rg9LK7QQKyAWi3QP0vpsPyr8/7Bj8vooFdijioH8HFF15K38eBZmlpP2Xb/qbMJO0L8gkJQsalk5Eg6g1QSaKPzLz+bpSbMPdRGOarfU89YNMbrfw5wF1MEn7E6hs4ecYAL1P/U78xxoRF4cGyF1jF1DJ1lsruDgMFTCP5mVrCJRW7g4Gevchvfnf1R7TLjZtUAqha3ndDgXweWPv6Fux3jMbMev1c1aGswu+eIy0+M7cHt6HcpgsBkohF9dmY2F3nbq02RZ7bWwJe1pcBh6DvctAmcxmK4U8L0rAtTmM3q0vKXcicOFKK8uLgSwx40Mu8HFEkb7MjQBZMZ7HMCXmynIViDP/DzAL9XNQkuYVIjZ+nwIIWuhWZjD1XMj7wsbVVgfuy6B0VGkUjIvLQlmuAklm6xcBXAzyg1w3YnObTu36d58ElbrMYoL+idqYRZug5dnLg6LR08p80jy+xpehI+HG/K9LL/c5lMuwvXMCguwiUXtHu308hcDE5nrPpKkG87MaXMDzHpprIDky//YaHPJReuxMJGdE2CNGTvK6Cphyk2SetnUZcOUqIM//MJJdX/7Uw/IctqZ1dhWQdfhwCh1mI/NFfHTRoaTv9vO/F5WAZyqtnFUUcE066F8C+agdioD+DgNMcQe96VIwBuRCcLclkNKCdyGCFBZF+r6WAVwlYj1s3meAXC5OBkWfLx7Rx7g5CKsgthXP4Rwk+8Gavq8fKeHikKVylr5smb+bxXL2PVD0/xIRh5ZtxoiGcTmLGkPD4XzouR4NslzcnrB39Fz8TLFpri4e0qfdLA76s4cBcF1fjdED1+zAVT//BsT73bZZD66O6GT/roHrVjE6Z1EGru2KPgIEdygIuObtX5Zy3tKff6Kc3O/DBrjGHfQzGTCdAmAbhPuwZQ1ICQNSO4EqUi0wFEQb0XlfXwb5SRUJoooArnFs9iCDw18wO7piApuddt5NYLYugDNAAUhhcxwXAOQaBIUdRGuBfH+iDqO42+3/QL6ieyPw8Y2ax4bl3EXN+ziQX9PRLCtFBbaF7Z3tQWWH50VcQrTF4knH7Kv8/UcsgOv5wwC4rqVYkijgeluNges5NQKusu/WAvkFR5XFNoOhWiUA1w9YANdLS2DJPONaXHBWVcyx7sdv1flZtMtJzwZnxaX56fChdjsD1v8iSOkCg9nsYOGAlDT+XGYp1g6/82ZQUNDBoATeEumnffm0H99qAC4DpY84AZRXr46+r1p5NhSzJ+1VUFDVjSA/y6eN/otPpmYgsvajbRwazzOb+2NQ6dpDAWym/kb7weqguaNBOUi/hmIDgPrU2JPmcRrIz/cmluOJRn/kb2zmUZcJ7oR8fzzIZ3sbAB8CsDnIjK/b30E+wlMcymXY3rmdPxuAasLvry482q9XfF9vgnvf1zkW3xmH3m9SgGREzHcWU2tVJx0kcpt0sM0pqU+Sq/IFUB7p83lu+0LOnUEAuwI4BMDvUJwfoMzTXESnnJSfjanhOhfdXmLwX/alTIKzZvfYfIWdWU0+809h7NJYFOQoDeOaZP5/lQ/Xw/hAa4TcYqNY1TAGqpGDfTOZwBVAuSmfQrQvn2aSXgUFILlmubIyrm3Es9m3A/g2qPxbGja7EbIujYwMrF5j/f+fAAUEmSbnNpLTL7ly29CHw/SIOZ4D4F4AP2TGL4/5P4lRXYoB6rF8G50Ssd8GjLl6DUEVpaLYGRPALwsKpns85Dat948L9lXmaiMkm9D/XUMmMq08Lg3gzYhxala7Yfxd1U3W9mpUmw4rrm83IrvLgCvGVdZrNQQWjCh5vqtma1wG4/o+nrcRSu+U8WlmOFvKdBXQ7n4DMZhrMihLTxUpPmvtKhBn/n+XAdNpDJjGpQRMLUQHnjQT/j/NQaifPxLAXszGRvny6bFerNgmF0JhC1zjzP9tkPn/1yDXhpUjlHeY2VoD1b4Uh0AWoTaf/38gU8ZMRJugdQDQro4BmsjQvgwAZ4OCkv4IYD9QtgnbeUwLVMfzHjkJZKJ8PQaoRgUVDhpyuXLBysrcO30APoXwYLx+4+IxPuO+baqL5qyEg/7+Hj7cbUrbyv9PReBG06hZ/++PAIe6jOnaMbJQBHDVLgOzkOwycE2IjnENXMeBLDhxF5SnVR98ydf6jqtKV4EOKAj9QlAA69iCSYzaAtfXjc0U5+fXYUBxPgOmVVICpriDfQmQb92pAK7n99zFTE/TEBxXQGprFoDZIUBK+2W6ZF81cO0o4bdhsy8HRa1PiLgIhF0STEY1rK3DwO1CUHaHB0CBL2sqhZyH1TIZyjX4sjM5hFHuGArhFwoEufB9bSjGc40QmbCN/reR5+1A5pv/IKjylAaoxl1oBNB8IUS2ilBQNpeQfrV2T4NyaqYFrw11wZycAOheQmBG78WDXvp8dwL4608Af1X1e3EEloIoYDcN8XlqiwCuWkd/GXZZBr5o9McVcJVxN0CpuoYiztUhUGGUpRcx4Lqp0qWNCj5FANc2667nMnyeB5V3fpwvhdeBiiadDoqt2BgLpwrsq0heKgWuz/LLFkQApqmgRP1HMWCyTfNjc7BvA/JFuprfEyXcdyDwk2zkVN6NkL6uCyqf9griTfMu2FcR/iOV4huMYbO/w4Dels1OAqoNAOsx4Pk1K9MFEfP+JsgHzBUwMhm8caCCEPeFHCaaiX0GlPvV1c2yGXPZygpUl2SgeiLIhO0KqMalSJH/vrQE9lXPgXkJOR3kV2imZOkAOCDDmsnzb0sAdPP5/XUBdGmC8/R+uijmIJQ98JGKWJW49VlfrU0UK/5QAhArCrjquYpzGRCS4m0mYhrGRd0FcJV+XBXTD3nmhBrJcxPZotPTAte6jDcvcNWVs1ZmQDeS/03zsbWEVlH5szbA9ViE+/mdAWBHhDvftzIA1SUR+PT9KwKodgzQooHjXAYFLtjXKCC1FG+2h7FwbrQBxXzuG7J4ad7Z4JtTv6FAJzKbvRfso9aTgGoTwIYMEP/A74iKAB5Ad7oQ+d2VILObC/ZVK0TddgYFxvUbAFaD6vOUPLYcbLo4hZzkyjKe5fkEkKlxWsFANYl9LcP3NW7vjAcFcpmXkBsy7Ff57vk9BujSAlkZ5/Ex45SfHR/BfFd5gNvk2v1rwvoUCVxl3tcGWdWSXAauNggBV8BVxngGkjMwfNbh+VbVxcwDVzclX023vjJSXPUMcAUoXckJIPP/6ikAk41P38lMd+c52LVivFMJe8ORwIcFFO3OzJnu13z135cgcIhuZFzwLUEm80P4pt20YLOTgGoLFA1+AChadmLEwaKBapJ/s7CvBztkX7UM6bYRyE3hdYT7UD6twErT8SaMA6pjQbkYj7O8eBVd0CNqf1xSEvsadwn5KKgYwyTFlLcyHBCHWAC6EyoGdCKDv+IL3uEgvz2byl8yJzshOvVXnB9m1Qf4uRbr880EfVEkcNXP/xrSuQyMLAC42gD9syoGriJfZ7HMfRUUQDXKM66pgOsKBjlSpAvDIgtcYQmYkhjV7UE+fdcWcLBr38d5fGA1HW/yMCC1OTM/b6u+CAv4JChaNIuwxZnOtDk2KZhKTP8HAPg9yDc4K1C1AUZXwp3vq6kw9bOWA6XIeiJEuQ+CUjTl2Qg2eVQ/xEzXv5hprwtQtfF93dfxJSPL3hmREwxuAvvAmmaFins0Fg62m8SXiEP5Ujoy5u+XAvk3xgGkdwAsk/Gi7HrMstZPxQBu6ffWFTKuMC41tyI5y8BbIJcBl64COmdvUpW0eypeY1nb54z+vQDKi34kg83FkOz+sSgD1+VrsFeHPXBtRQCmJKC6LQPIMnz6wkCUS9/XsM2rn7cKKKDqWaM/e+RYkGaICcDGR3UDAF8Cmf6fRLLp32VxiaLY1ygGbwSAPRFUw5HPP3K8O8pCIK4sV/UAUK0j+xp2CWnmVIjPIz6g5R1kt3y4Yqe25v70R+zFDl/mwy648oxrjD0Wtqb7V8zGaTn6YAxolZ9NQVCZrwofV3O/vwfkCpeUteMq1WcXwFUD/ocR77c9D9X5bcv7JiBIwRQFOu9UF9OGB64euFbFuNr69J3ISrgKn74w9nVuQeyr3sxmacx9GDRfCsoLmofet/VR/SLI9P9ESUDVBhhdURD7ajIl0j4IKot4OygwJCsDIxtoS1Bu36Q8qlGla+v6iWNfWxUotjyg8AIsnGnClMV9UY27gLzvrJCDTHz0xb3owgj9JP9/GJL9H++swSEv6/JrxLsJdEDJ0JNkrgzgqt9j6zJwoNI5LoBrnKyY7z6yoguKvO9EC3mOAyIeuHrgWjhwjWIqx4Gi/iXvZFmMalYQdTvc+74mASlXN1xzc2zIjOrvkc9HtQxg9AYoKAcFKduGQ7ZQ5ntTUNqv4QJUhxIOYQmSqYJ9zQuQPoZk/8+bKjj85LK6GKLTduk+fiJCceu8te8iOqe2PHvbCi4guq8NUGaVmYiupy593a1GwFW7styGZJcBcc2Y4Ai4yru3jFlj6c+DBZ1htljg0Zj5kZ99MUbfe+DqgWtpjOsSCHz6rkbvmEpN39fj1YT2FbRYLSRHpadhozYB+cJdDAo+atcMqFbNvprsd1alLn//gFI8dTf9u7xkTGFrAQrcH66V4mhQvtY4s3QblFe2USKgk7nbE8mVo95AUIWtEQNq/mzBut5eIXCVMf8c8dkeOiCfyFFItkaVBVz1374HlGUgyWXgL/zdoZi1tQWu+uyYiGQ3i7KzZYhe3RHJfsuz1SW46YGrB65VANdVQb5wVZr+i2BfNyuQfXXF/O3AIKpXgKqN7+thNQVGMucrgfzc2hi+YDVpf5jsa7PmB4VNGqHrSpY5Oej/i+RI8T8lKG2deqkdw/bLO75Uwf5qqUv2gpj9I2M+2bKPZQJX/b4klwFZg1+C3NFcAFd593EW8nxvBcAVCGIJouS5AwrQjRuvB64euBYOXG/A8DGVmuzryWqi6gKidDnCOQivVtaLgEoruqtB1biKZF+zAtfVEF1KtNc+7ZT7VF8ypiEI9qmKwbNds7V4P3cSGLLPlbTX5fn7ID6hvKzNNhZzLGO9Eslm7Blqf7VKOqBafEA9mNC/DigyfznY+f6XDVxtXQa0fmg7Aq7y++V5DZPk+csKGJQhz3FuOfrnuyfsMw9cPXAtHLjOxvDx6QsDUXeBUlrVhX0V4T8a3am1hptZ+q2asa9NZWGY3aPAVV9wzANlENl8X/+OoNhFHX1fRdH9PuYQ1KmM1i4Y0MnFc1lQ4FsnxmLSARVksNE78twJoOwEUVYuedfDoMDQog997dt/QQLQk7U5KcUalA1c9TOSsgwMWfw8DXDVc/ITC3mewwx3kfpTiIUxoAweUfIshMr/GKj4AgQeuFYKXN/skUNcNtSA5SGt2df5zL42C1YCaYT/24iOlq4jsyeAyUZOTPZ17Rqwr70IXE0m3vz9y+guUzwEe7eeOPa1bi4eDWYY58VYJGR+nkCQ77TIDCP/TgBx8vNPpeiLDajRz74eQWL4VkFzL8/9LpJN6x1QusDRSF/2tkzgqufraAtw5RK4yrysBApwS5LnSaBUjEXJszzzr5by/CWLvnjg6oFr4cD19Rof4gKY4jZTUr9N9vV9FbOvIvwnZVSYZQOmKFNWG/bA6G1Q8FmVwKhXgGvc5WwaKAhOkoAvzkzJx0BFEjpY2B8tzSXjbwb7WpfDRFfzsQF0D4Ii30XWGg77AMSXojWTyafRM/LdsQjyRbcT2M0bQQUMXI7V3KM/ThivvoDvlPKAqgq46j7elgDaXAJX/d6TLOXoKQQlt13KcyPlvnoCVEjDl3z1wLVy4Dq9Rod4HGAaAPA4KPL2FoQ7jWf1fW1UIPzH1wi4JrHZrwK4HBTE93ZKAGuyr++piH2tK3CNMv9LjuJ7APwAwIdBRT/i2v+BilLMynHJmAZgvwjAVqWCbIJS9L2IaHOmlrfnEVRtkn2XJedvS83BaAAXWYK4NigHaNo51GmTkgJjZaxPqndlHauMVwPWlRHvcysfKcf84wzjrRK4pnEZcAlcRZ4X47WzYTpfRZBpIK8896ln/NLiHJLf7Wy5vmmA6+b8/ZEIivFU9bEdlweuizhwTQJML4N88A5FkHBemiSjn5PikNbvuBMUxYuSb3wi/EdWDFzjANNsUGaG74AyH4wzDrOTEFQ00sx4xwIYvYMg6KBM9rUuwFXLfJisPgvy59wHQQUdcxxmpTWTHV0HFIn/KtL5werfX2YcyFUzImZe1wELQNcPMnEvETJ/LTVv+tNCeHnlHRDk/h20OOR/lENRmzqi32LN+vmCs0wIEO2LGWtYdcQ+AIcgKMphA2puVs9rZBhrFcBVr09al4E8wFW/d2ulD5LkuQNyI1k2ZI3TyvOWAO5OIc+/SyHPaYDrWj0E1DxwrQlwbTBwXY4fXsYk6wU2N9MsPhxu4c/DDEzNDS/PAIB1QeVHD0CQ4kee34p4f5vfLcr+DJ7gPjXxRQr/IICjAJyn3lvmvIcBkacYzN8CCih5OULRtvnfsQA+C+BwVoLSBmMOr7Z6zrUAvg6qid1U61YkcO0wcH0aZGIvS+Ylejgsz+gboJRoN4FMlhNZIZosiV6/uDE21BotzQD4UAQmOVmHKHOfvKfFfTseQTonkd0qD45BAGcD+AbP04iYORe5egnAb/gSPCnF+0YC2A4UZLhXiAybTfbyf0GFAtoWa5Y01p/xPrEd61QAfwRV9ZuY8p2rgwolHKLkxWa8EwFsz5fSRsp9LOM8lhlbUx/K+29ixq/pWE8I+9nmy/p2CWPW+6QBip9Yn/VlM+PYT2OSIGmN5aL6GihQ7hIAz6QEy1uzPviCGnfUWOV3TzFRpNOC2YzrCJBbTdwZ9x3en62Cz12btZwOcrlKGteZoGqd5rjkObOZPJjO/z+E4dlkbCP4HF/D0EVahv7FuqWlzqdaM65xASYdVnq/YRC0SsRm6ws5aM1SrMsA+CrIncB8dyeBXboXwBYlsa8i6EeVwLjGsdmvAfgnszqbhCgvfZNvhPxct4+CTIqDxk29bcG+HlES+1om4xrHZs9jYPMjnrelImQ+j4+puTdaAD4JqoA3ZLFG5v64XLFKVfq+atP9DRZsZMcYx1y+HHyfgegH+eK7Co9vY2ZWD2Vg8HQIU57EfL4KSrmWV4/oS84f1Fg7lmMdZDn7OV/qtwWwAcv/KiDz+JYA9ubL+y1Y2MUkbn/0KwtBnvFWzbjqZ67HMmLjMpCXcTV16WUW8mzuywWguI0zQangtlTyvBqAjfhCcTCAXyEofDCEeP9p/Z63WG7SjC8N41qnzxMJLKlnXGvCuBYFXOMA01RQgMlXGTA1LQGT7SE9gkHwTUj2g9W+rwsAnIpu/58ihK5I4BoHmOawkvseqDrKkhF9swUmYezhJswiv2kI7mCCAr4Gxfu+Fglck8z/z4Nq1e+PcNNYM+Jy5kKxmJeBLRiUzUCyi40GQ68jiCgu+pKRtI4NAONB/r82h30b8bXp5yE6LV0HyS4WA2qONnGooHVg129h5w4Vl6mkzQzhPMT7VNo+/xF0B/Pl0YdVAlebfhQBXPUaj7K8jCWtscjz/Aj91rEA5vLsGQC2yrC+aYCrnFdVfubzv3d64LpoAdckwHQ33+p3Qre/mQmYGjkn0ZyUrUFmzqRgFa3E7ymYfXXp45qULul/DFL2Rri/ZMsRYDLB7kogE/MzCQpTg4IZDOaLAkaugWvc5ewNZjePY1kamfNy5oqp1Gu0Ol/UJiHZV9lkX9cs+JJhu5ZLqAtqmiC0uKCntjrQbJ4n+3cSgPe6Vs4GeD0d4bl4bcbazjgfUXJwpbr8thzow6qBq94jNr6froCr/rvRCILh2hXL81QEAX99Gde0VxhXnQXEA9dhDFyTGKZnQM7c+6pDrgjAFKeA9HPXAgVpvBxzSJt5X09F4G9URJqZr2Xc1Enpkq5kNnvTEIVTNGAy2e/RLAN3JLDfeizXIQjEcwmM8gLXuIwX80F+qmeDgoeWSZD5Kpu5RuMAHAhyl4lbI7O078EVs69NpTR/ifRpwMxqTx2kiyjX+/Y/fFlzDVrDLuWfQhB0Z8MG5x2rGdjXj6CcqwsgWRfgqtduQ8VKuy5AkCTPGhglufO4XGOzZPpaOfa2B64euNYGuMYBJnFq/jooUr9qhinqkF4SFGjxIKLzwerx3Y/uNDMulGbaPK5J6ZLuZTY7yvyf118yq0CHRWVfyiAvjP3WYGBmAexrWuCadDmbBEqN9CWQX1nY+4q6nBW1Rjszo9ofc3CarNtaFbKv+n17Ish9ql1UinCBGlJyekwI8CkaWK2IwO/VTMHl2u1IP/MWUMo1OJTrOgFX3Z/jkJz2zCVwlT0pc7oryOeySHk2L2BzmLBp5ZRnD1w9cK0MuMYxTAtAjv9nAtil5gyTBhH6/3djsN0OOaT1hh4AVblyxb5KP06MEf44wPQcH1q26ZKqFmzzsrIhKKXLtAhGx2Rf11PPcsFoxAHXuMvZW6BKRSfyZWZUxNq2ekxZhbnYTAAF9UyPWCPN9L1RMfuq+z+O1+dlhPvRDWZgVsNcceaDIvfXdSSbWcArAGzDB0KUDLczjtWU//tB7kZFAHSRl28i8M8M8z+8riTgGuYyMB8L+2L287+zHAJXc35Hg7JnPF+wPA+CMhRs5IikkTU9PGJN6/ZJ6+N6RsS4RCZmLILAdRKPfUHE3F7hWndMQ7dPTRzDJAEmvcgwRR3SmwP4NSjC3bzdFsG+ivCfws/vR3yFsDdAqaOO4b7Whc3Oooz13C8Lcpd4HOHBIZp9/ZoDYCTrtRofNh10l7I1513M/z8FsLtSRHW9nLlaIz2WFfjgfBLhFgqTfa2ytK9pWTmYWbo5Foe4/sT5yr7A8rBRiSyrjR77P1BQ5IsOx/omqAzorsZ7i/L5PyUBdN1bEnDV79gIyYFSQ+j2+S5CnseCioJcA+DdlGscx8S/AuAXCKpJupJnWdOj0RvZBNJmFTjH4lkrLGLA9e2E+bjZpb5s8EYYGzLB7zCrejMohcwTfJibC2mTX7Kuh7TOB7sqKG3MgQqYa+p7BCuBM0Cm+QFky0kmueAORpDUWbd+nus7QIEn9zPbF6bUdP97pZm5RvsYGB4BYu+lDap5B8/F0aCcgllyOUrOufGssMeHfOcZZllu44Py+ZC+N3tY5rOu0UgAe/Aa6eo9bUMm32HG8wJD1stUpE2jX2uBcnNuDfL7XosvTTYgYzrIwnEvy9+dIPecMP1R1TpB9WEMX6535H/XB7kVjLB41htMTjwE4FYe63RjfdsFjaEDysawJb9Dn0WSj/tVvsCXlRdT+rUjKOPJYMgZ2eCf/wNkxXHdtzB5Xh3EtG8DYDO+LC5rCQjeZJ12P1/q7uBLfJgsuZi7DRHkM64zgBMZm4bApB03rg/w3LcjZGIAVD57HhaN1gRZZMaFyL/M7YugrBlO9kgDZP78KAOmJ1lp3cxs0xshgEkSTHeG0aTrQ3pxkL/cYbzpNKAUdu2/oKwAD2YAUSLo40Hmma35wL9fHY7PRAAmbRIaDre1lgFsPoAg2ft4BWA7DJ5mgXywzlHzOJRyrTsg9vpU/u+HQGbIW/nCMDCMLmdFrNFWvEafQVBRTaw1Yg34N8jffRLcJ4xP0+8wPbUEg7kV+MAfC3L7kH01iy+KU0GVo2YmXHjrqMOkjQYFja0EshiMQ+Di0mbS4m1QTuepIBNn2AW5jUWz1SV5fMO4MOs2nmVZ5Hkcr7v0exavscjzOz0gz775lthG8O2hV83/LpWDaYbensHlPHSbkOWA2wH5zWfLs6JBCGBqLSLzbpqo1wSl/nkB3QnPhYU9B9nN0TKfAl4QosiHk/m/qDVaG5Sp4yV0uxBIPtS3GeDWAdRJyctGDr3QC3uxkVN+qxyrXqcsdeSLai0k17j38pxtTev2aTkc16LWWlXv30UFMCUpfz3+9UGVjl5Dt9/GhQr8Z3lPwwOmhRSCmarpIBAbred9hmKOGhnfsyhezopYoyVAlaYewMIpeYb44rdYjea2gYVruIcp2eEgD3qsrWE+1kX5UunX2LdFVvA9wxR+izDLyn4FwMOg1DubhQChvADWt4WzQADkW3kpyNx1rFofP+/1ALANkI/y5ehOeTaERSPC1jfffPPNN99qC6RaCDfv++b+UmUC2CX8tNR+jd4HKlH6FiitVt7LnW+++eabb74BAP4fhaPEJLvlQ6EAAAAASUVORK5CYII=" alt="Inmobiliaria Concept">
+      <span>
+        <span class="brandmark__t">Revisión documental</span><br>
+        <span class="brandmark__s">Captación · Lima, Perú</span>
+      </span>
+    </div>
+    <p class="navtitle">Documentación</p>
+    <nav class="nav" id="navDesktop"></nav>
+    <p class="side__foot">Herramienta de pre-revisión para agentes. No reemplaza la evaluación de un abogado, notario, arquitecto o especialista municipal.</p>
+  </aside>
+
+  <main class="main">
+
+    <!-- HERO -->
+    <header class="hero">
+      <p class="eyebrow">Guía del agente · Captación de propiedades</p>
+      <h1>Qué revisar antes de <em>publicar</em> una propiedad.</h1>
+      <p class="hero__sub">Una guía visual para saber qué documento pedir, para qué sirve, qué buscar dentro y cuándo conviene profundizar. Sin lenguaje de abogado.</p>
+
+      <div class="thesis">
+        <p class="thesis__k">La idea central</p>
+        <p class="thesis__t">No necesitas pedir todos los documentos. Primero haces una <b>revisión básica</b> y, según lo que encuentres, <b>profundizas</b>.</p>
+      </div>
+
+      <div class="blocks" id="blocks"></div>
+    </header>
+
+    <!-- LEYENDA -->
+    <section class="sec" id="leyenda">
+      <div class="sec__head">
+        <p class="sec__num">Cómo leer esta guía</p>
+        <h2>Tres respuestas posibles</h2>
+        <p class="sec__lead">Cada documento se marca con una etiqueta de texto. Los colores solo acompañan: lo que manda es la palabra.</p>
+      </div>
+      <div class="legend">
+        <div class="leg">
+          <span class="leg__tag t-si">✓ SÍ</span>
+          <p>Corresponde revisar. Es parte de la documentación base para ese tipo de propiedad.</p>
+        </div>
+        <div class="leg">
+          <span class="leg__tag t-dep">△ DEPENDE DEL CASO</span>
+          <p>Se solicita cuando las características de la propiedad lo requieren o cuando la primera revisión levanta una duda.</p>
+        </div>
+        <div class="leg">
+          <span class="leg__tag t-no">✕ NO</span>
+          <p>Normalmente no corresponde para ese tipo de propiedad. Si aparece, es una señal de que algo particular está pasando.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 REGISTRAL -->
+    <section class="sec" id="registral">
+      <div class="sec__head">
+        <p class="sec__num">Bloque 01 — Registral</p>
+        <h2>¿Quién es el dueño y qué pesa sobre el inmueble?</h2>
+        <p class="sec__lead">Todo empieza aquí. La información registral es la que te dice si la persona que te está entregando la propiedad puede efectivamente venderla.</p>
+      </div>
+
+      <article class="cri">
+        <div class="cri__top">
+          <span class="cri__code">CRI</span>
+          <span class="cri__name">Certificado Registral Inmobiliario</span>
+          <p class="cri__desc">Es uno de los documentos más útiles para la primera revisión. Te permite conocer información registral importante del inmueble, como quién figura como propietario, la descripción del inmueble y las cargas o gravámenes registrados.</p>
+        </div>
+        <div class="cri__grid">
+          <div class="cri__col">
+            <p class="mini">¿Para qué sirve?</p>
+            <ul class="arrows">
+              <li>Saber quién figura como propietario.</li>
+              <li>Revisar la información registral del inmueble.</li>
+              <li>Detectar cargas y gravámenes.</li>
+              <li>Tener una primera visión de la situación registral.</li>
+            </ul>
+            <div class="doc__cost" style="margin-top:18px">S/ 69 – 71 <span>SUNARP · referencial</span></div>
+          </div>
+          <div class="cri__col">
+            <p class="mini">Qué contiene</p>
+            <div class="tree">
+              <div class="root">CRI</div>
+              <div><span class="br">├──</span> <span class="lf"><b>Propietario</b> que figura inscrito</span></div>
+              <div><span class="br">├──</span> <span class="lf"><b>Información del inmueble</b> (descripción, área)</span></div>
+              <div><span class="br">└──</span> <span class="lf"><b>Cargas y gravámenes</b> vigentes</span></div>
+            </div>
+            <p class="tree__note">Cargas y gravámenes también puede solicitarse por separado, con el <b>Certificado de Cargas y Gravámenes</b>, cuando necesitas una certificación específica sobre ese punto. No son dos documentos que tengas que sacar siempre.</p>
+          </div>
+        </div>
+      </article>
+
+      <p class="mini">Otros documentos registrales</p>
+      <div class="docs" data-docs="registral"></div>
+
+      <div class="callout">
+        <b>No todos se solicitan siempre.</b> Se utilizan cuando el caso lo requiere: cuando el CRI muestra algo que necesita aclaración, cuando hay más de un propietario, cuando quien firma no es el titular, o cuando la propiedad tiene historia.
+      </div>
+    </section>
+
+    <!-- 2 MUNICIPAL -->
+    <section class="sec" id="municipal">
+      <div class="sec__head">
+        <p class="sec__num">Bloque 02 — Municipal / Tributario</p>
+        <h2>¿Qué dice la municipalidad de este predio?</h2>
+        <p class="sec__lead">Registros Públicos y la municipalidad son dos fuentes distintas. Aquí se ve cómo está declarado el predio y si arrastra deudas.</p>
+      </div>
+      <div class="docs" data-docs="municipal"></div>
+      <div class="callout">
+        <b>El objetivo es comprobar que la información municipal coincida con la propiedad</b> y detectar posibles deudas o diferencias. Si el área de la HR no coincide con el área registral, ahí tienes un tema que revisar antes de publicar.
+      </div>
+    </section>
+
+    <!-- 3 TÉCNICO -->
+    <section class="sec" id="tecnico">
+      <div class="sec__head">
+        <p class="sec__num">Bloque 03 — Técnico / Urbanístico</p>
+        <h2>¿Qué existe físicamente y qué se puede hacer legalmente con el inmueble?</h2>
+        <p class="sec__lead">Este bloque conecta lo que ves cuando visitas la propiedad con lo que está declarado y permitido. Es donde aparecen las sorpresas más caras.</p>
+      </div>
+      <div class="docs" data-docs="tecnico"></div>
+      <div class="callout">
+        <b>Aquí no necesitas ser arquitecto.</b> Necesitas notar la diferencia: lo que mides y ves versus lo que dice el papel. Cuando la diferencia existe, se deriva a un especialista.
+      </div>
+    </section>
+
+    <!-- 4 COMERCIAL -->
+    <section class="sec" id="comercial">
+      <div class="sec__head">
+        <p class="sec__num">Bloque 04 — Comercial</p>
+        <h2>¿Está lista para venderse y cómo la posiciono?</h2>
+        <p class="sec__lead">Esta parte no busca saber si el inmueble es legalmente válido. Busca saber si está listo para venderse y cómo posicionarlo en el mercado.</p>
+      </div>
+      <div class="commercial" id="commercial"></div>
+    </section>
+
+    <!-- 5 POR TIPO -->
+    <section class="sec" id="tipo">
+      <div class="sec__head">
+        <p class="sec__num">Selector</p>
+        <h2>Por tipo de propiedad</h2>
+        <p class="sec__lead">Elige qué tienes en la mano. La lista se ajusta a lo que normalmente corresponde revisar en ese tipo de inmueble.</p>
+      </div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Tipo de propiedad"></div>
+      <div class="matrix" id="matrix" aria-live="polite"></div>
+    </section>
+
+    <!-- 6 FLUJO -->
+    <section class="sec" id="flujo">
+      <div class="sec__head">
+        <p class="sec__num">Relación entre documentos</p>
+        <h2>¿Tengo que sacar todo?</h2>
+      </div>
+
+      <div class="flow">
+        <p class="flow__no">NO.</p>
+        <p class="flow__cap">Se revisa primero, se profundiza después.</p>
+        <div class="chain">
+          <div class="chain__step">CRI</div>
+          <div class="chain__arrow">↓</div>
+          <div class="chain__step">Primera revisión</div>
+          <div class="chain__arrow">↓</div>
+          <div class="chain__step q">¿Encontraste algo que necesita aclaración?</div>
+          <div class="chain__arrow">↓</div>
+          <div class="chain__split">
+            <div class="chain__step yes"><b>SÍ</b> Solicitar el documento específico que responde esa duda.</div>
+            <div class="chain__step no"><b>NO</b> Continuar la revisión y pasar a lo comercial.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cases" id="cases"></div>
+
+      <div class="callout">
+        <b>El costo final depende de qué documentos realmente necesites solicitar.</b> Por eso esta guía no suma automáticamente todos los precios: una captación limpia cuesta muy poco, y una complicada te avisa sola en qué gastar.
+      </div>
+    </section>
+
+    <!-- 7 CHECKLIST -->
+    <section class="sec" id="checklist">
+      <div class="sec__head">
+        <p class="sec__num">Operación</p>
+        <h2>Checklist rápido del agente</h2>
+        <p class="sec__lead">El orden importa: cada paso te dice si el siguiente hace falta. Marca los pasos mientras avanzas con una captación.</p>
+      </div>
+      <div class="steps" id="steps"></div>
+      <div class="progress">
+        <span id="progressLabel">0 de 9</span>
+        <span class="progress__bar"><span class="progress__fill" id="progressFill"></span></span>
+      </div>
+    </section>
+
+    <!-- 8 BANDERAS -->
+    <section class="sec" id="banderas">
+      <div class="sec__head">
+        <p class="sec__num">Alertas</p>
+        <h2 class="h2ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2h2v20H4V2Zm3 1h13l-3 4.5L20 12H7V3Z"/></svg>Banderas rojas</h2>
+      </div>
+      <div class="redbar">
+        Una bandera roja <b>no significa necesariamente que la propiedad no pueda venderse</b>. Significa que debes investigar antes de comercializarla.
+      </div>
+      <div class="flags" id="flags"></div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing">
+      <p class="closing__k">Lo que deberías llevarte</p>
+      <h2>No tengo que pedir todos los documentos de todas las propiedades.</h2>
+      <ul class="closing__mantra">
+        <li>Primero identifico qué tipo de inmueble tengo.</li>
+        <li>Luego reviso los documentos base.</li>
+        <li>Después detecto qué necesito profundizar.</li>
+        <li>Y solo entonces solicito documentos adicionales.</li>
+      </ul>
+      <p class="closing__quote">“El agente no necesita saberlo todo de memoria. Necesita saber qué revisar, qué buscar y cuándo pedir ayuda especializada.”</p>
+    </section>
+
+    <p class="foot">
+      <b>Alcance de esta herramienta.</b> Es material de pre-revisión para agentes inmobiliarios. No reemplaza a un abogado, notario, arquitecto ni a un especialista municipal, y no constituye asesoría legal.
+      Las tarifas de SUNARP son referenciales y se indican en soles; verifica siempre el tarifario vigente en el canal oficial antes de cotizar al propietario. Los costos municipales y los trámites técnicos varían según distrito, procedimiento y área del predio.
+      Los documentos que corresponde revisar dependen de las características reales del inmueble, de su historia registral y del distrito donde se ubica.
+    </p>
+
+  </main>
+</div>
+
+<script>
+/* ============ DATOS ============ */
+const SECCIONES = [
+  {id:'registral', n:'01', t:'Registral'},
+  {id:'municipal', n:'02', t:'Municipal / Tributario'},
+  {id:'tecnico',   n:'03', t:'Técnico / Urbanístico'},
+  {id:'comercial', n:'04', t:'Comercial'},
+  {id:'tipo',      n:'—',  t:'Por tipo de propiedad'},
+  {id:'flujo',     n:'—',  t:'¿Tengo que sacar todo?'},
+  {id:'checklist', n:'—',  t:'Checklist'},
+  {id:'banderas',  n:'—',  t:'Banderas rojas'}
+];
+
+const BLOQUES = [
+  {id:'registral', n:'Bloque 01', t:'Registral',   q:'¿Quién figura como dueño y qué pesa sobre el inmueble?'},
+  {id:'municipal', n:'Bloque 02', t:'Municipal',   q:'¿Cómo está declarado el predio y tiene deudas?'},
+  {id:'tecnico',   n:'Bloque 03', t:'Técnico',     q:'¿Qué existe construido y qué permite la zona?'},
+  {id:'comercial', n:'Bloque 04', t:'Comercial',   q:'¿Está lista para venderse y a qué precio?'}
+];
+
+const DOCS = [
+  /* ---- REGISTRAL ---- */
+  {b:'registral', code:'Partida registral', name:'Partida registral / copia literal',
+   use:'La historia completa del inmueble, asiento por asiento.',
+   cost:'S/ 14', costNote:'2 primeras hojas + S/ 7 por hoja adicional',
+   sirve:['Ver todos los actos inscritos, no solo los vigentes.','Rastrear transferencias anteriores.','Leer el texto exacto de una carga o una anotación.'],
+   buscar:['Cadena de propietarios (tracto sucesivo).','Antecedente registral del que proviene el predio.','Asientos cancelados que expliquen una historia rara.'],
+   note:'Se solicita cuando el CRI deja una duda que necesita el detalle completo.'},
+
+  {b:'registral', code:'Cargas y gravámenes', name:'Certificado de cargas y gravámenes',
+   use:'Certificación específica sobre lo que pesa hoy sobre el predio.',
+   cost:'S/ 25', costNote:'SUNARP · referencial',
+   sirve:['Certificar hipotecas, embargos, demandas y otras cargas vigentes.','Entregar un documento enfocado solo en ese punto.'],
+   buscar:['Hipotecas y a favor de quién.','Embargos y medidas judiciales.','Servidumbres y otras cargas que limiten el uso.'],
+   note:'El CRI ya incluye esta información. Este certificado se pide cuando necesitas una certificación específica del tema.',
+   aparte:true},
+
+  {b:'registral', code:'Títulos archivados', name:'Títulos archivados',
+   use:'El documento original que dio origen a una inscripción.',
+   cost:'Variable', costNote:'se cobra por hojas del título',
+   sirve:['Leer la escritura o el documento que sustenta un asiento.','Verificar condiciones pactadas que la partida solo resume.'],
+   buscar:['Condiciones de la compraventa anterior.','Términos de la hipoteca.','Planos o memorias que acompañaron una declaratoria.'],
+   note:'Es el nivel más profundo de la revisión registral. Rara vez se necesita en captación.'},
+
+  {b:'registral', code:'Vigencia de poder', name:'Vigencia de poder',
+   use:'Confirma que quien firma por otro realmente puede hacerlo.',
+   cost:'S/ 25', costNote:'en línea · S/ 30 en ventanilla',
+   sirve:['Verificar que el poder está inscrito y vigente.','Ver qué facultades tiene exactamente el apoderado.'],
+   buscar:['Que la facultad de vender esté incluida de forma expresa.','Fecha de emisión reciente.','Que el poder no esté revocado ni extinguido.'],
+   note:'Obligatorio cuando la persona que negocia contigo no es el titular inscrito.'},
+
+  {b:'registral', code:'Sucesión', name:'Documentación de sucesión',
+   use:'Cuando el titular inscrito falleció.',
+   cost:'Variable', costNote:'según la vía y el trámite',
+   sirve:['Identificar quiénes son los herederos.','Ver si la sucesión ya está inscrita en el registro.'],
+   buscar:['Sucesión intestada o testamento inscrito.','Si los herederos ya figuran como titulares.','Si todos los herederos están de acuerdo con la venta.'],
+   note:'Si la sucesión no está inscrita, la propiedad todavía no se puede transferir. Deriva a un especialista.'},
+
+  {b:'registral', code:'Independización', name:'Independización (registral)',
+   use:'Confirma que la unidad tiene partida propia.',
+   cost:'Se lee en el CRI', costNote:'sin costo adicional',
+   sirve:['Verificar que el departamento o lote existe como unidad registral independiente.'],
+   buscar:['Número de partida propio de la unidad.','Relación con la partida matriz del edificio o terreno.','Porcentaje de participación en áreas comunes.'],
+   note:'Si la unidad no está independizada, lo que se vende no es lo que el propietario cree que vende.'},
+
+  {b:'registral', code:'Copropiedad', name:'Copropiedad',
+   use:'Cuántos dueños hay y con qué porcentaje.',
+   cost:'Se lee en el CRI', costNote:'sin costo adicional',
+   sirve:['Saber a quién necesitas para firmar.','Anticipar si la venta requiere el acuerdo de varias personas.'],
+   buscar:['Nombre de cada copropietario y su porcentaje.','Si hay sociedad conyugal.','Si alguno vendió solo su cuota.'],
+   note:'Captar con un solo copropietario cuando hay cuatro es la forma más común de perder tres meses.'},
+
+  {b:'registral', code:'Búsqueda catastral', name:'Búsqueda catastral SUNARP',
+   use:'Ubicar la partida cuando el propietario no la tiene.',
+   cost:'S/ 14', costNote:'por predio · referencial',
+   sirve:['Encontrar el número de partida a partir de la ubicación.','Detectar superposición con otra partida.'],
+   buscar:['Número de partida para poder pedir el CRI.','Si el predio está o no inscrito.'],
+   note:'Es referencial. No sustituye al CRI.'},
+
+  /* ---- MUNICIPAL ---- */
+  {b:'municipal', code:'HR', name:'Hoja de Resumen',
+   use:'Resumen tributario del predio y de su propietario.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Ver cómo está declarado el predio ante la municipalidad.','Confirmar quién figura como contribuyente.','Ver el valor de autoavalúo.'],
+   buscar:['Nombre del contribuyente vs. titular registral.','Dirección exacta del predio.','Valor de autoavalúo del año en curso.'],
+   note:'La HR y el PU se piden juntos: son parte de la misma declaración jurada.'},
+
+  {b:'municipal', code:'PU', name:'Predio Urbano',
+   use:'Las características declaradas del predio.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Ver área de terreno y área construida declaradas.','Ver categorías constructivas por piso.','Comparar con lo que figura en el registro.'],
+   buscar:['Área construida declarada vs. la que ves en la visita.','Número de pisos declarados.','Año de construcción o de la última declaración.'],
+   note:'Si el PU declara menos metros de los que existen, hay construcción sin declarar.'},
+
+  {b:'municipal', code:'Impuesto predial', name:'Estado de cuenta del impuesto predial',
+   use:'Saber si hay deuda tributaria por el predio.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Ver deuda pendiente y de qué años.','Anticipar qué debe regularizarse antes de la transferencia.'],
+   buscar:['Ejercicios impagos.','Fraccionamientos vigentes.','Multas tributarias asociadas.'],
+   note:'La deuda no impide vender, pero define quién paga qué y cuándo.'},
+
+  {b:'municipal', code:'Arbitrios', name:'Arbitrios municipales',
+   use:'Limpieza, parques y serenazgo del predio.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Ver la deuda corriente por servicios municipales.','Estimar el gasto anual del futuro comprador.'],
+   buscar:['Periodos impagos.','Monto anual aproximado.'],
+   note:'Es un dato comercial además de tributario: el comprador pregunta cuánto se paga al año.'},
+
+  {b:'municipal', code:'No adeudo', name:'Constancia de no adeudo',
+   use:'Certifica que el predio está al día.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Cerrar el punto tributario con un documento.','Dar tranquilidad al comprador en la negociación.'],
+   buscar:['Que cubra tanto predial como arbitrios.','Fecha de emisión.'],
+   note:'Se solicita cerca del cierre, no al inicio de la captación.'},
+
+  {b:'municipal', code:'Catastro municipal', name:'Información / certificado catastral',
+   use:'Lo que la municipalidad tiene registrado del predio.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Contrastar medidas, linderos y ubicación con el registro.','Detectar diferencias de área.'],
+   buscar:['Área de terreno según catastro.','Linderos y frente del lote.','Observaciones sobre el predio.'],
+   note:'Es distinto de la búsqueda catastral de SUNARP. Son dos fuentes diferentes.'},
+
+  {b:'municipal', code:'Numeración', name:'Certificado de numeración municipal',
+   use:'Confirma la dirección oficial del inmueble.',
+   cost:'Variable', costNote:'según municipalidad / distrito',
+   sirve:['Aclarar diferencias entre la dirección registral y la actual.','Ordenar casos con numeración antigua o duplicada.'],
+   buscar:['Numeración oficial vigente.','Coincidencia con la partida registral.'],
+   note:'Se pide cuando la dirección del CRI no coincide con la de la puerta.'},
+
+  /* ---- TÉCNICO ---- */
+  {b:'tecnico', code:'Zonificación', name:'Zonificación',
+   use:'¿Qué uso permite la municipalidad en ese terreno?',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Saber si el uso actual está permitido.','Saber a qué tipo de comprador puedes dirigir la propiedad.'],
+   buscar:['Zona asignada (residencial, comercial, mixta, industrial).','Usos permitidos y usos prohibidos.'],
+   note:'Define el mercado de la propiedad antes que el precio.'},
+
+  {b:'tecnico', code:'Parámetros', name:'Parámetros urbanísticos y edificatorios',
+   use:'¿Qué puedes construir, cuánto puedes construir y bajo qué condiciones?',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Conocer altura máxima, área libre y retiros.','Estimar el potencial de desarrollo del terreno.'],
+   buscar:['Altura máxima en pisos.','Porcentaje de área libre exigido.','Estacionamientos requeridos.'],
+   note:'Para terrenos y locales es el documento que sostiene el precio.'},
+
+  {b:'tecnico', code:'Declaratoria', name:'Declaratoria de fábrica',
+   use:'¿La construcción está declarada y registrada?',
+   cost:'Variable', costNote:'según el trámite; la inscripción tiene tasa registral',
+   sirve:['Confirmar que lo construido existe en el registro.','Comparar el área construida inscrita con la real.'],
+   buscar:['Área construida por piso.','Fecha de la declaratoria.','Si hay pisos o ampliaciones fuera de ella.'],
+   note:'Casa con tres pisos y declaratoria de uno: eso es un tema a resolver antes de publicar.'},
+
+  {b:'tecnico', code:'Licencia', name:'Licencia de edificación',
+   use:'El permiso con el que se construyó.',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Verificar que la obra fue autorizada.','Sustentar una regularización posterior.'],
+   buscar:['Número y fecha de licencia.','Que corresponda a lo efectivamente construido.'],
+   note:'Se pide cuando hay construcción reciente o ampliaciones.'},
+
+  {b:'tecnico', code:'Conformidad', name:'Conformidad de obra',
+   use:'La municipalidad confirma que lo construido corresponde a lo autorizado.',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Cerrar el ciclo licencia → obra → declaratoria.','Habilitar la inscripción de la fábrica.'],
+   buscar:['Que exista y sea posterior a la licencia.','Observaciones o modificaciones aprobadas.'],
+   note:'Sin conformidad, la declaratoria suele quedar incompleta.'},
+
+  {b:'tecnico', code:'Planos', name:'Planos',
+   use:'La representación técnica de lo que se vende.',
+   cost:'Variable', costNote:'según origen y trámite',
+   sirve:['Ver distribución real de ambientes.','Comparar con lo declarado y con lo construido.'],
+   buscar:['Plano de ubicación y de distribución.','Coincidencia de medidas con el registro.'],
+   note:'También sirve comercialmente: un plano claro mejora la publicación.'},
+
+  {b:'tecnico', code:'Reglamento interno', name:'Reglamento interno',
+   use:'Las reglas del edificio o condominio.',
+   cost:'Variable', costNote:'se ubica en la partida matriz o en títulos archivados',
+   sirve:['Ver porcentajes de participación.','Saber qué está permitido dentro del edificio.'],
+   buscar:['Uso permitido de la unidad (vivienda, oficina, comercio).','Áreas comunes asignadas y estacionamientos.','Restricciones de mascotas, alquiler temporal o remodelación.'],
+   note:'Indispensable en departamentos. Evita vender un uso que el edificio no permite.'},
+
+  {b:'tecnico', code:'Independización', name:'Independización (técnica)',
+   use:'La división física y registral de una unidad mayor.',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Verificar que cada unidad tiene existencia propia.','Detectar ventas de "una parte" de un predio no dividido.'],
+   buscar:['Resolución de independización.','Que la unidad tenga partida propia.'],
+   note:'Frecuente en casas divididas en departamentos sin trámite.'},
+
+  {b:'tecnico', code:'Habilitación urbana', name:'Habilitación urbana',
+   use:'El terreno pasó de rústico a urbano.',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Saber si el terreno se puede construir y vender como urbano.','Verificar aportes y servicios.'],
+   buscar:['Resolución de habilitación y su inscripción.','Si el predio sigue figurando como rústico.'],
+   note:'Clave en terrenos. Un terreno rústico vendido como urbano es un problema serio.'},
+
+  {b:'tecnico', code:'Subdivisión', name:'Subdivisión',
+   use:'Un lote dividido en lotes menores.',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Confirmar que el lote que se vende existe como tal.','Ver el área resultante aprobada.'],
+   buscar:['Resolución de subdivisión.','Áreas y linderos de cada lote resultante.'],
+   note:'Si la subdivisión no está inscrita, lo que existe es una parte de un lote mayor.'},
+
+  {b:'tecnico', code:'Compatibilidad', name:'Compatibilidad de uso',
+   use:'¿Puedes desarrollar determinada actividad en ese inmueble?',
+   cost:'Variable', costNote:'según municipalidad y trámite',
+   sirve:['Saber si el giro que quiere el comprador es viable ahí.','Anticipar el rechazo de una licencia de funcionamiento.'],
+   buscar:['Giro consultado y respuesta municipal.','Condiciones o restricciones (horario, aforo, estacionamientos).'],
+   note:'Para locales comerciales, es tan importante como el CRI.'},
+
+  {b:'tecnico', code:'Ampliaciones', name:'Ampliaciones',
+   use:'Lo que se construyó después y quizá nadie declaró.',
+   cost:'Variable', costNote:'la regularización tiene costo propio',
+   sirve:['Identificar metros construidos no inscritos.','Estimar el costo de regularizar antes de fijar precio.'],
+   buscar:['Azoteas techadas, cuartos añadidos, pisos adicionales.','Diferencia entre lo construido y la declaratoria.'],
+   note:'Los metros no declarados no se pueden vender como metros. Afectan el precio.'},
+
+  {b:'tecnico', code:'Área construida', name:'Área construida vs. registrada',
+   use:'Verificación, no documento.',
+   cost:'Sin costo', costNote:'comparación entre documentos',
+   sirve:['Cruzar declaratoria, PU y lo que mediste en la visita.'],
+   buscar:['Diferencia en metros cuadrados.','Origen de la diferencia (ampliación, error, falta de declaratoria).'],
+   note:'Si hay diferencia, se resuelve antes de publicar el aviso, no después de la oferta.'},
+
+  {b:'tecnico', code:'Área de terreno', name:'Área de terreno vs. registrada',
+   use:'Verificación, no documento.',
+   cost:'Sin costo', costNote:'comparación entre documentos',
+   sirve:['Comparar el área registral con la municipal y la medida en campo.'],
+   buscar:['Diferencia de área del lote.','Si el predio ocupa más o menos de lo inscrito.'],
+   note:'Diferencias grandes suelen requerir levantamiento y rectificación de área.'},
+
+  {b:'tecnico', code:'Linderos', name:'Linderos y medidas perimétricas',
+   use:'Por dónde pasa exactamente el límite de la propiedad.',
+   cost:'Sin costo', costNote:'comparación entre documentos',
+   sirve:['Verificar frente, fondo y colindantes.','Detectar invasión de vecinos o del propio predio.'],
+   buscar:['Medida de frente en la partida vs. en campo.','Nombre de los colindantes.'],
+   note:'En terrenos y casas antiguas es la revisión que más problemas evita.'}
+];
+
+const COMERCIAL = [
+  {t:'Precio y mercado', why:'Cómo se sostiene el número que vas a publicar.',
+   chips:['Precio solicitado','Precio por m²','Comparables','Condiciones de venta']},
+  {t:'Medidas y espacios', why:'Los datos duros de la ficha de la propiedad.',
+   chips:['Área','Área construida','Dormitorios','Baños','Cocheras','Depósito','Antigüedad']},
+  {t:'Situación actual', why:'Qué tan lista está para entregarse.',
+   chips:['Estado de conservación','Situación de ocupación','Alquiler vigente','Disponibilidad de entrega','Mantenimiento']},
+  {t:'Material de venta', why:'Sin esto no hay publicación que funcione.',
+   chips:['Fotos','Video','Ubicación']}
+];
+
+const TIPOS = {
+  depto:{icon:`<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M3 2h11v6h7v14H3V2Zm3 3h2v2H6V5Zm5 0h2v2h-2V5ZM6 9h2v2H6V9Zm5 0h2v2h-2V9Zm5 1h2v2h-2v-2ZM6 13h2v2H6v-2Zm5 0h2v2h-2v-2Zm5 1h2v2h-2v-2ZM6 17h2v2H6v-2Zm5 0h2v2h-2v-2Zm5 1h2v2h-2v-2Z"/></svg>`, t:'Departamento', s:'Unidad en edificio',
+    items:[
+      {s:'si', t:'CRI', d:'Titular, descripción y cargas del departamento.'},
+      {s:'si', t:'HR', d:'Cómo está declarado el predio y quién es el contribuyente.'},
+      {s:'si', t:'PU', d:'Área construida declarada de la unidad.'},
+      {s:'si', t:'DNI del propietario', d:'Que el nombre y documento coincidan con el titular del CRI.'},
+      {s:'si', t:'Reglamento interno', d:'Uso permitido, participación y áreas comunes asignadas.'},
+      {s:'si', t:'Independización', d:'Que la unidad tenga partida propia.'},
+      {s:'dep', t:'Declaratoria de fábrica', d:'Si hay dudas sobre el área construida o el edificio es antiguo.'},
+      {s:'dep', t:'Partida / copia literal', d:'Si necesitas el historial completo del inmueble.'},
+      {s:'dep', t:'Cargas y gravámenes', d:'Si aparece hipoteca o embargo y necesitas certificación específica.'},
+      {s:'dep', t:'Vigencia de poder', d:'Si quien firma no es el titular inscrito.'},
+      {s:'no', t:'Habilitación urbana', d:'El edificio ya está sobre suelo urbano habilitado.'},
+      {s:'no', t:'Subdivisión', d:'No aplica a una unidad dentro de un edificio.'}
+    ]},
+  casa:{icon:`<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2 1 11h3v11h16V11h3L12 2Zm-2 12h4v8h-4v-8Z"/></svg>`, t:'Casa', s:'Vivienda unifamiliar',
+    items:[
+      {s:'si', t:'CRI', d:'Titular, descripción y cargas del predio.'},
+      {s:'si', t:'HR', d:'Contribuyente y valor de autoavalúo.'},
+      {s:'si', t:'PU', d:'Área de terreno y construida declaradas, piso por piso.'},
+      {s:'si', t:'DNI del propietario', d:'Coincidencia exacta con el titular inscrito.'},
+      {s:'si', t:'Declaratoria de fábrica', d:'Que la construcción exista en el registro.'},
+      {s:'si', t:'Área construida', d:'Comparar lo declarado con lo que ves en la visita.'},
+      {s:'si', t:'Parámetros urbanísticos', d:'Potencial de la propiedad; sostiene el precio del terreno.'},
+      {s:'dep', t:'Licencia de edificación', d:'Si hubo obra reciente.'},
+      {s:'dep', t:'Conformidad de obra', d:'Si la declaratoria está incompleta.'},
+      {s:'dep', t:'Ampliaciones', d:'Si hay metros construidos que no aparecen declarados.'},
+      {s:'dep', t:'Partida / copia literal', d:'Si el historial registral tiene puntos que aclarar.'},
+      {s:'dep', t:'Reglamento interno', d:'Solo si la casa está dentro de un condominio.'},
+      {s:'no', t:'Habilitación urbana', d:'Salvo que el predio siga figurando como rústico.'}
+    ]},
+  local:{icon:`<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M2 3h20v4H2V3Zm2 6h16v13h-5v-7H9v7H4V9Zm2 2v4h5v-4H6Z"/></svg>`, t:'Local comercial', s:'Uso comercial',
+    items:[
+      {s:'si', t:'CRI', d:'Titular, descripción y cargas del local.'},
+      {s:'si', t:'HR', d:'Declaración del predio ante la municipalidad.'},
+      {s:'si', t:'PU', d:'Área declarada y categorías constructivas.'},
+      {s:'si', t:'Zonificación', d:'Qué usos permite la municipalidad en esa ubicación.'},
+      {s:'si', t:'Compatibilidad de uso', d:'Si el giro que interesa al comprador es viable ahí.'},
+      {s:'si', t:'Parámetros urbanísticos', d:'Condiciones de edificación y estacionamientos exigidos.'},
+      {s:'dep', t:'Licencia de edificación', d:'Si el local fue construido o remodelado recientemente.'},
+      {s:'dep', t:'Declaratoria de fábrica', d:'Si el área construida no está clara.'},
+      {s:'dep', t:'Conformidad de obra', d:'Si hubo obra con licencia sin cerrar.'},
+      {s:'dep', t:'Reglamento interno', d:'Si el local está dentro de un edificio o galería.'},
+      {s:'no', t:'Habilitación urbana', d:'La zona comercial ya está habilitada.'}
+    ]},
+  terreno:{icon:`<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2 23 8l-11 6L1 8l11-6Zm0 2.3L5 8l7 3.8L19 8l-7-3.7ZM2 12.6l10 5.5 10-5.5V15l-10 5.5L2 15v-2.4Z"/></svg>`, t:'Terreno', s:'Lote sin construir',
+    items:[
+      {s:'si', t:'CRI', d:'Titular, descripción del lote y cargas.'},
+      {s:'si', t:'HR', d:'Cómo está declarado el terreno.'},
+      {s:'si', t:'PU', d:'Área de terreno declarada.'},
+      {s:'si', t:'Zonificación', d:'Uso permitido: define quién es el comprador.'},
+      {s:'si', t:'Parámetros urbanísticos', d:'Cuánto se puede construir; es el corazón del precio.'},
+      {s:'si', t:'Área y linderos', d:'Medidas perimétricas y colindantes verificados en campo.'},
+      {s:'dep', t:'Habilitación urbana', d:'Si el terreno podría seguir siendo rústico.'},
+      {s:'dep', t:'Subdivisión', d:'Si el lote proviene de la división de uno mayor.'},
+      {s:'dep', t:'Independización', d:'Si el lote todavía no tiene partida propia.'},
+      {s:'no', t:'Declaratoria de fábrica', d:'No hay construcción que declarar.'},
+      {s:'no', t:'Conformidad de obra', d:'No aplica sin obra.'},
+      {s:'no', t:'Reglamento interno', d:'No hay edificio ni régimen de propiedad exclusiva.'}
+    ]}
+};
+
+const CASOS = [
+  {find:'Detecto una hipoteca', do:'Investigo la hipoteca: a favor de quién, por cuánto y en qué estado está el crédito.'},
+  {find:'Detecto copropietarios', do:'Reviso titularidad y participación de cada uno, y confirmo que todos están de acuerdo con vender.'},
+  {find:'Detecto diferencia de área', do:'Reviso documentación municipal y técnica: PU, declaratoria y, si hace falta, catastro.'},
+  {find:'Todo coincide', do:'Continúo con la comercialización. No pido nada más.'}
+];
+
+const PASOS = [
+  {t:'Identificar tipo de propiedad', d:'Departamento, casa, local o terreno. De esto depende toda la lista.'},
+  {t:'Solicitar documentación base', d:'CRI, HR, PU y documento de identidad del propietario.'},
+  {t:'Revisar el CRI', d:'Titular, descripción del inmueble y cargas o gravámenes.'},
+  {t:'Comparar información registral vs. municipal', d:'Nombre, dirección y áreas deben contar la misma historia.'},
+  {t:'Revisar aspectos técnicos según el tipo de propiedad', d:'Zonificación, parámetros, declaratoria o reglamento interno, según corresponda.'},
+  {t:'Detectar inconsistencias', d:'Anota cada diferencia con su origen. No la interpretes todavía.'},
+  {t:'Derivar si la situación es compleja', d:'Sucesiones, litigios, construcciones no declaradas: revisión legal o técnica especializada.'},
+  {t:'Analizar precio y mercado', d:'Comparables, precio por m² y condiciones de venta.'},
+  {t:'Preparar la propiedad para comercialización', d:'Fotos, video, ficha y argumentos sostenidos en documentos.'}
+];
+
+const FLAGS = [
+  {t:'El propietario que vende no aparece como titular', d:'Verifica sucesión, poder o una transferencia que nunca se inscribió.'},
+  {t:'Aparece una hipoteca', d:'Se puede vender, pero el saldo y el levantamiento entran en la negociación.'},
+  {t:'Aparece un embargo', d:'Hay un tercero con derecho sobre el inmueble. Requiere revisión legal.'},
+  {t:'Existen varios propietarios', d:'Necesitas a todos. Confirma participación y voluntad de venta de cada uno.'},
+  {t:'El área no coincide', d:'Cruza registro, PU y medición en campo antes de publicar metros.'},
+  {t:'Hay construcción no declarada', d:'Esos metros no se pueden vender como metros hasta regularizarlos.'},
+  {t:'Existen ampliaciones no regularizadas', d:'Estima el costo y el tiempo de regularización antes de fijar precio.'},
+  {t:'El inmueble está alquilado', d:'Revisa contrato, plazo y condiciones de entrega. Afecta la fecha de posesión.'},
+  {t:'Existe una sucesión', d:'Confirma si está inscrita y quiénes son los herederos.'},
+  {t:'La persona que vende actúa mediante poder', d:'Vigencia de poder con facultad expresa de vender.'},
+  {t:'El uso comercial no coincide con lo permitido', d:'Zonificación y compatibilidad de uso antes de ofrecer el local para ese giro.'},
+  {t:'La propiedad tiene problemas de independización', d:'Sin partida propia, lo que se vende no está definido registralmente.'}
+];
+
+/* ============ RENDER ============ */
+const el = (h)=>{const d=document.createElement('div'); d.innerHTML=h.trim(); return d.firstElementChild;};
+const esc = (s)=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+/* nav */
+const navHTML = SECCIONES.map(s=>`<a href="#${s.id}" data-target="${s.id}"><span class="n">${s.n}</span>${s.t}</a>`).join('');
+document.getElementById('navDesktop').innerHTML = navHTML;
+document.getElementById('navMobile').innerHTML = navHTML;
+
+/* bloques hero */
+document.getElementById('blocks').innerHTML = BLOQUES.map(b=>`
+  <a class="blk" href="#${b.id}">
+    <span class="blk__n">${b.n}</span>
+    <span class="blk__t">${b.t}</span>
+    <span class="blk__q">${b.q}</span>
+  </a>`).join('');
+
+/* documentos */
+function docCard(d,i){
+  return `
+  <article class="doc">
+    <button class="doc__btn" aria-expanded="false">
+      <span class="doc__row">
+        <span>
+          <span class="doc__code">${esc(d.code)}</span>
+          <span class="doc__name">${esc(d.name)}</span>
+          <span class="doc__use">${esc(d.use)}</span>
+        </span>
+        <span class="doc__chev" aria-hidden="true">+</span>
+      </span>
+      <span class="doc__cost">${esc(d.cost)} <span>${esc(d.costNote)}</span></span>
+      ${d.aparte?'<span class="doc__aparte">Se puede solicitar aparte</span>':''}
+    </button>
+    <div class="doc__body">
+      <p class="mini">¿Para qué sirve?</p>
+      <ul class="arrows">${d.sirve.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      <p class="mini">Qué buscar dentro</p>
+      <ul class="checkl">${d.buscar.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      ${d.note?`<p class="doc__note">${esc(d.note)}</p>`:''}
+    </div>
+  </article>`;
+}
+document.querySelectorAll('[data-docs]').forEach(cont=>{
+  const b = cont.getAttribute('data-docs');
+  cont.innerHTML = DOCS.filter(d=>d.b===b).map(docCard).join('');
+});
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.doc__btn');
+  if(!btn) return;
+  const card = btn.closest('.doc');
+  const open = card.classList.toggle('is-open');
+  btn.setAttribute('aria-expanded', open?'true':'false');
+  btn.querySelector('.doc__chev').textContent = open? '+' : '+';
+});
+
+/* comercial */
+document.getElementById('commercial').innerHTML = COMERCIAL.map(g=>`
+  <div class="cgroup">
+    <h4>${g.t}</h4>
+    <p class="why">${g.why}</p>
+    <div class="chips">${g.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
+  </div>`).join('');
+
+/* selector de tipo */
+const TAGS = {si:{c:'t-si', l:'✓ SÍ'}, dep:{c:'t-dep', l:'△ DEPENDE'}, no:{c:'t-no', l:'✕ NO'}};
+const tabsEl = document.getElementById('tabs');
+tabsEl.innerHTML = Object.entries(TIPOS).map(([k,v],i)=>`
+  <button class="tab${i===0?' is-on':''}" role="tab" data-tipo="${k}" aria-selected="${i===0}">
+    <span class="tab__i" aria-hidden="true">${v.icon}</span>
+    <span class="tab__t">${v.t}</span>
+    <span class="tab__s">${v.s}</span>
+  </button>`).join('');
+
+function renderMatrix(key){
+  const v = TIPOS[key];
+  const n = v.items.filter(i=>i.s==='si').length;
+  document.getElementById('matrix').innerHTML = `
+    <div class="matrix__head">
+      <h3>${v.t}</h3>
+      <span class="matrix__count">${n} documentos base · ${v.items.length} puntos en total</span>
+    </div>
+    ${v.items.map(i=>`
+      <div class="mrow">
+        <span class="mrow__tag ${TAGS[i.s].c}">${TAGS[i.s].l}</span>
+        <span>
+          <span class="mrow__t">${esc(i.t)}</span>
+          <span class="mrow__d">${esc(i.d)}</span>
+        </span>
+      </div>`).join('')}
+    <div class="matrix__foot">Esta lista es orientativa. Los documentos que corresponde revisar dependen de las características reales del inmueble y del distrito.</div>`;
+}
+renderMatrix('depto');
+tabsEl.addEventListener('click', e=>{
+  const b = e.target.closest('.tab'); if(!b) return;
+  tabsEl.querySelectorAll('.tab').forEach(t=>{t.classList.remove('is-on'); t.setAttribute('aria-selected','false');});
+  b.classList.add('is-on'); b.setAttribute('aria-selected','true');
+  renderMatrix(b.dataset.tipo);
+});
+
+/* casos */
+document.getElementById('cases').innerHTML = CASOS.map(c=>`
+  <div class="case">
+    <span class="case__l">CRI →</span>
+    <p class="case__find">${esc(c.find)}</p>
+    <p class="case__do"><b>Qué hago</b>${esc(c.do)}</p>
+  </div>`).join('');
+
+/* checklist */
+const stepsEl = document.getElementById('steps');
+stepsEl.innerHTML = PASOS.map((p,i)=>`
+  <div class="step" role="checkbox" tabindex="0" aria-checked="false">
+    <span class="step__box" aria-hidden="true">✓</span>
+    <span>
+      <span class="step__n">PASO ${i+1}</span>
+      <span class="step__t">${esc(p.t)}</span>
+      <span class="step__d">${esc(p.d)}</span>
+    </span>
+  </div>`).join('');
+
+function updateProgress(){
+  const done = stepsEl.querySelectorAll('.step.is-done').length;
+  document.getElementById('progressLabel').textContent = `${done} de ${PASOS.length}`;
+  document.getElementById('progressFill').style.width = (done/PASOS.length*100)+'%';
+}
+function toggleStep(s){
+  const on = s.classList.toggle('is-done');
+  s.setAttribute('aria-checked', on?'true':'false');
+  updateProgress();
+}
+stepsEl.addEventListener('click', e=>{const s=e.target.closest('.step'); if(s) toggleStep(s);});
+stepsEl.addEventListener('keydown', e=>{
+  if(e.key===' '||e.key==='Enter'){const s=e.target.closest('.step'); if(s){e.preventDefault(); toggleStep(s);}}
+});
+
+/* banderas */
+document.getElementById('flags').innerHTML = FLAGS.map(f=>`
+  <div class="flag">
+    <p class="flag__t">${esc(f.t)}</p>
+    <p class="flag__d">${esc(f.d)}</p>
+  </div>`).join('');
+
+/* menú móvil */
+const drawer = document.getElementById('drawer');
+const openBtn = document.getElementById('openMenu');
+function setDrawer(open){
+  drawer.classList.toggle('is-open', open);
+  openBtn.setAttribute('aria-expanded', open?'true':'false');
+  document.body.style.overflow = open?'hidden':'';
+}
+openBtn.addEventListener('click', ()=>setDrawer(true));
+document.getElementById('closeMenu').addEventListener('click', ()=>setDrawer(false));
+drawer.addEventListener('click', e=>{ if(e.target===drawer || e.target.closest('a')) setDrawer(false); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') setDrawer(false); });
+
+/* scrollspy */
+const links = document.querySelectorAll('#navDesktop a');
+const targets = SECCIONES.map(s=>document.getElementById(s.id)).filter(Boolean);
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        links.forEach(a=>a.classList.toggle('is-active', a.dataset.target===en.target.id));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  targets.forEach(t=>io.observe(t));
+}
+</script>
+</body>
+</html>
